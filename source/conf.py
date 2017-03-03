@@ -84,11 +84,42 @@ todo_include_todos = False
 #
 html_theme = 'alabaster'
 
+html_sidebars = {
+    '**': [
+        'about.html',
+        # 'navigation.html',
+        'localtoc.html',
+        'relations.html',
+        'searchbox.html',
+        'donate.html',
+    ]
+}
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
 # html_theme_options = {}
+html_theme_options = {
+    'logo': 'CLVsol_logo.png',
+    'description': 'creative open source solutions',
+    'github_user': 'cvercelino',
+    # 'github_repo': 'CLVsol',
+    'github_button': True,
+    'github_banner': True,
+    'show_powered_by': True,
+    # 'page_width': 'auto',
+    'page_width': '1220px',
+    'sidebar_width': '220px',
+    'fixed_sidebar': True,
+    'show_related': True,
+}
+
+# The name of an image file (relative to this directory) to use as a favicon of
+# the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
+# pixels large.
+# html_favicon = None
+html_favicon = '_static/CLVsol_favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -126,7 +157,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'CLVsolDocumentation.tex', u'CLVsol Documentation Documentation',
+    (master_doc, 'CLVsolDocumentation.tex', u'CLVsol Documentation',
      u'Carlos Eduardo Vercelino - CLVsol', 'manual'),
 ]
 
@@ -136,7 +167,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'clvsoldocumentation', u'CLVsol Documentation Documentation',
+    (master_doc, 'clvsoldocumentation', u'CLVsol Documentation',
      [author], 1)
 ]
 
@@ -147,7 +178,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'CLVsolDocumentation', u'CLVsol Documentation Documentation',
+    (master_doc, 'CLVsolDocumentation', u'CLVsol Documentation',
      author, 'CLVsolDocumentation', 'One line description of project.',
      'Miscellaneous'),
 ]
