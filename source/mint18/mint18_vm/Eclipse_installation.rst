@@ -114,19 +114,19 @@ Connect to Remote Linux Server using Eclipse
 
 		`Remote projects in Eclipse <https://habd.as/remote-project-in-eclipse/>`_
 
-	* Step 1. Open Eclipse  and Goto Window >> Open Perspective >> Other...
+	* Step 1. Open Eclipse  and Goto **Window** >> **Perspective**  >> **Open Perspective** >> **Other...**
 	* Step 2. Select **Remote System Explorer** from the Open Perspective Dialogue Box
-	* Step 3. Right click Local in the Remote System Explorer Tab and Select New >> Connection from the Context Menu
-	* Step 4. Select SSH Only and click Next
-	* Step 5. Provide Hostname and Connection name in the Remote SSH Only Connection Dialogue box
-	* Step 6. Click Next for a couple of times
-	* Step 7. Click Finish
+	* Step 3. Right click **Local** in the Remote System Explorer Tab and Select **New** >> **Connection** from the Context Menu
+	* Step 4. Select **SSH Only** and click **Next**
+	* Step 5. Provide **Host name** and **Connection name** in the Remote SSH Only Connection Dialogue box
+	* Step 6. Click **Next** for a couple of times
+	* Step 7. Click **Finish**
 
 	* Once a remote connection is established successfully, open up the Remote Systems view and drill down into the site via the tree view control. Find the the folder containing your desired project starting point, open its context menu and choose the Create Remote Project option to create a new remote project in Eclipse.
 	* Once the remote project is finished syncing, it will appear in the Project and Package Explorer views. Opening the context menu for a remote project from one of the Explorer views will bring up additional options, such as project type configuration. The same menu also provides easy access to the Remote Systems view, helpful for file transfers.
 	* The project will appear at the PyDev Package Explorer. Make sure it’s set to PyDev Project.
 
-		Right-click on the Odoo project > PyDev > Set as PyDev Project.
+		Right-click on the <**project name**> project > **PyDev** > **Set as PyDev Project**.
 
 .. toctree::
    :maxdepth: 2
