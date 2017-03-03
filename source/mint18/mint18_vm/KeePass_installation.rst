@@ -17,6 +17,8 @@ If you haven’t already installed KeePass2, then press Alt+Ctrl+T and run the f
 	# sudo apt-get install keepass2 -y
 	sudo apt-get install keepass2 mono-complete
 
+	sudo apt-get install xsel
+
 Once the installation is done, in Linux Mint we will find KeePass at the menu, in the Accessories section.
 
 You can start KeePass 2 from Terminal simply with::
