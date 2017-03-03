@@ -172,3 +172,20 @@ Replace the Odoo installation (Odoo 10.0)
 		cd /opt/openerp/odoo
 		su openerp
 		./odoo-bin -c /etc/odoo/openerp-server-man.conf
+
+Remote access to the server
+===========================
+
+#. To set **openerp** user password (Linux), use the following commands (as root):
+
+	::
+
+		passwd openerp
+
+#. To access remotly the server, use the following commands:
+
+	::
+
+		ssh tkl-odoo10-vm -l root
+
+		ssh tkl-odoo10-vm -l openerp
