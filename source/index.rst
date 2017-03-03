@@ -12,6 +12,7 @@ CLVsol Documentation
    :caption: Contents:
 
    sphinx/index
+   mint18/index
 
 
 
