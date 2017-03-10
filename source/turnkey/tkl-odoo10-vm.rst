@@ -173,8 +173,19 @@ Replace the Odoo installation (Odoo 10.0)
 		su openerp
 		./odoo-bin -c /etc/odoo/openerp-server-man.conf
 
-Remote access to the server
-===========================
+#. To install openerplib, use the following commands (as root):
+
+	::
+
+		easy_install openerp-client-lib
+
+	* Reference: `OpenERP Client Library <https://github.com/nicolas-van/openerp-client-lib>`_
+
+#. To install erppeek, use the following commands (as root):
+
+	::
+
+		pip install erppeek
 
 #. To set **openerp** user password (Linux), use the following commands (as root):
 
@@ -182,10 +193,43 @@ Remote access to the server
 
 		passwd openerp
 
-#. To access remotly the server, use the following commands:
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+	::
+
+			addons_path = /opt/openerp/odoo/addons
+
+	::
+
+			# addons_path = /opt/openerp/odoo/addons
+			addons_path = /opt/openerp/odoo/addons,/opt/openerp/clvsol_odoo_addons
+
+Remote access to the server
+===========================
+
+#. To access remotly the server, use the following commands (as **root**):
 
 	::
 
 		ssh tkl-odoo10-vm -l root
 
+		/etc/init.d/openerp-server stop
+
+		/etc/init.d/openerp-server start
+
+	::
+
+		cd /opt/openerp/odoo
+		su openerp
+		./odoo-bin -c /etc/odoo/openerp-server-man.conf
+
+#. To access remotly the server, use the following commands (as **openerp**):
+
+	::
+
 		ssh tkl-odoo10-vm -l openerp
+
+	::
+
+		cd /opt/openerp/clvsol_clvhealth_jcafb/project
+		python install.py -h
