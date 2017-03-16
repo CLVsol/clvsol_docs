@@ -233,3 +233,37 @@ Remote access to the server
 
 		cd /opt/openerp/clvsol_clvhealth_jcafb/project
 		python install.py -h
+
+
+Installation of external modules
+================================
+
+
+`OCA/server-tools <https://github.com/OCA/server-tools>`_
+---------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**OCA/server-tools**", use the following commands (as openerp):
+
+	::
+
+		ssh tkl-odoo10-vm -l openerp
+
+	::
+
+		cd /opt/openerp
+		git clone https://github.com/OCA/server-tools oca_server-tools --branch 10.0 --depth=1
+		cd /opt/openerp/oca_server-tools
+		git branch -a
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+	::
+
+			addons_path = /opt/openerp/odoo/addons,...
+
+	::
+
+			# addons_path = /opt/openerp/odoo/addons,...
+			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/oca_server-tools
