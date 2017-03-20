@@ -267,3 +267,73 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 			# addons_path = /opt/openerp/odoo/addons,...
 			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/oca_server-tools
+
+`OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_
+---------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**OCA/l10n-brazil**", use the following commands (as openerp):
+
+	::
+
+		ssh tkl-odoo10-vm -l openerp
+
+	::
+
+		cd /opt/openerp
+		git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 10.0 --depth=1
+		cd /opt/openerp/oca_l10n-brazil
+		git branch -a
+
+#. To install "`num2words <https://pypi.python.org/pypi/num2words>`_", use the following commands (as root):
+
+	::
+
+		ssh tkl-odoo10-vm -l root
+
+	::
+
+		pip install num2words
+
+#. To install "`suds <https://pypi.python.org/pypi/suds>`_", use the following commands (as root):
+
+	::
+
+		ssh tkl-odoo10-vm -l root
+
+	::
+
+		pip install suds
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+	::
+
+			addons_path = /opt/openerp/odoo/addons,...
+
+	::
+
+			# addons_path = /opt/openerp/odoo/addons,...
+			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/oca_l10n-brazil
+
+
+The shell command
+=================
+
+
+#. To access remotly the server and use the **shell command**, use the following commands (as **root**):
+
+	::
+
+		ssh tkl-odoo10-vm -l root
+
+		/etc/init.d/openerp-server stop
+
+	::
+
+		cd /opt/openerp/odoo
+		su openerp
+		./odoo-bin shell -c /etc/odoo/openerp-server-man.conf -d clvhealth_jcafb_dev
+
+		Use exit() or Ctrl-D (i.e. EOF) to exit
