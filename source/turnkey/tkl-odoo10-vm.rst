@@ -232,6 +232,7 @@ Remote access to the server
 	::
 
 		cd /opt/openerp/clvsol_clvhealth_jcafb/project
+		cd /opt/openerp/clvsol_mfmng/project
 		python install.py -h
 
 
