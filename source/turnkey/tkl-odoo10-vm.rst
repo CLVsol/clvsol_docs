@@ -322,7 +322,6 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 The shell command
 =================
 
-
 #. To access remotly the server and use the **shell command**, use the following commands (as **root**):
 
 	::
@@ -338,3 +337,21 @@ The shell command
 		./odoo-bin shell -c /etc/odoo/openerp-server-man.conf -d clvhealth_jcafb_dev
 
 		Use exit() or Ctrl-D (i.e. EOF) to exit
+
+
+`SymLink <https://wiki.debian.org/SymLink>`_
+============================================
+
+#. To create a symbolic link "odoo_api", use the following commands (as **root**):
+
+	::
+
+		ssh tkl-odoo10-vm -l root
+
+	::
+
+		cd /opt/openerp/clvsol_clvhealth_jcafb/data
+		ln -s /opt/openerp/clvsol_odoo_api odoo_api 
+
+		cd /opt/openerp/clvsol_mfmng/data
+		ln -s /opt/openerp/clvsol_odoo_api odoo_api 
