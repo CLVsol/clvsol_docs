@@ -30,3 +30,4 @@ odoo-mint18 (virtual machine)
    Sublimerge_3_Installation
    xlrd_installation
    Gnumeric_installation
+   Server_remote_access
