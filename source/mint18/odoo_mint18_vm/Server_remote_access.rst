@@ -76,3 +76,28 @@ The shell command
 		./openerp-server shell -c /etc/odoo/openerp-server-man.conf -d clvhealth_jcafb_dev
 
 		Use exit() or Ctrl-D (i.e. EOF) to exit
+
+
+clvhealth_jcafb_dev
+===================
+
+#. To manage "**clvhealth_jcafb_dev**" database, use the following commands (as **openerp**):
+
+	::
+
+		ssh odoo-mint18 -l openerp
+
+	::
+
+		cd /opt/openerp
+
+		dropdb -i clvhealth_jcafb_dev
+		createdb -O openerp -E UTF8 -T template0 clvhealth_jcafb_dev
+		psql -f clvhealth_jcafb_dev_2017-02-26b.sql -d clvhealth_jcafb_dev -U postgres -h localhost -p 5432 -q
+
+	::
+
+		cd /opt/openerp
+
+		pg_dump clvhealth_jcafb_dev -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_dev_2017-03-28a.sql
+		gzip clvhealth_jcafb_dev_2017-03-28a.sql
