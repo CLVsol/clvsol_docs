@@ -6,18 +6,6 @@ Server Remote Access
 Remote access to the server
 ===========================
 
-#. To access remotly the server, use the following commands (as **root**):
-
-	::
-
-		ssh odoo-mint18 -l root
-
-	::
-
-		cd /opt/openerp/odoo
-		su openerp
-		./openerp-server -c /etc/odoo/openerp-server-man.conf
-
 #. To access remotly the server, use the following commands (as **openerp**):
 
 	::
@@ -31,7 +19,7 @@ Remote access to the server
 
 	::
 
-		cd /opt/openerp/clvsol_clvhealth_jcafb/project
+		cd /opt/openerp/mostlyopen_clvhealth_jcafb/project
 		python install.py -h
 
 
