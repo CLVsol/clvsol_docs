@@ -14,6 +14,7 @@ CLVsol Documentation
    sphinx/index
    mint18/index
    turnkey/index
+   odoo/index
 
 
 
