@@ -93,3 +93,28 @@ Remote access to the server **tkl-odoo10-mfmng-vm**
 
 		cd /opt/openerp/clvsol_mfmng/data
 		python setup.py -h
+
+
+#. To manage "**mfmng_pro**" database, use the following commands (as **openerp**):
+
+	::
+
+		ssh tkl-odoo10-mfmng-vm -l openerp
+
+	::
+
+		cd /opt/openerp
+
+		gzip -d mfmng_dev_2017-04-07a.sql.gz
+
+		dropdb -i mfmng_pro
+		createdb -O openerp -E UTF8 -T template0 mfmng_pro
+		psql -f mfmng_dev_2017-04-07a.sql -d mfmng_pro -U postgres -h localhost -p 5432 -q
+
+	::
+
+		cd /opt/openerp
+
+		pg_dump mfmng_pro -Fp -U postgres -h localhost -p 5432 > mfmng_pro_2017-04-07a.sql
+		gzip mfmng_pro_2017-04-07a.sql
+
