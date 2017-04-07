@@ -218,3 +218,120 @@ Remote access to the server
 	::
 
 		ssh tkl-odoo10-mfmng-vm -l openerp
+
+
+Installation of project modules
+===============================
+
+
+`clvsol_odoo_addons <https://github.com/CLVsol/clvsol_odoo_addons>`_
+--------------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**OCA/server-tools**", use the following commands (as openerp):
+
+	::
+
+		ssh tkl-odoo10-mfmng-vm -l openerp
+
+	::
+
+		cd /opt/openerp
+		git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 10.0 --depth=1
+		cd /opt/openerp/clvsol_odoo_addons
+		git branch -a
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+	::
+
+			addons_path = /opt/openerp/odoo/addons,...
+
+	::
+
+			# addons_path = /opt/openerp/odoo/addons,...
+			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons
+
+
+`clvsol_odoo_addons_mfmng <https://github.com/CLVsol/clvsol_odoo_addons_mfmng>`_
+--------------------------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**OCA/server-tools**", use the following commands (as openerp):
+
+	::
+
+		ssh tkl-odoo10-mfmng-vm -l openerp
+
+	::
+
+		cd /opt/openerp
+		git clone https://github.com/CLVsol/clvsol_odoo_addons_mfmng --branch 10.0 --depth=1
+		cd /opt/openerp/clvsol_odoo_addons_mfmng
+		git branch -a
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+	::
+
+			addons_path = /opt/openerp/odoo/addons,...
+
+	::
+
+			# addons_path = /opt/openerp/odoo/addons,...
+			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_mfmng
+
+
+`clvsol_mfmng <https://github.com/CLVsol/clvsol_mfmng>`_
+--------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**OCA/server-tools**", use the following commands (as openerp):
+
+	::
+
+		ssh tkl-odoo10-mfmng-vm -l openerp
+
+	::
+
+		cd /opt/openerp
+		git clone https://github.com/CLVsol/clvsol_mfmng --branch 10.0 --depth=1
+		cd /opt/openerp/clvsol_mfmng
+		git branch -a
+
+
+`clvsol_odoo_api <https://github.com/CLVsol/clvsol_odoo_api>`_
+--------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**OCA/server-tools**", use the following commands (as openerp):
+
+	::
+
+		ssh tkl-odoo10-mfmng-vm -l openerp
+
+	::
+
+		cd /opt/openerp
+		git clone https://github.com/CLVsol/clvsol_odoo_api --depth=1
+		cd /opt/openerp/clvsol_odoo_api
+		git branch -a
+
+
+`SymLink <https://wiki.debian.org/SymLink>`_
+============================================
+
+#. To create a symbolic link "odoo_api", use the following commands (as **root**):
+
+	::
+
+		ssh tkl-odoo10-mfmng-vm -l root
+
+	::
+
+		cd /opt/openerp/clvsol_mfmng/data
+		ln -s /opt/openerp/clvsol_odoo_api odoo_api 
