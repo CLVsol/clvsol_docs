@@ -9,3 +9,4 @@ Turnkey Linux
    tkl-tkldev-vm
    tkl-odoo-vm
    tkl-odoo10-vm
+   tkl-odoo10-mfmng-vm
