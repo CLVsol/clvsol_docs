@@ -8,3 +8,4 @@ Odoo
 
    clvsol_clvhealth_jcafb
    clvsol_mfmng
+   mostlyopen_clvhealth_jcafb
