@@ -59,14 +59,14 @@ Remote access to the server **odoo-mint18**
 		gzip clvhealth_jcafb_dev_2017-04-07a.sql
 
 
-Remote access to the server **tkl-odoo-vm-jcafb**
-=================================================
+Remote access to the server **clvhealth-jcafb-2017-pro**
+========================================================
 
 #. To access remotly the server, use the following commands (as **root**):
 
 	::
 
-		ssh tkl-odoo-vm-jcafb -l root
+		ssh clvhealth-jcafb-2017-pro -l root
 
 		/etc/init.d/openerp-server stop
 
@@ -76,13 +76,13 @@ Remote access to the server **tkl-odoo-vm-jcafb**
 
 		cd /opt/openerp/odoo
 		su openerp
-		./openerp-server -c /etc/odoo/openerp-server-man-clvhealth-jcafb.conf
+		./openerp-server -c /etc/odoo/openerp-server-man.conf
 
 #. To access remotly the server, use the following commands (as **openerp**):
 
 	::
 
-		ssh tkl-odoo-vm-jcafb -l openerp
+		ssh clvhealth-jcafb-2017-pro -l openerp
 
 	::
 
@@ -99,7 +99,7 @@ Remote access to the server **tkl-odoo-vm-jcafb**
 
 	::
 
-		ssh tkl-odoo-vm-jcafb -l openerp
+		ssh clvhealth-jcafb-2017-pro -l openerp
 
 	::
 
