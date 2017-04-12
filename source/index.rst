@@ -15,6 +15,7 @@ CLVsol Documentation
    mint18/index
    turnkey/index
    odoo/index
+   aws/index
 
 
 
