@@ -1,17 +1,17 @@
-=============================
-clvhealh-jcafb-2017-pro (AWS)
-=============================
+==============================
+clvhealth-jcafb-2017-pro (AWS)
+==============================
 
 #. Update host name, executing the following commands:
 
 	::
 
-		HOSTNAME=clvhealh-jcafb-2017-pro
+		HOSTNAME=clvhealth-jcafb-2017-pro
 		echo "$HOSTNAME" > /etc/hostname
 		sed -i "s|127.0.1.1 \(.*\)|127.0.1.1 $HOSTNAME|" /etc/hosts
 		/etc/init.d/hostname.sh start
 
-#. (Optional) Reboot the instance "**tclvhealh-jcafb-2017-pro**".
+#. (Optional) Reboot the instance "**clvhealth-jcafb-2017-pro**".
 
 #. To stop and start the Odoo server, use the following commands (as root):
 
