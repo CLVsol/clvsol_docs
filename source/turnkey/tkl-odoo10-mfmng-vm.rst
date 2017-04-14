@@ -6,7 +6,7 @@ This project will help you create a server to host the Media File Management, ba
 
 	* Based on `Odoo - From ERP to CRM, eCommerce to CMS <https://www.turnkeylinux.org/odoo>`_ 
 
-	* ISO file: "**tkl-odoo10_2017-02-27.iso**" (created with: :doc:`tkl-tkldev-vm`).
+	* ISO file: "**tkl-odoo_2017-02-27.iso**" (created with: :doc:`tkl-tkldev-vm`).
 
 VM preparation
 ==============
