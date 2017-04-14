@@ -6,7 +6,7 @@ This project will help you install `Odoo 10 <https://www.odoo.com/>`_  appliance
 
 	* Based on `Odoo - From ERP to CRM, eCommerce to CMS <https://www.turnkeylinux.org/odoo>`_ 
 
-	* ISO file: "**tkl-odoo10_2017-02-27.iso**" (created with: :doc:`tkl-tkldev-vm`).
+	* ISO file: "**tkl-odoo_2017-02-27.iso**" (created with: :doc:`tkl-tkldev-vm`).
 
 VM preparation
 ==============
