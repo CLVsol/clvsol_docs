@@ -17,7 +17,7 @@ You can download Eclipse IDE for Java EE Developers `here <https://www.eclipse.o
 To install `Eclipse <https://www.eclipse.org/>`_, execute the followind commands::
 
 	cd ~/Downloads
-	sudo tar -xvf eclipse-jee-neon-3-RC2-linux-gtk-x86_64.tar.gz
+	sudo tar -xvf eclipse-jee-neon-3-linux-gtk-x86_64.tar.gz
 	sudo mv eclipse /opt
 	! sudo chown -R $(whoami):$(whoami) /opt/eclipse/
 
@@ -46,7 +46,7 @@ Install Aptana Studio
 
 Open Eclipse and go to Help -> Install New Software and paste the URL::
 
-	http://download.aptana.com/studio3/plugin/install
+	http://www.pydev.org/updates
 
 **Debugging OpenERP with Aptana or Eclipse with PyDev**
 
