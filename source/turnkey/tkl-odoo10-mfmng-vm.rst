@@ -229,7 +229,7 @@ Installation of project modules
 
 Tools for Odoo Administrators to improve some technical features on Odoo. 
 
-#. To install "**OCA/server-tools**", use the following commands (as openerp):
+#. To install "**clvsol_odoo_addons**", use the following commands (as openerp):
 
 	::
 
@@ -259,7 +259,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 Tools for Odoo Administrators to improve some technical features on Odoo. 
 
-#. To install "**OCA/server-tools**", use the following commands (as openerp):
+#. To install "**clvsol_odoo_addons_mfmng**", use the following commands (as openerp):
 
 	::
 
@@ -289,7 +289,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 Tools for Odoo Administrators to improve some technical features on Odoo. 
 
-#. To install "**OCA/server-tools**", use the following commands (as openerp):
+#. To install "**clvsol_mfmng**", use the following commands (as openerp):
 
 	::
 
@@ -308,7 +308,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 Tools for Odoo Administrators to improve some technical features on Odoo. 
 
-#. To install "**OCA/server-tools**", use the following commands (as openerp):
+#. To install "**clvsol_odoo_api**", use the following commands (as openerp):
 
 	::
 
