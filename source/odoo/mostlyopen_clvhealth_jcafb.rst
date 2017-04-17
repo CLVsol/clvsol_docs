@@ -5,20 +5,15 @@ mostlyopen_clvhealth_jcafb
 Remote access to the server **odoo-mint18**
 ===========================================
 
-#. To access remotly the server, use the following commands (as **root**):
+#. To access remotly the server, use the following commands (as **openerp**):
 
 	::
 
-		ssh odoo-mint18 -l root
-
-		/etc/init.d/openerp-server stop
-
-		/etc/init.d/openerp-server start
+		ssh odoo-mint18 -l openerp
 
 	::
 
 		cd /opt/openerp/odoo
-		su openerp
 		./openerp-server -c /etc/odoo/openerp-server-man-clvhealth-jcafb.conf
 
 #. To access remotly the server, use the following commands (as **openerp**):
