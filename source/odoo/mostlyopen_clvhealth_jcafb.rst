@@ -25,7 +25,7 @@ Remote access to the server **odoo-mint18**
 	::
 
 		cd /opt/openerp/mostlyopen_clvhealth_jcafb/project
-		python install.py -h
+		python install_v9.py -h
 
 	::
 
