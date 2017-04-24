@@ -144,6 +144,8 @@ Replace the Odoo installation (Odoo 10.0)
 		git config --global user.email "carlos.vercelino@clvsol.com"
 		git config --global user.name "Carlos Eduardo Vercelino - CLVsol"
 
+		git config --global alias.lg "log --oneline --all --graph --decorate"
+
 		git config --list
 
 		exit
