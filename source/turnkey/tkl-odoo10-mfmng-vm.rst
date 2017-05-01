@@ -337,3 +337,18 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 		cd /opt/openerp/clvsol_mfmng/data
 		ln -s /opt/openerp/clvsol_odoo_api odoo_api 
+
+
+Additional Installation
+=======================
+
+#. To install the complete **vim** package, use the following commands (as root):
+
+	::
+
+		apt-get install vim
+
+	::
+
+		vim
+		vimtutor
