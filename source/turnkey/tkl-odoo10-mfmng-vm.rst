@@ -352,3 +352,5 @@ Additional Installation
 
 		vim
 		vimtutor
+
+ * `Desvendando o editor Vim <http://blog.caelum.com.br/desvendando-o-editor-vim/>`_ 
