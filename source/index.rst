@@ -16,6 +16,7 @@ CLVsol Documentation
    turnkey/index
    odoo/index
    aws/index
+   windows/index
 
 
 
