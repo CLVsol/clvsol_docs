@@ -17,6 +17,7 @@ CLVsol Documentation
    odoo/index
    aws/index
    windows/index
+   references/index
 
 
 
