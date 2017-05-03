@@ -20,3 +20,10 @@ Git
 
 		git lg
 		git lg -10
+
+
+#. `How do I configure Git to always use Vim <http://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits>`_
+
+	::
+
+		git config --global core.editor "vim"
