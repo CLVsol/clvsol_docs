@@ -24,3 +24,4 @@ mint18-vm
    DbVisualizer_installation
    Meld_installation
    KeePass_installation
+   Vim_installation
