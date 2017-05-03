@@ -27,3 +27,6 @@ Git
 	::
 
 		git config --global core.editor "vim"
+
+		# You can use command to remove setting:
+		git config --global --unset core.editor
