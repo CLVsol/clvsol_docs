@@ -69,6 +69,22 @@ The shell command
 clvhealth_jcafb_dev
 ===================
 
+#. To access remotly the server, use the following commands (as **openerp**):
+
+	::
+
+		ssh odoo-mint18 -l openerp
+
+	::
+
+		cd /opt/openerp/odoo
+		./openerp-server -c /etc/odoo/openerp-server-man-clvhealth-jcafb.conf
+
+	::
+
+		cd /opt/openerp/mostlyopen_clvhealth_jcafb/project
+		python install.py -h
+
 #. To manage "**clvhealth_jcafb_dev**" database, use the following commands (as **openerp**):
 
 	::
