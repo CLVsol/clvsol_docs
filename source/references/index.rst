@@ -7,3 +7,4 @@ References
    :caption: Contents:
 
    git
+   odoo_10
