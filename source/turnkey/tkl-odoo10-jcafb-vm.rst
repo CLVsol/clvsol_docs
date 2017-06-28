@@ -380,7 +380,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 	::
 
-		ssh tkl-odoo10-vm -l openerp
+		ssh tkl-odoo10-jcafb-vm -l openerp
 
 	::
 
@@ -393,7 +393,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 	::
 
-		ssh tkl-odoo10-vm -l root
+		ssh tkl-odoo10-jcafb-vm -l root
 
 	::
 
@@ -403,7 +403,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 	::
 
-		ssh tkl-odoo10-vm -l root
+		ssh tkl-odoo10-jcafb-vm -l root
 
 	::
 
