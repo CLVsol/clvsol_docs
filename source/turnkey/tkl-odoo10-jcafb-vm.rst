@@ -238,7 +238,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 	::
 
 		cd /opt/openerp
-		git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 10.0 --depth=1
+		git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 10.0
 		cd /opt/openerp/clvsol_odoo_addons
 		git branch -a
 
@@ -254,12 +254,12 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons
 
 
-`clvsol_odoo_addons_mfmng <https://github.com/CLVsol/clvsol_odoo_addons_mfmng>`_
---------------------------------------------------------------------------------
+`clvsol_odoo_addons_l10n_br <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br>`_
+------------------------------------------------------------------------------------
 
 Tools for Odoo Administrators to improve some technical features on Odoo. 
 
-#. To install "**clvsol_odoo_addons_mfmng**", use the following commands (as openerp):
+#. To install "**clvsol_odoo_addons_l10n_br**", use the following commands (as openerp):
 
 	::
 
@@ -268,8 +268,8 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 	::
 
 		cd /opt/openerp
-		git clone https://github.com/CLVsol/clvsol_odoo_addons_mfmng --branch 10.0 --depth=1
-		cd /opt/openerp/clvsol_odoo_addons_mfmng
+		git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 10.0
+		cd /opt/openerp/clvsol_odoo_addons_jcafb
 		git branch -a
 
 #. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
@@ -281,15 +281,15 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 	::
 
 			# addons_path = /opt/openerp/odoo/addons,...
-			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_mfmng
+			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_l10n_br
 
 
-`clvsol_mfmng <https://github.com/CLVsol/clvsol_mfmng>`_
---------------------------------------------------------
+`clvsol_odoo_addons_jcafb <https://github.com/CLVsol/clvsol_odoo_addons_jcafb>`_
+--------------------------------------------------------------------------------
 
 Tools for Odoo Administrators to improve some technical features on Odoo. 
 
-#. To install "**clvsol_mfmng**", use the following commands (as openerp):
+#. To install "**clvsol_odoo_addons_jcafb**", use the following commands (as openerp):
 
 	::
 
@@ -298,8 +298,38 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 	::
 
 		cd /opt/openerp
-		git clone https://github.com/CLVsol/clvsol_mfmng --branch 10.0 --depth=1
-		cd /opt/openerp/clvsol_mfmng
+		git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 10.0
+		cd /opt/openerp/clvsol_odoo_addons_jcafb
+		git branch -a
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+	::
+
+			addons_path = /opt/openerp/odoo/addons,...
+
+	::
+
+			# addons_path = /opt/openerp/odoo/addons,...
+			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_jcafb
+
+
+`clvsol_clvhealth_jcafb <https://github.com/CLVsol/clvsol_clvhealth_jcafb>`_
+-----------------------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_clvhealth_jcafb**", use the following commands (as openerp):
+
+	::
+
+		ssh tkl-odoo10-jcafb-vm -l openerp
+
+	::
+
+		cd /opt/openerp
+		git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 10.0
+		cd /opt/openerp/clvsol_clvhealth_jcafb
 		git branch -a
 
 
@@ -317,7 +347,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 	::
 
 		cd /opt/openerp
-		git clone https://github.com/CLVsol/clvsol_odoo_api --depth=1
+		git clone https://github.com/CLVsol/clvsol_odoo_api
 		cd /opt/openerp/clvsol_odoo_api
 		git branch -a
 
@@ -333,5 +363,59 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 	::
 
-		cd /opt/openerp/clvsol_mfmng/data
+		cd /opt/openerp/clvsol_clvhealth_jcafb/data
 		ln -s /opt/openerp/clvsol_odoo_api odoo_api 
+
+
+Installation of external modules
+================================
+
+
+`OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_
+-------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**OCA/l10n-brazil**", use the following commands (as openerp):
+
+	::
+
+		ssh tkl-odoo10-vm -l openerp
+
+	::
+
+		cd /opt/openerp
+		git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 10.0 --depth=1
+		cd /opt/openerp/oca_l10n-brazil
+		git branch -a
+
+#. To install "`num2words <https://pypi.python.org/pypi/num2words>`_", use the following commands (as root):
+
+	::
+
+		ssh tkl-odoo10-vm -l root
+
+	::
+
+		pip install num2words
+
+#. To install "`suds <https://pypi.python.org/pypi/suds>`_", use the following commands (as root):
+
+	::
+
+		ssh tkl-odoo10-vm -l root
+
+	::
+
+		pip install suds
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+	::
+
+			addons_path = /opt/openerp/odoo/addons,...
+
+	::
+
+			# addons_path = /opt/openerp/odoo/addons,...
+			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/oca_l10n-brazil
