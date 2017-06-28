@@ -187,6 +187,14 @@ Replace the Odoo installation (Odoo 10.0)
 
 		pip install erppeek
 
+#. To install xlrd 1.0.0, execute the following commands (as root):
+
+	::
+
+		pip install xlrd
+		pip install xlwt
+		pip install xlutils
+
 #. To set **openerp** user password (Linux), use the following commands (as root):
 
 	::
@@ -218,6 +226,16 @@ Remote access to the server
 	::
 
 		ssh tkl-odoo10-jcafb-vm -l openerp
+
+	::
+
+		cd /opt/openerp/clvsol_clvhealth_jcafb/project
+		python install.py -h
+
+	::
+
+		cd /opt/openerp/clvsol_clvhealth_jcafb/data
+		python setup.py -h
 
 
 Installation of project modules
