@@ -1,8 +1,8 @@
-===================
-tkl-odoo10-jcafb-vm
-===================
+=================
+tkl-odoo10-pbm-vm
+=================
 
-This project will help you create a server to host the **CLVhealth-JCAFB** solution, based on an `Odoo 10 <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
+This project will help you create a server to host the **CLVhealth-PBM** solution, based on an `Odoo 10 <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
 
 	* Based on `Odoo - From ERP to CRM, eCommerce to CMS <https://www.turnkeylinux.org/odoo>`_ 
 
@@ -17,7 +17,7 @@ VM preparation
 	- Choose de "Virtual Machine Hardware Compatibility": **Workstation 12.x**
 	- Choose the gest operating system: **I will install the operating system later**
 	- Select the Guest Operatin System: **Linux** (Version: **Debian 8.x 64-bit**)
-	- Set a VM Name and a VM Location of your preference (**tkl-odoo10-jcafb-vm** - **D:\\vm\\tkl-odoo10-jcafb-vm**).
+	- Set a VM Name and a VM Location of your preference (**tkl-odoo10-pbm-vm** - **D:\\vm\\tkl-odoo10-pbm-vm**).
 	- Processor Configuration:
 		- Number of processors: **4**
 		- Number of cores per processor: **1**
@@ -51,7 +51,7 @@ VM preparation
 
 	::
 
-		HOSTNAME=tkl-odoo10-jcafb-vm
+		HOSTNAME=tkl-odoo10-pbm-vm
 		echo "$HOSTNAME" > /etc/hostname
 		sed -i "s|127.0.1.1 \(.*\)|127.0.1.1 $HOSTNAME|" /etc/hosts
 		/etc/init.d/hostname.sh start
@@ -67,7 +67,7 @@ VM preparation
 			logfile = False
 			# logfile = /var/log/odoo/openerp-server.log
 
-#. (Optional) Reboot the instance "**tkl-odoo10-jcafb-vm**".
+#. (Optional) Reboot the instance "**tkl-odoo10-pbm-vm**".
 
 #. To stop and start the Odoo server, use the following commands (as root):
 
@@ -209,7 +209,7 @@ Remote access to the server
 
 	::
 
-		ssh tkl-odoo10-jcafb-vm -l root
+		ssh tkl-odoo10-pbm-vm -l root
 
 		/etc/init.d/openerp-server stop
 
@@ -225,16 +225,16 @@ Remote access to the server
 
 	::
 
-		ssh tkl-odoo10-jcafb-vm -l openerp
+		ssh tkl-odoo10-pbm-vm -l openerp
 
 	::
 
-		cd /opt/openerp/clvsol_clvhealth_jcafb/project
+		cd /opt/openerp/clvsol_clvhealth_pbm/project
 		python install.py -h
 
 	::
 
-		cd /opt/openerp/clvsol_clvhealth_jcafb/data
+		cd /opt/openerp/clvsol_clvhealth_pbm/data
 		python setup.py -h
 
 
@@ -251,7 +251,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 	::
 
-		ssh tkl-odoo10-jcafb-vm -l openerp
+		ssh tkl-odoo10-pbm-vm -l openerp
 
 	::
 
@@ -281,13 +281,13 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 	::
 
-		ssh tkl-odoo10-jcafb-vm -l openerp
+		ssh tkl-odoo10-pbm-vm -l openerp
 
 	::
 
 		cd /opt/openerp
 		git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 10.0
-		cd /opt/openerp/clvsol_odoo_addons_jcafb
+		cd /opt/openerp/clvsol_odoo_addons_pbm
 		git branch -a
 
 #. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
@@ -302,22 +302,22 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_l10n_br
 
 
-`clvsol_odoo_addons_jcafb <https://github.com/CLVsol/clvsol_odoo_addons_jcafb>`_
+`clvsol_odoo_addons_pbm <https://github.com/CLVsol/clvsol_odoo_addons_pbm>`_
 --------------------------------------------------------------------------------
 
 Tools for Odoo Administrators to improve some technical features on Odoo. 
 
-#. To install "**clvsol_odoo_addons_jcafb**", use the following commands (as openerp):
+#. To install "**clvsol_odoo_addons_pbm**", use the following commands (as openerp):
 
 	::
 
-		ssh tkl-odoo10-jcafb-vm -l openerp
+		ssh tkl-odoo10-pbm-vm -l openerp
 
 	::
 
 		cd /opt/openerp
-		git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 10.0
-		cd /opt/openerp/clvsol_odoo_addons_jcafb
+		git clone https://github.com/CLVsol/clvsol_odoo_addons_pbm --branch 10.0
+		cd /opt/openerp/clvsol_odoo_addons_pbm
 		git branch -a
 
 #. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
@@ -329,25 +329,25 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 	::
 
 			# addons_path = /opt/openerp/odoo/addons,...
-			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_jcafb
+			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_pbm
 
 
-`clvsol_clvhealth_jcafb <https://github.com/CLVsol/clvsol_clvhealth_jcafb>`_
+`clvsol_clvhealth_pbm <https://github.com/CLVsol/clvsol_clvhealth_pbm>`_
 -----------------------------------------------------------------------------
 
 Tools for Odoo Administrators to improve some technical features on Odoo. 
 
-#. To install "**clvsol_clvhealth_jcafb**", use the following commands (as openerp):
+#. To install "**clvsol_clvhealth_pbm**", use the following commands (as openerp):
 
 	::
 
-		ssh tkl-odoo10-jcafb-vm -l openerp
+		ssh tkl-odoo10-pbm-vm -l openerp
 
 	::
 
 		cd /opt/openerp
-		git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 10.0
-		cd /opt/openerp/clvsol_clvhealth_jcafb
+		git clone https://github.com/CLVsol/clvsol_clvhealth_pbm --branch 10.0
+		cd /opt/openerp/clvsol_clvhealth_pbm
 		git branch -a
 
 
@@ -360,7 +360,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 	::
 
-		ssh tkl-odoo10-jcafb-vm -l openerp
+		ssh tkl-odoo10-pbm-vm -l openerp
 
 	::
 
@@ -377,11 +377,11 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 	::
 
-		ssh tkl-odoo10-jcafb-vm -l root
+		ssh tkl-odoo10-pbm-vm -l root
 
 	::
 
-		cd /opt/openerp/clvsol_clvhealth_jcafb/data
+		cd /opt/openerp/clvsol_clvhealth_pbm/data
 		ln -s /opt/openerp/clvsol_odoo_api odoo_api 
 
 
@@ -398,7 +398,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 	::
 
-		ssh tkl-odoo10-jcafb-vm -l openerp
+		ssh tkl-odoo10-pbm-vm -l openerp
 
 	::
 
@@ -411,7 +411,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 	::
 
-		ssh tkl-odoo10-jcafb-vm -l root
+		ssh tkl-odoo10-pbm-vm -l root
 
 	::
 
@@ -421,7 +421,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 	::
 
-		ssh tkl-odoo10-jcafb-vm -l root
+		ssh tkl-odoo10-pbm-vm -l root
 
 	::
 
