@@ -48,18 +48,30 @@ Remote access to the server **tkl-odoo10-jcafb-vm**
 
 		cd /opt/openerp
 
-		gzip -d clvhealth_jcafb_2018_2017-07-16a.sql.gz
+		gzip -d clvhealth_jcafb_2018_2017-07-17a.sql.gz
 
 		dropdb -i clvhealth_jcafb_2018
 		createdb -O openerp -E UTF8 -T template0 clvhealth_jcafb_2018
-		psql -f clvhealth_jcafb_2018_2017-07-16a.sql -d clvhealth_jcafb_2018 -U postgres -h localhost -p 5432 -q
+		psql -f clvhealth_jcafb_2018_2017-07-17a.sql -d clvhealth_jcafb_2018 -U postgres -h localhost -p 5432 -q
+
+	::
+
+		cd /opt/openerp/.local/share/Odoo/filestore
+
+		tar -xzvf /opt/openerp/filestore_clvhealth_jcafb_2018_2017-07-17a.tar.gz
 
 	::
 
 		cd /opt/openerp
 
-		pg_dump clvhealth_jcafb_2018 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2018_2017-07-16a.sql
-		gzip clvhealth_jcafb_2018_2017-07-16a.sql
+		pg_dump clvhealth_jcafb_2018 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2018_2017-07-17a.sql
+		gzip clvhealth_jcafb_2018_2017-07-17a.sql
+
+	::
+
+		cd /opt/openerp/.local/share/Odoo/filestore
+
+		tar -czvf /opt/openerp/filestore_clvhealth_jcafb_2018_2017-07-17a.tar.gz clvhealth_jcafb_2018
 
 
 Remote access to the server **tkl-clvhealth-jcafb-vm**
@@ -108,16 +120,27 @@ Remote access to the server **tkl-clvhealth-jcafb-vm**
 
 		cd /opt/openerp
 
-		gzip -d clvhealth_jcafb_2018_2017-07-16a.sql.gz
+		gzip -d clvhealth_jcafb_2018_2017-07-17a.sql.gz
 
 		dropdb -i clvhealth_jcafb_2018
 		createdb -O openerp -E UTF8 -T template0 clvhealth_jcafb_2018
-		psql -f clvhealth_jcafb_2018_2017-07-16a.sql -d clvhealth_jcafb_2018 -U postgres -h localhost -p 5432 -q
+		psql -f clvhealth_jcafb_2018_2017-07-17a.sql -d clvhealth_jcafb_2018 -U postgres -h localhost -p 5432 -q
+
+	::
+
+		cd /opt/openerp/.local/share/Odoo/filestore
+		
+		tar -xzvf /opt/openerp/filestore_clvhealth_jcafb_2018_2017-07-17a.tar.gz
 
 	::
 
 		cd /opt/openerp
 
-		pg_dump clvhealth_jcafb_2018 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2018_2017-07-16a.sql
-		gzip clvhealth_jcafb_2018_2017-07-16a.sql
+		pg_dump clvhealth_jcafb_2018 -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2018_2017-07-17a.sql
+		gzip clvhealth_jcafb_2018_2017-07-17a.sql
 
+	::
+
+		cd /opt/openerp/.local/share/Odoo/filestore
+
+		tar -czvf /opt/openerp/filestore_clvhealth_jcafb_2018_2017-07-17a.tar.gz clvhealth_jcafb_2018
