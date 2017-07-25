@@ -323,25 +323,6 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_jcafb
 
 
-`clvsol_clvhealth_jcafb <https://github.com/CLVsol/clvsol_clvhealth_jcafb>`_
------------------------------------------------------------------------------
-
-Tools for Odoo Administrators to improve some technical features on Odoo. 
-
-#. To install "**clvsol_clvhealth_jcafb**", use the following commands (as openerp):
-
-	::
-
-		ssh clvheatlh-jcafb-2018-aws-tst -l openerp
-
-	::
-
-		cd /opt/openerp
-		git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 10.0
-		cd /opt/openerp/clvsol_clvhealth_jcafb
-		git branch -a
-
-
 `clvsol_odoo_api <https://github.com/CLVsol/clvsol_odoo_api>`_
 --------------------------------------------------------------
 
@@ -361,10 +342,26 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 		git branch -a
 
 
-`SymLink <https://wiki.debian.org/SymLink>`_
-============================================
+`clvsol_clvhealth_jcafb <https://github.com/CLVsol/clvsol_clvhealth_jcafb>`_
+-----------------------------------------------------------------------------
 
-#. To create a symbolic link "odoo_api", use the following commands (as **root**):
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_clvhealth_jcafb**", use the following commands (as openerp):
+
+	::
+
+		ssh clvheatlh-jcafb-2018-aws-tst -l openerp
+
+	::
+
+		cd /opt/openerp
+		git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 10.0
+		cd /opt/openerp/clvsol_clvhealth_jcafb
+		git branch -a
+
+
+#. To create a symbolic link "odoo_api"(`SymLink <https://wiki.debian.org/SymLink>`_), use the following commands (as **root**):
 
 	::
 
