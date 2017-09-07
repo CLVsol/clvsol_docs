@@ -25,3 +25,4 @@ mint18-vm
    Meld_installation
    KeePass_installation
    Vim_installation
+   TeamViewer_installation
