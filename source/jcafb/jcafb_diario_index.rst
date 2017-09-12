@@ -14,3 +14,4 @@ Diário
 
    jcafb_diario_2017_09_04
    jcafb_diario_2017_09_09
+   jcafb_diario_2017_09_12
