@@ -45,7 +45,7 @@
 #. Aplicar as Permissões de Acesso do Usuário de referência a todos os Usuários da JCAFB-2018 atuais:
 
     * Aplicar as Permissões de Acesso aos Funcionários JCAFB-2018:
-        * Menu: **Fincionários** > **Employees** > **Employees**
+        * Menu: **Funcionários** > **Employees** > **Employees**
         * Executar a Ação "**Employee User Groups Update**" para todos os Funcionários JCAFB-2018 atuais
             * Reference Employee: **Usuário de referência** (selecionado no ítem anterior)
 
