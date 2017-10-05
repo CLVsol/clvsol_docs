@@ -92,7 +92,7 @@
         cd /opt/openerp/clvsol_clvhealth_jcafb/project
         python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb_2018" -m clv_lab_test
 
-#. Habilitar a instalação e **instalar** o módulo **clv_survey_jcafb_2018**.
+#. Habilitar a instalação e **instalar** o módulo **clv_lab_test_jcafb_2018**.
 
 #. Importar os dados de **History Marker** (**JCAFB-2018**):
 
