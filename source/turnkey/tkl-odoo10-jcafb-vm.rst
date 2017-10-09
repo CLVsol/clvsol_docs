@@ -217,8 +217,8 @@ Remote access to the server
 
 	::
 
-		cd /opt/openerp/odoo
 		su openerp
+		cd /opt/openerp/odoo
 		./odoo-bin -c /etc/odoo/openerp-server-man.conf
 
 #. To access remotly the server, use the following commands (as **openerp**):
