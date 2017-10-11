@@ -19,6 +19,7 @@ CLVsol Documentation
    windows/index
    references/index
    jcafb/index
+   biobox/index
 
 
 
