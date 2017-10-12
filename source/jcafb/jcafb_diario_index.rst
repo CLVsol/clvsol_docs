@@ -25,3 +25,4 @@ Diário
    jcafb_diario_2017_10_05
    jcafb_diario_2017_10_09
    jcafb_diario_2017_10_10
+   jcafb_diario_2017_10_12
