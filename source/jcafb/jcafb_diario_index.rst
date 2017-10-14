@@ -1,6 +1,6 @@
-======
-Diário
-======
+==============
+Diário (JCAFB)
+==============
 
 .. toctree::
    :maxdepth: 2
@@ -26,3 +26,4 @@ Diário
    jcafb_diario_2017_10_09
    jcafb_diario_2017_10_10
    jcafb_diario_2017_10_12
+   jcafb_diario_2017_10_13
