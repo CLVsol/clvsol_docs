@@ -28,3 +28,4 @@ Diário (JCAFB)
    jcafb_diario_2017_10_12
    jcafb_diario_2017_10_13
    jcafb_diario_2017_10_14
+   jcafb_diario_2017_10_15
