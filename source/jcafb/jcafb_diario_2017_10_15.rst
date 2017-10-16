@@ -248,7 +248,7 @@
 
     * Trocar o *State* de *Ready* para *Verified para todos os registros de *Persons Management* com *State* atual *Ready*:
         * Menu: **Community** > **Community** > **Persons** > **Management**
-        * Executar a Ação "**Person (Mng) Update**" para todss as Pessoas com *State* atual igual a *Ready* (628 Pessoas):
+        * Executar a Ação "**Person (Mng) Update**" para todas as Pessoas com *State* atual igual a *Ready* (628 Pessoas):
             * *State*: *Set* *Verified*
 
 #. Habilitar a instalação e **instalar** o módulo:
