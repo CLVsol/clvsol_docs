@@ -32,3 +32,4 @@ Diário (JCAFB)
    jcafb_diario_2017_10_16
    jcafb_diario_2017_10_17
    jcafb_diario_2017_10_18
+   jcafb_diario_2017_10_19
