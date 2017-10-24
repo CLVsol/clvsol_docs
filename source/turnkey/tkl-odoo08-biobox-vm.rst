@@ -252,3 +252,21 @@ Installation of project modules
 
         /etc/init.d/openerp-server start
 
+
+`clvsol_odoo_api <https://github.com/CLVsol/odoo_api.git>`_
+--------------------------------------------------------------
+
+the CLVsol Odoo API 
+
+#. To install "**clvsol_odoo_api**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo08-biobox-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://github.com/CLVsol/odoo_api clvsol_odoo_api
+        cd /opt/openerp/clvsol_odoo_api
+        git branch -a
