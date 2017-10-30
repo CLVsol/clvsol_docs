@@ -37,3 +37,4 @@ Diário (JCAFB)
    jcafb_diario_2017_10_24
    jcafb_diario_2017_10_25
    jcafb_diario_2017_10_26
+   jcafb_diario_2017_10_30
