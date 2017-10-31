@@ -7,3 +7,4 @@ Diário (BioBox)
    :caption: Contents:
 
    biobox_diario_2017_10_23
+   biobox_diario_2017_10_31
