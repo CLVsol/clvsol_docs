@@ -40,6 +40,7 @@
             * LPM_1709.csv
             * LPM_1710.csv
     #. Mover todos os arquivos ***.csv** para o diretório **/opt/openerp/orizon_lpm** do servidor **tkl-odoo08-biobox-vm**.
+
 #. Restaurar o backup dos dados de "**clvhealth_biobox_pro_01**" no servidor **tkl-odoo08-biobox-vm**, executando:
 
     ::
