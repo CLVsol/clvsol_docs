@@ -9,3 +9,4 @@ Diário (BioBox)
    biobox_diario_2017_10_23
    biobox_diario_2017_10_31
    biobox_diario_2017_11_02
+   biobox_diario_2017_11_06
