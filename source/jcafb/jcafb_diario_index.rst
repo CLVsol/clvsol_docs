@@ -42,3 +42,4 @@ Diário (JCAFB)
    jcafb_diario_2017_11_06
    jcafb_diario_2017_11_07
    jcafb_diario_2017_11_09
+   jcafb_diario_2017_11_13
