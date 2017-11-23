@@ -281,3 +281,42 @@ the CLVsol Odoo API
         git clone https://github.com/CLVsol/odoo_api clvsol_odoo_api
         cd /opt/openerp/clvsol_odoo_api
         git branch -a
+
+Remote access to the server (dbserver = bb-aws-postgres-01)
+===========================================================
+
+#. To access remotly the server, use the following commands (as **root**):
+
+	::
+
+		ssh tkl-odoo08-biobox-aws -l root
+
+		/etc/init.d/openerp-server stop
+
+		/etc/init.d/openerp-server start
+
+	::
+
+		/etc/init.d/openerp-server stop
+
+		su openerp
+
+		cd /opt/openerp/odoo
+		./openerp-server -c /etc/odoo/openerp-server-man-db_bb-aws-postgres-01.conf
+
+#. To access remotly the server, use the following commands (as **openerp**):
+
+	::
+
+		ssh tkl-odoo08-biobox-aws -l openerp
+
+	::
+
+		cd /opt/openerp/clvsol_clvhealth_jcafb/project
+		python install.py -h
+
+	::
+
+		cd /opt/openerp/clvsol_clvhealth_jcafb/data
+		python setup.py -h
+
