@@ -26,3 +26,4 @@ mint18-vm
    KeePass_installation
    Vim_installation
    TeamViewer_installation
+   Connect_to_SSH_server_using_private_key_file
