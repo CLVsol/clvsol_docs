@@ -13,3 +13,4 @@ Diário (BioBox)
    biobox_diario_2017_11_07
    biobox_diario_2017_11_23
    biobox_diario_2017_11_25
+   biobox_diario_2017_11_26
