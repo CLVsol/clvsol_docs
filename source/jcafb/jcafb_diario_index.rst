@@ -48,3 +48,4 @@ Diário (JCAFB)
    jcafb_diario_2017_11_21
    jcafb_diario_2017_11_22
    jcafb_diario_2017_11_24
+   jcafb_diario_2017_11_27
