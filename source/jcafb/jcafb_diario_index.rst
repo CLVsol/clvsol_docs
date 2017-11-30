@@ -50,3 +50,4 @@ Diário (JCAFB)
    jcafb_diario_2017_11_24
    jcafb_diario_2017_11_27
    jcafb_diario_2017_11_28
+   jcafb_diario_2017_11_29
