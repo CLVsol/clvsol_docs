@@ -56,6 +56,23 @@ VM preparation
 		sed -i "s|127.0.1.1 \(.*\)|127.0.1.1 $HOSTNAME|" /etc/hosts
 		/etc/init.d/hostname.sh start
 
+#. Change the timezone, executing the following command and picking out the time zone from a list:
+
+	::
+
+		dpkg-reconfigure tzdata
+
+	* Geographic area: **America**
+	* Time Zone: **Sao Paulo**
+
+#. Set the time and date manually, executing the following command:
+
+	::
+
+		date -set="STRING"
+
+	* STRING: **3 DEC 2017 11:06:00**
+
 #. Copy file "**/etc/odoo/openerp-server.conf**" into "**/etc/odoo/openerp-server-man.conf**". Edit the file "**/etc/odoo/openerp-server-man.conf**":
 
 	::
