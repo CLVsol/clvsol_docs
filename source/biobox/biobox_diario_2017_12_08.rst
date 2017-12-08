@@ -96,8 +96,8 @@
         clv_medicament_dispensation_export(client, file_path, start_date, end_date)
 
         file_path = "/opt/openerp/biobox/data/bb_dispensation_2017_11_01_a_2017_11_30.csv"
-        start_date = '2017-10-01'
-        end_date = '2017-10-31'
+        start_date = '2017-11-01'
+        end_date = '2017-11-30'
         print('-->', client, file_path, start_date, end_date)
         print('--> Executing clv_medicament_dispensation_export()...')
         clv_medicament_dispensation_export(client, file_path, start_date, end_date)
