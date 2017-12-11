@@ -56,3 +56,4 @@ Diário (JCAFB)
    jcafb_diario_2017_12_05
    jcafb_diario_2017_12_07
    jcafb_diario_2017_12_08
+   jcafb_diario_2017_12_10
