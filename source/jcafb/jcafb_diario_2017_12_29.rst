@@ -474,3 +474,18 @@
         exit
 
         /etc/init.d/openerp-server start
+
+#. Criar um backup parcial dos dados de "**clvhealth_jcafb_2018**" (servidor **tkl-odoo10-jcafb-vm**), executando:
+
+    ::
+
+        # ***** tkl-odoo10-jcafb-vm
+        #
+
+        ssh tkl-odoo10-jcafb-vm -l openerp
+
+        cd /opt/openerp/clvsol_clvhealth_jcafb/lab_test_files/reports
+        tar -czvf /opt/openerp/lab_test_report_templates_2018_2017-12-29b.tar.gz templates
+
+    Criados os seguintes arquivos:
+        * /opt/openerp/lab_test_report_templates_2018_2017-12-29b.tar.gz
