@@ -1,5 +1,5 @@
 ==========
-2018-08-20
+2017-08-20
 ==========
 
 #. Exportar os dados do **CLVhealth-JCAFB** (**JCAFB-2017**), executando:

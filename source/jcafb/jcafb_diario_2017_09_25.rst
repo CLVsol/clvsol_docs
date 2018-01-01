@@ -1,5 +1,5 @@
 ==========
-2018-09-25
+2017-09-25
 ==========
 
 #. Criar uma nova instância do **CLVhealth-JCAFB** (**JCAFB-2018**) no servidor **tkl-odoo10-jcafb-vm**:

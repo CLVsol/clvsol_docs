@@ -1,5 +1,5 @@
 ==========
-2018-08-24
+2017-08-24
 ==========
 
 #. Restaurar o backup dos dados de "**clvhealth_jcafb_2018**", executando:

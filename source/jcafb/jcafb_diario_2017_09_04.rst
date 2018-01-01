@@ -1,5 +1,5 @@
 ==========
-2018-09-04
+2017-09-04
 ==========
 
 #.  Atualizar o Documento Relacionado (*Related Document*) para todas as Requisições de Exames (*Lab Test Requests*) da JCAFB-2017:

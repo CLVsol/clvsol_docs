@@ -1,5 +1,5 @@
 ==================
-2018-10-12 (JCAFB)
+2017-10-12 (JCAFB)
 ==================
 
 #. Exportar os dados de **Persons Management** (**JCAFB-2018**) no servidor **clvheatlh-jcafb-2018-aws-tst**, executando:

@@ -1,5 +1,5 @@
 ==================
-2018-11-30 (JCAFB)
+2017-11-30 (JCAFB)
 ==================
 
 #. Desabilitar a instalação dos módulos:

@@ -1,5 +1,5 @@
 ==========
-2018-08-21
+2017-08-21
 ==========
 
 #. Criar os Eventos de Campanha da JCAFB-2017:

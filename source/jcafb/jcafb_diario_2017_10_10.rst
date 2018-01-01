@@ -1,5 +1,5 @@
 ==========
-2018-10-10
+2017-10-10
 ==========
 
 #. Restaurar o backup dos dados de "**clvhealth_jcafb_2018**" no servidor **tkl-odoo10-jcafb-vm**, executando:

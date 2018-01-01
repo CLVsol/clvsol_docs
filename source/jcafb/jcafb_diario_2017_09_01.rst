@@ -1,5 +1,5 @@
 ==========
-2018-09-01
+2017-09-01
 ==========
 
 #. Criar um backup dos dados de "**clvhealth_jcafb_2018**", executando:
