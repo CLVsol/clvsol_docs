@@ -65,3 +65,4 @@ Diário (JCAFB)
    jcafb_diario_2017_12_24
    jcafb_diario_2017_12_29
    jcafb_diario_2017_12_31
+   jcafb_diario_2018_01_02
