@@ -76,3 +76,24 @@ VM preparation
 		sed -i "s|127.0.1.1 \(.*\)|127.0.1.1 $HOSTNAME|" /etc/hosts
 		/etc/init.d/hostname.sh start
 
+
+#. Correct warnning message:
+
+	::
+
+		ssh clvheatlh-jcafb-2018-vm-pro -l root
+		Warning: the ECDSA host key for 'clvheatlh-jcafb-2018-vm-pro' differs from the key for the IP address '192.168.75.155'
+		Offending key for IP in /home/mint18/.ssh/known_hosts:57
+		Matching host key in /home/mint18/.ssh/known_hosts:58
+		Are you sure you want to continue connecting (yes/no)?
+
+	#. Edit file **/home/mint18/.ssh/known_hosts** (mint18-vm) and delete line 57:
+
+		::
+
+			|1|Jw+ZOPwvWco4kKJuBOVDx+qaTkc=|+YeAzKT6y4fcYzP5Rr3w9A6a3jw= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFpkgppixpVCdus/JaFi87luqIlMNUBbdnMF3QiCfybSrLuwsUv6dgWPOvWf7q9LtvndZha478NA5J4qONQPdv4=
+
+	::
+
+		ssh clvheatlh-jcafb-2018-vm-pro -l root
+		Warning: Permanently added the ECDSA host key for IP address '192.168.75.155' to the list of known hosts.
