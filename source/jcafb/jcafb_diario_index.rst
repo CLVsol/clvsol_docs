@@ -74,3 +74,4 @@ Diário (JCAFB)
    jcafb_diario_2018_01_12
    jcafb_diario_2018_01_13
    jcafb_diario_2018_01_14
+   jcafb_diario_2018_01_16
