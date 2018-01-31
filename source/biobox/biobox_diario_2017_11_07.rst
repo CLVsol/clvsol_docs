@@ -1,5 +1,5 @@
 ===================
-2018-11-07 (BioBox)
+2017-11-07 (BioBox)
 ===================
 
 #. Reposição dos arquivos fontes que estavam faltando no servidor **tkl-odoo08-biobox-aws** (as root):

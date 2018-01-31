@@ -1,5 +1,5 @@
 ===================
-2018-11-23 (BioBox)
+2017-11-23 (BioBox)
 ===================
 
 #. Copy, in server **tkl-odoo08-biobox-aws**, file "**/etc/odoo/openerp-server-man.conf**" into "**/etc/odoo/openerp-server-man-db_bb-aws-postgres-01.conf**".

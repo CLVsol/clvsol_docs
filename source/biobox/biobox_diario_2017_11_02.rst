@@ -1,5 +1,5 @@
 ===================
-2018-11-02 (BioBox)
+2017-11-02 (BioBox)
 ===================
 
 #. Reestabelecido o serviço do Odoo do servidor **bb-aws-web2py-odoo-01** via o SecureCRT (as root):

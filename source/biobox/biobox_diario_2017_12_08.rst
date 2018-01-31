@@ -1,5 +1,5 @@
 ===================
-2018-12-08 (BioBox)
+2017-12-08 (BioBox)
 ===================
 
 #. Conetar-se ao servidor **tkl-odoo08-biobox-aws** (as root):

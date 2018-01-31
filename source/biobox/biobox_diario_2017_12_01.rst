@@ -1,5 +1,5 @@
 ===================
-2018-12-01 (BioBox)
+2017-12-01 (BioBox)
 ===================
 
 #. Reestabelecido o serviço do Odoo do servidor **bb-aws-web2py-odoo-01**:

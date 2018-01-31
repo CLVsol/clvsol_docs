@@ -1,5 +1,5 @@
 ===================
-2018-10-31 (BioBox)
+2017-10-31 (BioBox)
 ===================
 
 #. Criar um backup dos dados de "**clvhealth_biobox_pro_01**" no servidor "**bb-aws-postgres-01**", via o *SecureCRT*, executando:
