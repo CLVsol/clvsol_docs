@@ -20,3 +20,4 @@ Diário (BioBox)
    biobox_diario_2017_12_06
    biobox_diario_2017_12_08
    biobox_diario_2017_12_20
+   biobox_diario_2018_01_31
