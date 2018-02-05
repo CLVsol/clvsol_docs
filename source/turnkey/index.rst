@@ -13,6 +13,7 @@ Turnkey Linux
    tkl-odoo10-jcafb-vm
    tkl-odoo10-pharm-vm
    tkl-odoo10-pbm-vm
+   tkl-odoo10-biobox-vm
    tkl-odoo09-jcafb-vm
    clvhealh-jcafb-2017-pro
    clvhealth-jcafb-2018-vm
