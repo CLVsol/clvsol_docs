@@ -121,6 +121,13 @@
         print('--> Executing clv_medicament_dispensation_updt_refund_price()...')
         clv_medicament_dispensation_updt_refund_price(client)
 
+        file_path = "/opt/openerp/biobox/data/bb_dispensation_2017_12_01_a_2017_12_31.csv"
+        start_date = '2017-12-01'
+        end_date = '2017-12-31'
+        print('-->', client, file_path, start_date, end_date)
+        print('--> Executing clv_medicament_dispensation_export()...')
+        clv_medicament_dispensation_export(client, file_path, start_date, end_date)
+
         file_path = "/opt/openerp/biobox/data/bb_dispensation_2017_12_20_a_2018_01_20.csv"
         start_date = '2017-12-20'
         end_date = '2018-01-20'
@@ -162,4 +169,20 @@
 
     Criados o seguinte arquivo:
         * /opt/openerp/clvhealth_biobox_pro_01_2018-02-02b.sql.gz
+
+#. [tkl-odoo08-biobox-aws] Criar um backup dos dados de "**clvhealth_biobox_pro_01**" ("**bb-aws-postgres-01**") no servidor "**tkl-odoo08-biobox-aws**", executando (as openerp):
+
+    ::
+
+        ssh tkl-odoo08-biobox-aws -l openerp
+
+        cd /opt/openerp
+
+        pg_dump clvhealth_biobox_pro_01 -Fp -U postgres -h 172.31.38.203 -p 5432 > clvhealth_biobox_pro_01_2018-02-05a.sql
+        gzip clvhealth_biobox_pro_01_2018-02-05a.sql
+
+        exit
+
+    Criados o seguinte arquivo:
+        * /opt/openerp/clvhealth_biobox_pro_01_2018-02-05a.sql.gz
 
