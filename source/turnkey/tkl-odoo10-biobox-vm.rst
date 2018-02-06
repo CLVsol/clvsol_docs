@@ -335,6 +335,21 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
             addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_l10n_br
 
 
+`clvsol_odoo_addons_biobox <https://github.com/CLVsol/clvsol_odoo_addons_biobox>`_
+----------------------------------------------------------------------------------
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+    ::
+
+            addons_path = /opt/openerp/odoo/addons,...
+
+    ::
+
+            # addons_path = /opt/openerp/odoo/addons,...
+            addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_biobox
+
+
 Installation of external modules
 ================================
 
