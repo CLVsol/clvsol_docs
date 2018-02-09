@@ -262,12 +262,12 @@ Remote access to the server
 
     ::
 
-        cd /opt/openerp/clvsol_clvhealth_jcafb/project
+        cd /opt/openerp/clvsol_clvhealth_biobox/project
         python install.py -h
 
     ::
 
-        cd /opt/openerp/clvsol_clvhealth_jcafb/data
+        cd /opt/openerp/clvsol_clvhealth_biobox/data
         python setup.py -h
 
 
