@@ -89,3 +89,4 @@ Diário (JCAFB)
    jcafb_diario_2018_02_06
    jcafb_diario_2018_02_07
    jcafb_diario_2018_02_14
+   jcafb_diario_2018_02_15
