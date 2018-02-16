@@ -20,6 +20,7 @@ CLVsol Documentation
    references/index
    jcafb/index
    pbm/index
+   pharm/index
    biobox/index
 
 
