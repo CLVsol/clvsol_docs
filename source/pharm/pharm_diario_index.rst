@@ -7,3 +7,4 @@ Diário (Pharm)
    :caption: Contents:
 
    pharm_diario_2018_02_16
+   pharm_diario_2018_02_19
