@@ -26,3 +26,4 @@ Diário (BioBox)
    biobox_diario_2018_02_06
    biobox_diario_2018_02_07
    biobox_diario_2018_02_08
+   biobox_diario_2018_02_22
