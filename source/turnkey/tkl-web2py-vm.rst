@@ -96,13 +96,51 @@ Remote access to the server
 Miscellaneous
 =============
 
-#. To configure `Git <http://git-scm.com/>`_, execute the followind command
+#. To configure `Git <http://git-scm.com/>`_, execute the followind command:
+
     ::
 
         git config --list
+
+        git config --system user.name 'Carlos Eduardo Vercelino - CLVsol'
+        git config --system user.email 'carlos.vercelino@clvsol.com'
 
         git config --global user.name 'Carlos Eduardo Vercelino - CLVsol'
         git config --global user.email 'carlos.vercelino@clvsol.com'
 
         git config --global alias.lg "log --oneline --all --graph --decorate"
+
+#. To create a new project (web2py_odoo_connector), execute the following commands (as **root**):
+
+    ::
+
+        mkdir /var/www/web2py/applications/web2py_odoo_connector
+        chown www-data:www-data /var/www/web2py/applications/web2py_odoo_connector
+
+#. If new files were created or edited, remember to run (as **root**):
+
+    ::
+
+        chown -R www-data:www-data /var/www/web2py/applications/web2py_odoo_connector
+
+Installation of project modules
+===============================
+
+
+`clvsol_web2py_odoo_connector <https://github.com/CLVsol/clvsol_web2py_odoo_connector.git>`_
+--------------------------------------------------------------------------------------------
+
+CLVsol web2py Odoo Connector . 
+
+#. To install "**clvsol_web2py_odoo_connector**", use the following commands (as root):
+
+    ::
+
+        ssh tkl-web2py-vm -l root
+
+    ::
+
+        cd /var/www/web2py/applications
+        git clone https://github.com/CLVsol/clvsol_web2py_odoo_connector.git web2py_odoo_connector
+        chown -R www-data:www-data /var/www/web2py/applications/web2py_odoo_connector
 
