@@ -91,3 +91,18 @@ Remote access to the server
     ::
 
         ssh tkl-web2py-vm -l root
+
+
+Miscellaneous
+=============
+
+#. To configure `Git <http://git-scm.com/>`_, execute the followind command
+    ::
+
+        git config --list
+
+        git config --global user.name 'Carlos Eduardo Vercelino - CLVsol'
+        git config --global user.email 'carlos.vercelino@clvsol.com'
+
+        git config --global alias.lg "log --oneline --all --graph --decorate"
+
