@@ -432,3 +432,12 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
             # addons_path = /opt/openerp/odoo/addons,...
             addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/oca_l10n-brazil
+
+Install other libraries
+=======================
+
+#. To install dbfpy, execute the following commands (as root):
+
+    ::
+
+        pip install dbfpy
