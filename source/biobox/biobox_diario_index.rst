@@ -31,3 +31,4 @@ Diário (BioBox)
    biobox_diario_2018_03_12
    biobox_diario_2018_03_21
    biobox_diario_2018_03_29
+   biobox_diario_2018_04_02
