@@ -39,3 +39,4 @@ Diário (BioBox)
    biobox_diario_2018_04_25
    biobox_diario_2018_05_02
    biobox_diario_2018_05_03
+   biobox_diario_2018_05_08
