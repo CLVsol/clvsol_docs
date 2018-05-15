@@ -25,3 +25,4 @@ Turnkey Linux
    tkl-odoo08-biobox-vm
    tkl-web2py-biobox-aws
    tkl-web2py-vm
+   tkl-odoo11-vm
