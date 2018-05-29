@@ -89,6 +89,26 @@ VM preparation
 
         passwd openerp
 
+#. Create a role **openuser** (PostgreSQL), executing the following commands (replace the openuser password (openuserpass) for another one):
+
+    ::
+
+        su -c - postgres "createuser openuser --no-superuser --createdb --no-createrole" 
+        cat > /tmp/openuser_changepass.sql <<"EOF"
+        ALTER USER openuser WITH PASSWORD 'openuserpass';
+        EOF
+        su -c - postgres "psql template1 -U postgres -f /tmp/openuser_changepass.sql"
+
+        rm /tmp/openuser_changepass.sql
+
+#. Create a role **oerp-hom-bib** (PostgreSQL), executing the following commands (replace the oerp-hom-bib password (oerppass) for another one):
+
+    ::
+
+        su -c - postgres "createuser oerp-hom-bib --no-superuser --createdb --no-createrole" 
+
+#. Change manually, using Webmin, the password for the account **oerp-hom-bib** (PostgreSQL).
+
 
 Shrinking VM Disk Images
 ========================
