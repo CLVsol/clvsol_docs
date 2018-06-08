@@ -47,3 +47,4 @@ Diário (BioBox)
    biobox_diario_2018_06_04
    biobox_diario_2018_06_06
    biobox_diario_2018_06_07
+   biobox_diario_2018_06_08
