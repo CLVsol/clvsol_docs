@@ -7,3 +7,4 @@ Diário (MFMNG)
    :caption: Contents:
 
    mfmng_diario_2018_03_09
+   mfmng_diario_2018_06_29
