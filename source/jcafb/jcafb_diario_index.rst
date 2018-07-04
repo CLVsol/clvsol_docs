@@ -96,3 +96,4 @@ Diário (JCAFB)
    jcafb_diario_2018_06_27
    jcafb_diario_2018_07_02
    jcafb_diario_2018_07_03
+   jcafb_diario_2018_07_04
