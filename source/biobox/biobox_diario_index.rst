@@ -50,3 +50,4 @@ Diário (BioBox)
    biobox_diario_2018_06_08
    biobox_diario_2018_06_11
    biobox_diario_2018_06_22
+   biobox_diario_2018_07_04
