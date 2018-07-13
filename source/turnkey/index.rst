@@ -21,6 +21,7 @@ Turnkey Linux
    clvheatlh-jcafb-2018-aws-tst
    clvheatlh-jcafb-2018-vm-pro
    clvheatlh-jcafb-2018-vm-pro2
+   clvheatlh-jcafb-2019-aws-tst
    tkl-odoo08-biobox-aws
    tkl-odoo08-biobox-vm
    tkl-web2py-biobox-aws
