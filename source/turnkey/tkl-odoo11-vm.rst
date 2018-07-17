@@ -1,3 +1,9 @@
+.. raw:: html
+
+    <style> .red {color:red} </style>
+
+.. role:: red
+
 =============
 tkl-odoo11-vm
 =============
@@ -351,3 +357,445 @@ Remote access to the server
         su openerp
         cd /opt/openerp/odoo
         ./odoo-bin -c /etc/odoo/openerp-server-man.conf
+
+Installation of project modules
+===============================
+
+
+`clvsol_odoo_addons <https://github.com/CLVsol/clvsol_odoo_addons>`_
+--------------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_odoo_addons**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 10.0
+        cd /opt/openerp/clvsol_odoo_addons
+        git branch -a
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+    ::
+
+            addons_path = /opt/openerp/odoo/addons,...
+
+    ::
+
+            # addons_path = /opt/openerp/odoo/addons,...
+            addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons
+
+
+`clvsol_odoo_addons_l10n_br <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br>`_
+------------------------------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_odoo_addons_l10n_br**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 10.0
+        cd /opt/openerp/clvsol_odoo_addons_l10n_br
+        git branch -a
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+    ::
+
+            addons_path = /opt/openerp/odoo/addons,...
+
+    ::
+
+            # addons_path = /opt/openerp/odoo/addons,...
+            addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_l10n_br
+
+
+`clvsol_odoo_addons_jcafb <https://github.com/CLVsol/clvsol_odoo_addons_jcafb>`_
+--------------------------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_odoo_addons_jcafb**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 10.0
+        cd /opt/openerp/clvsol_odoo_addons_jcafb
+        git branch -a
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+    ::
+
+            addons_path = /opt/openerp/odoo/addons,...
+
+    ::
+
+            # addons_path = /opt/openerp/odoo/addons,...
+            addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_jcafb
+
+
+`clvsol_clvhealth_jcafb <https://github.com/CLVsol/clvsol_clvhealth_jcafb>`_
+-----------------------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_clvhealth_jcafb**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 10.0
+        cd /opt/openerp/clvsol_clvhealth_jcafb
+        git branch -a
+
+
+`clvsol_odoo_api <https://github.com/CLVsol/clvsol_odoo_api>`_
+--------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_odoo_api**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://github.com/CLVsol/clvsol_odoo_api
+        cd /opt/openerp/clvsol_odoo_api
+        git branch -a
+
+
+`SymLink <https://wiki.debian.org/SymLink>`_ :red:`(Não Executado)`
+-------------------------------------------------------------------
+
+#. To create a symbolic link "odoo_api", use the following commands (as **root**):
+
+    ::
+
+        ssh tkl-odoo11-vm -l root
+
+    ::
+
+        cd /opt/openerp/clvsol_clvhealth_jcafb/data
+        ln -s /opt/openerp/clvsol_odoo_api odoo_api 
+
+
+`clvsol_odoo_addons_pbm <https://github.com/CLVsol/clvsol_odoo_addons_pbm>`_
+--------------------------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_odoo_addons_pbm**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://github.com/CLVsol/clvsol_odoo_addons_pbm --branch 10.0
+        cd /opt/openerp/clvsol_odoo_addons_pbm
+        git branch -a
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+    ::
+
+            addons_path = /opt/openerp/odoo/addons,...
+
+    ::
+
+            # addons_path = /opt/openerp/odoo/addons,...
+            addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_pbm
+
+
+`clvsol_odoo_addons_biobox <https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox>`_
+-------------------------------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_odoo_addons_biobox**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox --branch 10.0
+        cd /opt/openerp/clvsol_odoo_addons_biobox
+        git branch -a
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+    ::
+
+            addons_path = /opt/openerp/odoo/addons,...
+
+    ::
+
+            # addons_path = /opt/openerp/odoo/addons,...
+            addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_biobox
+
+
+`clvsol_clvhealth_biobox <https://bitbucket.org/clvsol/clvsol_clvhealth_biobox>`_
+---------------------------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_clvhealth_jcafb**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://bitbucket.org/clvsol/clvsol_clvhealth_biobox --branch 10.0
+        cd /opt/openerp/clvsol_clvhealth_biobox
+        git branch -a
+
+
+`clvsol_odoo_addons_mfmng <https://github.com/CLVsol/clvsol_odoo_addons_mfmng>`_
+--------------------------------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_odoo_addons_mfmng**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://github.com/CLVsol/clvsol_odoo_addons_mfmng --branch 10.0 --depth=1
+        cd /opt/openerp/clvsol_odoo_addons_mfmng
+        git branch -a
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+    ::
+
+            addons_path = /opt/openerp/odoo/addons,...
+
+    ::
+
+            # addons_path = /opt/openerp/odoo/addons,...
+            addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_mfmng
+
+
+`clvsol_mfmng <https://github.com/CLVsol/clvsol_mfmng>`_
+--------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**clvsol_mfmng**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://github.com/CLVsol/clvsol_mfmng --branch 10.0 --depth=1
+        cd /opt/openerp/clvsol_mfmng
+        git branch -a
+
+
+Installation of external modules
+================================
+
+
+`OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_
+-------------------------------------------------------
+
+Tools for Odoo Administrators to improve some technical features on Odoo. 
+
+#. To install "**OCA/l10n-brazil**", use the following commands (as openerp):
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp
+        git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 11.0 --depth=1
+        cd /opt/openerp/oca_l10n-brazil
+        git branch -a
+
+#. To install "`num2words <https://pypi.python.org/pypi/num2words>`_", use the following commands (as root):
+
+    ::
+
+        ssh tkl-odoo11-vm -l root
+
+    ::
+
+        pip3 install num2words
+
+#. To install "`suds <https://pypi.python.org/pypi/suds>`_", use the following commands (as root):
+
+    ::
+
+        ssh tkl-odoo11-vm -l root
+
+    ::
+
+        pip3 install suds
+
+    :red:`ImportError: No module named 'client'`
+
+    ::
+
+        root@tkl-odoo11-vm ~# pip3 install suds
+        Downloading/unpacking suds
+          Downloading suds-0.4.tar.gz (104kB): 104kB downloaded
+          Running setup.py (path:/tmp/pip-build-r8jkp16h/suds/setup.py) egg_info for package suds
+            Traceback (most recent call last):
+              File "<string>", line 17, in <module>
+              File "/tmp/pip-build-r8jkp16h/suds/setup.py", line 20, in <module>
+                import suds
+              File "/tmp/pip-build-r8jkp16h/suds/suds/__init__.py", line 154, in <module>
+                import client
+            ImportError: No module named 'client'
+            Complete output from command python setup.py egg_info:
+            Traceback (most recent call last):
+
+          File "<string>", line 17, in <module>
+
+          File "/tmp/pip-build-r8jkp16h/suds/setup.py", line 20, in <module>
+
+            import suds
+
+          File "/tmp/pip-build-r8jkp16h/suds/suds/__init__.py", line 154, in <module>
+
+            import client
+
+        ImportError: No module named 'client'
+
+        ----------------------------------------
+        Cleaning up...
+        Command python setup.py egg_info failed with error code 1 in /tmp/pip-build-r8jkp16h/suds
+        Storing debug log for failure in /root/.pip/pip.log
+
+#. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+    ::
+
+            addons_path = /opt/openerp/odoo/addons,...
+
+    ::
+
+            # addons_path = /opt/openerp/odoo/addons,...
+            addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/oca_l10n-brazil
+
+Install other libraries
+=======================
+
+#. To install dbfpy, execute the following commands (as root):
+
+    ::
+
+        pip3 install dbfpy
+
+    :red:`ERROR: dbfpy is not working in python3.4`
+
+Additional Installation :red:`(Não Executado)`
+==============================================
+
+#. To install the complete **vim** package, use the following commands (as root):
+
+    ::
+
+        apt-get install vim
+
+    ::
+
+        vim
+        vimtutor
+
+ * `Desvendando o editor Vim <http://blog.caelum.com.br/desvendando-o-editor-vim/>`_ 
+
+Remote access to the server (2)
+===============================
+
+#. To access remotly the server, use the following commands (as **root**):
+
+    ::
+
+        ssh tkl-odoo11-vm -l root
+
+        /etc/init.d/openerp-server stop
+
+        /etc/init.d/openerp-server start
+
+    ::
+
+        su openerp
+        cd /opt/openerp/odoo
+        ./odoo-bin -c /etc/odoo/openerp-server-man.conf
+
+#. To access remotly the server, use the following commands (as **openerp**) for **JCAFB**:
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp/clvsol_clvhealth_jcafb/project
+        python install.py -h
+
+#. To access remotly the server, use the following commands (as **openerp**) for **BioBox**:
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp/clvsol_clvhealth_biobox/project
+        python install.py -h
+
+#. To access remotly the server, use the following commands (as **openerp**) for **Media File Management**:
+
+    ::
+
+        ssh tkl-odoo11-vm -l openerp
+
+    ::
+
+        cd /opt/openerp/clvsol_mfmng/project
+        python install.py -h
