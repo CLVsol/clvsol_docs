@@ -9,3 +9,5 @@ mint19-vm
    VM_creation
    Shrinking_VM_Disk_Images
    Check_for_Any_Last_Minute_Updates
+   Clean_dis_space
+   VMWare_Tools_installation
