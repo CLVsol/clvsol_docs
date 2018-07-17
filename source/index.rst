@@ -12,7 +12,7 @@ CLVsol Documentation
    :caption: Contents:
 
    sphinx/index
-   mint18/index
+   mint/index
    turnkey/index
    odoo/index
    aws/index

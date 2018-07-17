@@ -1,6 +1,6 @@
-=============
-Linux Mint 18
-=============
+==========
+Linux Mint
+==========
 
 .. toctree::
    :maxdepth: 2
