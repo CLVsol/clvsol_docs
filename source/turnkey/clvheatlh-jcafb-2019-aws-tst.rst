@@ -218,23 +218,6 @@ Remote access to the server
 		su openerp
 		./odoo-bin -c /etc/odoo/openerp-server-man.conf
 
-#. To access remotly the server, use the following commands (as **openerp**):
-
-	::
-
-		ssh clvheatlh-jcafb-2019-aws-tst -l openerp
-
-	::
-
-		cd /opt/openerp/clvsol_clvhealth_jcafb/project
-		python install.py -h
-
-	::
-
-		cd /opt/openerp/clvsol_clvhealth_jcafb/data
-		python setup.py -h
-
-
 Installation of project modules
 ===============================
 
@@ -440,3 +423,40 @@ Install other libraries
     ::
 
         pip install dbfpy
+
+Remote access to the server (2)
+===============================
+
+#. To access remotly the server, use the following commands (as **root**):
+
+	::
+
+		ssh clvheatlh-jcafb-2019-aws-tst -l root
+
+		/etc/init.d/openerp-server stop
+
+		/etc/init.d/openerp-server start
+
+	::
+
+		/etc/init.d/openerp-server stop
+
+		cd /opt/openerp/odoo
+		su openerp
+		./odoo-bin -c /etc/odoo/openerp-server-man.conf
+
+#. To access remotly the server, use the following commands (as **openerp**):
+
+	::
+
+		ssh clvheatlh-jcafb-2019-aws-tst -l openerp
+
+	::
+
+		cd /opt/openerp/clvsol_clvhealth_jcafb/project
+		python install.py -h
+
+	::
+
+		cd /opt/openerp/clvsol_clvhealth_jcafb/data
+		python setup.py -h
