@@ -254,23 +254,6 @@ Remote access to the server
         cd /opt/openerp/odoo
         ./odoo-bin -c /etc/odoo/openerp-server-man.conf
 
-#. To access remotly the server, use the following commands (as **openerp**):
-
-    ::
-
-        ssh tkl-odoo10-biobox-vm -l openerp
-
-    ::
-
-        cd /opt/openerp/clvsol_clvhealth_biobox/project
-        python install.py -h
-
-    ::
-
-        cd /opt/openerp/clvsol_clvhealth_biobox/data
-        python setup.py -h
-
-
 Installation of project modules
 ===============================
 
@@ -441,3 +424,38 @@ Install other libraries
     ::
 
         pip install dbfpy
+
+Remote access to the server (2)
+===============================
+
+#. To access remotly the server, use the following commands (as **root**):
+
+    ::
+
+        ssh tkl-odoo10-biobox-vm -l root
+
+        /etc/init.d/openerp-server stop
+
+        /etc/init.d/openerp-server start
+
+    ::
+
+        su openerp
+        cd /opt/openerp/odoo
+        ./odoo-bin -c /etc/odoo/openerp-server-man.conf
+
+#. To access remotly the server, use the following commands (as **openerp**):
+
+    ::
+
+        ssh tkl-odoo10-biobox-vm -l openerp
+
+    ::
+
+        cd /opt/openerp/clvsol_clvhealth_biobox/project
+        python install.py -h
+
+    ::
+
+        cd /opt/openerp/clvsol_clvhealth_biobox/data
+        python setup.py -h
