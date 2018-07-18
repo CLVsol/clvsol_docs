@@ -316,6 +316,12 @@ Replace the Odoo installation (Odoo 11.0)
 
         easy_install3 openerp-client-lib
 
+    :red:`ERROR: openerplib is not working in python3.4`
+
+    ::
+
+        easy_install openerp-client-lib
+
     * Reference: `OpenERP Client Library <https://github.com/nicolas-van/openerp-client-lib>`_
 
 #. To install erppeek, use the following commands (as root):
@@ -323,6 +329,10 @@ Replace the Odoo installation (Odoo 11.0)
     ::
 
         pip3 install erppeek
+
+    ::
+
+        pip install erppeek
 
 #. To install xlrd 1.0.0, execute the following commands (as root):
 
@@ -637,10 +647,10 @@ Installation of external modules
 ================================
 
 
-`OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_
--------------------------------------------------------
+`OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_ :red:`(OCA/l10n-brazil is not working!!!!)`
+---------------------------------------------------------------------------------------------------
 
-Tools for Odoo Administrators to improve some technical features on Odoo. 
+Tools for Odoo Administrators to improve some technical features on Odoo.
 
 #. To install "**OCA/l10n-brazil**", use the following commands (as openerp):
 
@@ -776,7 +786,9 @@ Remote access to the server (2)
     ::
 
         cd /opt/openerp/clvsol_clvhealth_jcafb/project
-        python install.py -h
+        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb"
+
+        dropdb -i clvhealth_jcafb
 
 #. To access remotly the server, use the following commands (as **openerp**) for **BioBox**:
 
@@ -787,7 +799,9 @@ Remote access to the server (2)
     ::
 
         cd /opt/openerp/clvsol_clvhealth_biobox/project
-        python install.py -h
+        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_biobox"
+
+        dropdb -i clvhealth_biobox
 
 #. To access remotly the server, use the following commands (as **openerp**) for **Media File Management**:
 
@@ -798,4 +812,6 @@ Remote access to the server (2)
     ::
 
         cd /opt/openerp/clvsol_mfmng/project
-        python install.py -h
+        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "mfmng"
+
+        dropdb -i mfmng
