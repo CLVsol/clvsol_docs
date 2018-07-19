@@ -5,11 +5,12 @@ tkl-tkldev-vm
 References:
 
 	* `TKLDev - TurnKey Development Toolchain and Build System <https://www.turnkeylinux.org/tkldev>`_
+	* `documentation <https://github.com/turnkeylinux-apps/tkldev/tree/master/docs>`_
 
 VM preparation
 ==============
 
-Based on `Turnkey TKLDev <https://www.turnkeylinux.org/tkldev>`_. The first time, it was downloaded from: `turnkey-tkldev-14.1-jessie-amd64.iso <https://www.turnkeylinux.org/download?file=turnkey-tkldev-14.1-jessie-amd64.iso>`_. The second time it was used a local file (**tkl-tkldev_2017-02-27.iso**).
+Based on `Turnkey TKLDev <https://www.turnkeylinux.org/tkldev>`_. The first time, it was downloaded from: `turnkey-tkldev-15.0-stretch-amd64.iso <http://mirror.turnkeylinux.org/turnkeylinux/images/iso/turnkey-tkldev-15.0-stretch-amd64.iso>`_. The second time it was used a local file (**tkl-tkldev_2018-07-19.iso**).
 
 #. Create a new Virtual Machine using the following parameters:
 
@@ -20,8 +21,8 @@ Based on `Turnkey TKLDev <https://www.turnkeylinux.org/tkldev>`_. The first time
 	- Set a VM Name and a VM Location of your preference (**tkl-tkldev-vm** - **D:\\vm\\tkl-tkldev-vm**).
 	- Processor Configuration:
 		- Number of processors: **4**
-		- Number of cores per processor: **1**
-	- Memory for the Virtual Machine: **1024 MB**
+		- Number of cores per processor: **2**
+	- Memory for the Virtual Machine: **2048 MB**
 	- Choose "**Use bridged networking**" for the Network Type. This way you will give the operating system, direct acces to an external Ethernet network (otherwise you can use **network address translation (NAT)**)
 	- Leave the default parameters for the next three windows:
 		- Select I/O Controller Types
@@ -135,7 +136,7 @@ TKLDev
 
 	::
 
-		/turnkey/fab/products/tkl-tkldev_2017-02-27.iso
+		/turnkey/fab/products/tkl-tkldev_2018-07-19.iso
 
 #. Get the ISO out of your TKLDev VM
 
@@ -243,7 +244,7 @@ Odoo
 
 	::
 
-		/turnkey/fab/products/tkl-odoo_2017-02-27.iso
+		/turnkey/fab/products/tkl-odoo_2018-07-19.iso
 
 #. Get the ISO out of your TKLDev VM
 
