@@ -27,3 +27,4 @@ Turnkey Linux
    tkl-web2py-biobox-aws
    tkl-web2py-vm
    tkl-odoo11-vm
+   tkl-odoo11-dev-vm
