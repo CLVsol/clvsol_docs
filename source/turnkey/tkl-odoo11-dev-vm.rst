@@ -335,7 +335,7 @@ Development
 
     * Reference: `OpenERP Client Library <https://github.com/nicolas-van/openerp-client-lib>`_
 
-#. :red:`(Não Executado)` To install erppeek (for python 3.5), use the following commands (as root):
+#. To install erppeek (for python 3.5), use the following commands (as root):
 
     ::
 
@@ -353,16 +353,94 @@ Development
 
         pip install erppeek
 
-#. :red:`(Não Executado)` To install xlrd 1.0.0, execute the following commands (as root):
+#. To install xlrd 1.0.0, execute the following commands (as root):
 
     ::
 
-        # pip3 install xlrd
-        # pip3 install xlwt
+        pip3 install xlrd
+        pip3 install xlwt
         pip3 install xlutils
 
 Installation of project modules
 ===============================
+
+#. `clvsol_odoo_addons <https://github.com/CLVsol/clvsol_odoo_addons>`_
+
+    #. To install "**clvsol_odoo_addons**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 10.0
+            cd /opt/odoo/clvsol_odoo_addons
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons
+
+#. `clvsol_odoo_addons_l10n_br <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br>`_
+
+    #. To install "**clvsol_odoo_addons_l10n_br**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 10.0
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_l10n_br
+
+#. `clvsol_odoo_addons_jcafb <https://github.com/CLVsol/clvsol_odoo_addons_jcafb>`_
+
+    #. To install "**clvsol_odoo_addons_jcafb**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 10.0
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_jcafb
 
 #. `clvsol_clvhealth_jcafb <https://github.com/CLVsol/clvsol_clvhealth_jcafb>`_
 
@@ -377,6 +455,115 @@ Installation of project modules
             cd /opt/odoo
             git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 10.0
             cd /opt/odoo/clvsol_clvhealth_jcafb
+            git branch -a
+
+#. `clvsol_odoo_addons_pbm <https://github.com/CLVsol/clvsol_odoo_addons_pbm>`_
+
+    #. To install "**clvsol_odoo_addons_pbm**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_pbm --branch 10.0
+            cd /opt/odoo/clvsol_odoo_addons_pbm
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_pbm
+
+#. `clvsol_odoo_addons_biobox <https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox>`_
+
+    #. To install "**clvsol_odoo_addons_biobox**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox --branch 10.0
+            cd /opt/odoo/clvsol_odoo_addons_biobox
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_biobox
+
+#. `clvsol_clvhealth_biobox <https://bitbucket.org/clvsol/clvsol_clvhealth_biobox>`_
+
+    #. To install "**clvsol_clvhealth_jcafb**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://bitbucket.org/clvsol/clvsol_clvhealth_biobox --branch 10.0
+            cd /opt/odoo/clvsol_clvhealth_biobox
+            git branch -a
+
+
+#. `clvsol_odoo_addons_mfmng <https://github.com/CLVsol/clvsol_odoo_addons_mfmng>`_
+
+    #. To install "**clvsol_odoo_addons_mfmng**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_mfmng --branch 10.0 --depth=1
+            cd /opt/odoo/clvsol_odoo_addons_mfmng
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_mfmng
+
+#. `clvsol_mfmng <https://github.com/CLVsol/clvsol_mfmng>`_
+
+    #. To install "**clvsol_mfmng**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_mfmng --branch 10.0 --depth=1
+            cd /opt/odoo/clvsol_mfmng
             git branch -a
 
 Remote access to the server
@@ -459,99 +646,19 @@ References
 Buffer
 ======
 
-#. `clvsol_odoo_addons <https://github.com/CLVsol/clvsol_odoo_addons>`_
-
-    #. To install "**clvsol_odoo_addons**", use the following commands (as openerp):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l openerp
-
-        ::
-
-            cd /opt/openerp
-            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 10.0
-            cd /opt/openerp/clvsol_odoo_addons
-            git branch -a
-
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**":
-
-        ::
-
-                addons_path = /opt/openerp/odoo/addons,...
-
-        ::
-
-                # addons_path = /opt/openerp/odoo/addons,...
-                addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons
-
-
-#. `clvsol_odoo_addons_l10n_br <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br>`_
-
-    #. To install "**clvsol_odoo_addons_l10n_br**", use the following commands (as openerp):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l openerp
-
-        ::
-
-            cd /opt/openerp
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 10.0
-            cd /opt/openerp/clvsol_odoo_addons_l10n_br
-            git branch -a
-
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**":
-
-        ::
-
-                addons_path = /opt/openerp/odoo/addons,...
-
-        ::
-
-                # addons_path = /opt/openerp/odoo/addons,...
-                addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_l10n_br
-
-
-#. `clvsol_odoo_addons_jcafb <https://github.com/CLVsol/clvsol_odoo_addons_jcafb>`_
-
-    #. To install "**clvsol_odoo_addons_jcafb**", use the following commands (as openerp):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l openerp
-
-        ::
-
-            cd /opt/openerp
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 10.0
-            cd /opt/openerp/clvsol_odoo_addons_jcafb
-            git branch -a
-
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**":
-
-        ::
-
-                addons_path = /opt/openerp/odoo/addons,...
-
-        ::
-
-                # addons_path = /opt/openerp/odoo/addons,...
-                addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_jcafb
-
 #. `clvsol_odoo_api <https://github.com/CLVsol/clvsol_odoo_api>`_
 
-    #. To install "**clvsol_odoo_api**", use the following commands (as openerp):
+    #. To install "**clvsol_odoo_api**", use the following commands (as odoo):
 
         ::
 
-            ssh tkl-odoo11-dev-vm -l openerp
+            ssh tkl-odoo11-dev-vm -l odoo
 
         ::
 
-            cd /opt/openerp
+            cd /opt/odoo
             git clone https://github.com/CLVsol/clvsol_odoo_api
-            cd /opt/openerp/clvsol_odoo_api
+            cd /opt/odoo/clvsol_odoo_api
             git branch -a
 
 
@@ -565,122 +672,8 @@ Buffer
 
         ::
 
-            cd /opt/openerp/clvsol_clvhealth_jcafb/data
-            ln -s /opt/openerp/clvsol_odoo_api odoo_api 
-
-
-#. `clvsol_odoo_addons_pbm <https://github.com/CLVsol/clvsol_odoo_addons_pbm>`_
-
-    #. To install "**clvsol_odoo_addons_pbm**", use the following commands (as openerp):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l openerp
-
-        ::
-
-            cd /opt/openerp
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_pbm --branch 10.0
-            cd /opt/openerp/clvsol_odoo_addons_pbm
-            git branch -a
-
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**":
-
-        ::
-
-                addons_path = /opt/openerp/odoo/addons,...
-
-        ::
-
-                # addons_path = /opt/openerp/odoo/addons,...
-                addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_pbm
-
-
-#. `clvsol_odoo_addons_biobox <https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox>`_
-
-    #. To install "**clvsol_odoo_addons_biobox**", use the following commands (as openerp):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l openerp
-
-        ::
-
-            cd /opt/openerp
-            git clone https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox --branch 10.0
-            cd /opt/openerp/clvsol_odoo_addons_biobox
-            git branch -a
-
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**":
-
-        ::
-
-                addons_path = /opt/openerp/odoo/addons,...
-
-        ::
-
-                # addons_path = /opt/openerp/odoo/addons,...
-                addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_biobox
-
-
-#. `clvsol_clvhealth_biobox <https://bitbucket.org/clvsol/clvsol_clvhealth_biobox>`_
-
-    #. To install "**clvsol_clvhealth_jcafb**", use the following commands (as openerp):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l openerp
-
-        ::
-
-            cd /opt/openerp
-            git clone https://bitbucket.org/clvsol/clvsol_clvhealth_biobox --branch 10.0
-            cd /opt/openerp/clvsol_clvhealth_biobox
-            git branch -a
-
-
-#. `clvsol_odoo_addons_mfmng <https://github.com/CLVsol/clvsol_odoo_addons_mfmng>`_
-
-    #. To install "**clvsol_odoo_addons_mfmng**", use the following commands (as openerp):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l openerp
-
-        ::
-
-            cd /opt/openerp
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_mfmng --branch 10.0 --depth=1
-            cd /opt/openerp/clvsol_odoo_addons_mfmng
-            git branch -a
-
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**":
-
-        ::
-
-                addons_path = /opt/openerp/odoo/addons,...
-
-        ::
-
-                # addons_path = /opt/openerp/odoo/addons,...
-                addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/clvsol_odoo_addons_mfmng
-
-
-#. `clvsol_mfmng <https://github.com/CLVsol/clvsol_mfmng>`_
-
-    #. To install "**clvsol_mfmng**", use the following commands (as openerp):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l openerp
-
-        ::
-
-            cd /opt/openerp
-            git clone https://github.com/CLVsol/clvsol_mfmng --branch 10.0 --depth=1
-            cd /opt/openerp/clvsol_mfmng
-            git branch -a
-
+            cd /opt/odoo/clvsol_clvhealth_jcafb/data
+            ln -s /opt/odoo/clvsol_odoo_api odoo_api 
 
 Installation of external modules
 ================================
@@ -688,17 +681,17 @@ Installation of external modules
 
 #. `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_ :red:`(OCA/l10n-brazil is not working!!!!)`
 
-    #. To install "**OCA/l10n-brazil**", use the following commands (as openerp):
+    #. To install "**OCA/l10n-brazil**", use the following commands (as odoo):
 
         ::
 
-            ssh tkl-odoo11-dev-vm -l openerp
+            ssh tkl-odoo11-dev-vm -l odoo
 
         ::
 
-            cd /opt/openerp
+            cd /opt/odoo
             git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 11.0 --depth=1
-            cd /opt/openerp/oca_l10n-brazil
+            cd /opt/odoo/oca_l10n-brazil
             git branch -a
 
     #. To install "`num2words <https://pypi.python.org/pypi/num2words>`_", use the following commands (as root):
@@ -756,16 +749,16 @@ Installation of external modules
             Command python setup.py egg_info failed with error code 1 in /tmp/pip-build-r8jkp16h/suds
             Storing debug log for failure in /root/.pip/pip.log
 
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**":
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
         ::
 
-                addons_path = /opt/openerp/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
 
         ::
 
-                # addons_path = /opt/openerp/odoo/addons,...
-                addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/oca_l10n-brazil
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/oca_l10n-brazil
 
 Install other libraries
 =======================
