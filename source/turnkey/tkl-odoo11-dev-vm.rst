@@ -548,6 +548,35 @@ Installation of project modules
             git rm -rf .
             git commit --allow-empty -m "root commit"
 
+#. `clvsol_clvhealth_pbm <https://github.com/CLVsol/clvsol_clvhealth_pbm>`_
+
+    #. To install "**clvsol_clvhealth_jcafb**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/clvsol/clvsol_clvhealth_pbm --branch 10.0
+            cd /opt/odoo/clvsol_clvhealth_pbm
+            git branch -a
+
+
+    #. To create the **11.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_pbm
+            git checkout --orphan 11.0
+            git rm -rf .
+            git commit --allow-empty -m "root commit"
+
 #. `clvsol_odoo_addons_biobox <https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox>`_
 
     #. To install "**clvsol_odoo_addons_biobox**", use the following commands (as odoo):
@@ -601,7 +630,6 @@ Installation of project modules
             git clone https://bitbucket.org/clvsol/clvsol_clvhealth_biobox --branch 10.0
             cd /opt/odoo/clvsol_clvhealth_biobox
             git branch -a
-
 
     #. To create the **11.0** empty branch, use the following commands (as odoo):
 
