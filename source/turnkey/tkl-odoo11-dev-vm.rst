@@ -390,6 +390,19 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons
 
+    #. To create the **11.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git checkout --orphan 11.0
+            git rm -rf .
+            git commit --allow-empty -m "root commit"
+
 #. `clvsol_odoo_addons_l10n_br <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br>`_
 
     #. To install "**clvsol_odoo_addons_l10n_br**", use the following commands (as odoo):
@@ -415,6 +428,19 @@ Installation of project modules
 
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_l10n_br
+
+    #. To create the **11.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git checkout --orphan 11.0
+            git rm -rf .
+            git commit --allow-empty -m "root commit"
 
 #. `clvsol_odoo_addons_jcafb <https://github.com/CLVsol/clvsol_odoo_addons_jcafb>`_
 
@@ -442,6 +468,19 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_jcafb
 
+    #. To create the **11.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git checkout --orphan 11.0
+            git rm -rf .
+            git commit --allow-empty -m "root commit"
+
 #. `clvsol_clvhealth_jcafb <https://github.com/CLVsol/clvsol_clvhealth_jcafb>`_
 
     #. To install "**clvsol_clvhealth_jcafb**", use the following commands (as odoo):
@@ -456,6 +495,19 @@ Installation of project modules
             git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 10.0
             cd /opt/odoo/clvsol_clvhealth_jcafb
             git branch -a
+
+    #. To create the **11.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git checkout --orphan 11.0
+            git rm -rf .
+            git commit --allow-empty -m "root commit"
 
 #. `clvsol_odoo_addons_pbm <https://github.com/CLVsol/clvsol_odoo_addons_pbm>`_
 
@@ -483,6 +535,19 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_pbm
 
+    #. To create the **11.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_addons_pbm
+            git checkout --orphan 11.0
+            git rm -rf .
+            git commit --allow-empty -m "root commit"
+
 #. `clvsol_odoo_addons_biobox <https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox>`_
 
     #. To install "**clvsol_odoo_addons_biobox**", use the following commands (as odoo):
@@ -509,6 +574,19 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_biobox
 
+    #. To create the **11.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_addons_biobox
+            git checkout --orphan 11.0
+            git rm -rf .
+            git commit --allow-empty -m "root commit"
+
 #. `clvsol_clvhealth_biobox <https://bitbucket.org/clvsol/clvsol_clvhealth_biobox>`_
 
     #. To install "**clvsol_clvhealth_jcafb**", use the following commands (as odoo):
@@ -524,6 +602,19 @@ Installation of project modules
             cd /opt/odoo/clvsol_clvhealth_biobox
             git branch -a
 
+
+    #. To create the **11.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_biobox
+            git checkout --orphan 11.0
+            git rm -rf .
+            git commit --allow-empty -m "root commit"
 
 #. `clvsol_odoo_addons_mfmng <https://github.com/CLVsol/clvsol_odoo_addons_mfmng>`_
 
@@ -551,6 +642,19 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_mfmng
 
+    #. To create the **11.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_addons_mfmng
+            git checkout --orphan 11.0
+            git rm -rf .
+            git commit --allow-empty -m "root commit"
+
 #. `clvsol_mfmng <https://github.com/CLVsol/clvsol_mfmng>`_
 
     #. To install "**clvsol_mfmng**", use the following commands (as odoo):
@@ -565,6 +669,58 @@ Installation of project modules
             git clone https://github.com/CLVsol/clvsol_mfmng --branch 10.0 --depth=1
             cd /opt/odoo/clvsol_mfmng
             git branch -a
+
+    #. To create the **11.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_mfmng
+            git checkout --orphan 11.0
+            git rm -rf .
+            git commit --allow-empty -m "root commit"
+
+#. `clvsol_odoo_api <https://github.com/CLVsol/clvsol_odoo_api>`_
+
+    #. To install "**clvsol_odoo_api**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_api
+            cd /opt/odoo/clvsol_odoo_api
+            git branch -a
+
+
+#. :red:`(Não Executado)` `SymLink <https://wiki.debian.org/SymLink>`_
+
+    #. To create a symbolic link "odoo_api", use the following commands (as **root**):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l root
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/data
+            ln -s /opt/odoo/clvsol_odoo_api odoo_api 
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_biobox/data
+            ln -s /opt/odoo/clvsol_odoo_api odoo_api 
+
+        ::
+
+            cd /opt/odoo/clvsol_mfmng/data
+            ln -s /opt/odoo/clvsol_odoo_api odoo_api 
 
 Remote access to the server
 ===========================
@@ -628,6 +784,8 @@ Remote access to the server
 References
 ==========
 
+#. Installing Odoo
+
  * `Installing Odoo — odoo 11.0 documentation <https://www.odoo.com/documentation/11.0/setup/install.html>`_ 
  * `Installation de Odoo sous Debian Stretch <http://www.linux-note.com/debian-9-installer-odoo/>`_ 
  * `Tutorial for how to install odoo 11 on a Ubuntu Server <http://www.erpish.com/odoo/tutorial-for-how-to-install-odoo-11-on-a-ubuntu-server/>`_ 
@@ -641,39 +799,13 @@ References
  
  * `Google - odoo 11 install <https://www.google.com/search?biw=1755&bih=758&ei=9ZFQW8zcFofczwLXuIGACA&q=odoo+11+install&oq=odoo+11+install&gs_l=psy-ab.3..0l10.59396.66905.0.67978.9.7.0.2.2.0.190.717.0j4.4.0....0...1c.1.64.psy-ab..3.6.722...0i67k1j0i7i30k1.0.6PmF8X9n744>`_ 
 
+#. Create branch 11.0
+
+ * `How to create a new empty branch for a new project <https://stackoverflow.com/questions/13969050/how-to-create-a-new-empty-branch-for-a-new-project>`_ 
+ * `Git create a empty branch from existing repository <https://stackoverflow.com/questions/32559168/git-create-a-empty-branch-from-existing-repository>`_ 
+ * `Github create empty branch <https://stackoverflow.com/questions/34100048/github-create-empty-branch/34100189>`_ 
+
 :red:`>>>>> Executado até este ponto. <<<<<`
-
-Buffer
-======
-
-#. `clvsol_odoo_api <https://github.com/CLVsol/clvsol_odoo_api>`_
-
-    #. To install "**clvsol_odoo_api**", use the following commands (as odoo):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l odoo
-
-        ::
-
-            cd /opt/odoo
-            git clone https://github.com/CLVsol/clvsol_odoo_api
-            cd /opt/odoo/clvsol_odoo_api
-            git branch -a
-
-
-#. `SymLink <https://wiki.debian.org/SymLink>`_ :red:`(Não Executado)`
-
-    #. To create a symbolic link "odoo_api", use the following commands (as **root**):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l root
-
-        ::
-
-            cd /opt/odoo/clvsol_clvhealth_jcafb/data
-            ln -s /opt/odoo/clvsol_odoo_api odoo_api 
 
 Installation of external modules
 ================================
@@ -763,7 +895,7 @@ Installation of external modules
 Install other libraries
 =======================
 
-#. To install dbfpy, execute the following commands (as root):
+#. :red:`(Não Executado)` To install dbfpy, execute the following commands (as root):
 
     ::
 
@@ -771,10 +903,10 @@ Install other libraries
 
     :red:`ERROR: dbfpy is not working in python3.4`
 
-Additional Installation :red:`(Não Executado)`
-==============================================
+Additional Installation
+=======================
 
-#. To install the complete **vim** package, use the following commands (as root):
+#. :red:`(Não Executado)` To install the complete **vim** package, use the following commands (as root):
 
     ::
 
