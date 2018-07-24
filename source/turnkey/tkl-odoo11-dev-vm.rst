@@ -722,6 +722,117 @@ Installation of project modules
             cd /opt/odoo/clvsol_mfmng/data
             ln -s /opt/odoo/clvsol_odoo_api odoo_api 
 
+Installation of external modules
+================================
+
+#. `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_
+
+    #. To install "**OCA/l10n-brazil**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 10.0 --depth=1
+            cd /opt/odoo/oca_l10n-brazil
+            git branch -a
+
+    #. :red:`(Não Executado)` To install "`num2words <https://pypi.python.org/pypi/num2words>`_", use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l root
+
+        ::
+
+            pip3 install num2words
+
+    #. :red:`(Não Executado)` To install "`suds <https://pypi.python.org/pypi/suds>`_", use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l root
+
+        ::
+
+            pip3 install suds
+
+        :red:`ImportError: No module named 'client'`
+
+        ::
+
+            root@tkl-odoo11-dev-vm ~# pip3 install suds
+            Downloading/unpacking suds
+              Downloading suds-0.4.tar.gz (104kB): 104kB downloaded
+              Running setup.py (path:/tmp/pip-build-r8jkp16h/suds/setup.py) egg_info for package suds
+                Traceback (most recent call last):
+                  File "<string>", line 17, in <module>
+                  File "/tmp/pip-build-r8jkp16h/suds/setup.py", line 20, in <module>
+                    import suds
+                  File "/tmp/pip-build-r8jkp16h/suds/suds/__init__.py", line 154, in <module>
+                    import client
+                ImportError: No module named 'client'
+                Complete output from command python setup.py egg_info:
+                Traceback (most recent call last):
+
+              File "<string>", line 17, in <module>
+
+              File "/tmp/pip-build-r8jkp16h/suds/setup.py", line 20, in <module>
+
+                import suds
+
+              File "/tmp/pip-build-r8jkp16h/suds/suds/__init__.py", line 154, in <module>
+
+                import client
+
+            ImportError: No module named 'client'
+
+            ----------------------------------------
+            Cleaning up...
+            Command python setup.py egg_info failed with error code 1 in /tmp/pip-build-r8jkp16h/suds
+            Storing debug log for failure in /root/.pip/pip.log
+
+    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/oca_l10n-brazil
+
+Install other libraries
+=======================
+
+#. :red:`(Não Executado)` To install dbfpy, execute the following commands (as root):
+
+    ::
+
+        pip3 install dbfpy
+
+    :red:`ERROR: dbfpy is not working in python3.4`
+
+Additional Installation
+=======================
+
+#. :red:`(Não Executado)` To install the complete **vim** package, use the following commands (as root):
+
+    ::
+
+        apt-get install vim
+
+    ::
+
+        vim
+        vimtutor
+
+ * `Desvendando o editor Vim <http://blog.caelum.com.br/desvendando-o-editor-vim/>`_ 
+
 Remote access to the server
 ===========================
 
@@ -804,117 +915,3 @@ References
  * `How to create a new empty branch for a new project <https://stackoverflow.com/questions/13969050/how-to-create-a-new-empty-branch-for-a-new-project>`_ 
  * `Git create a empty branch from existing repository <https://stackoverflow.com/questions/32559168/git-create-a-empty-branch-from-existing-repository>`_ 
  * `Github create empty branch <https://stackoverflow.com/questions/34100048/github-create-empty-branch/34100189>`_ 
-
-:red:`>>>>> Executado até este ponto. <<<<<`
-
-Installation of external modules
-================================
-
-
-#. `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_ :red:`(OCA/l10n-brazil is not working!!!!)`
-
-    #. To install "**OCA/l10n-brazil**", use the following commands (as odoo):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l odoo
-
-        ::
-
-            cd /opt/odoo
-            git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 11.0 --depth=1
-            cd /opt/odoo/oca_l10n-brazil
-            git branch -a
-
-    #. To install "`num2words <https://pypi.python.org/pypi/num2words>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l root
-
-        ::
-
-            pip3 install num2words
-
-    #. To install "`suds <https://pypi.python.org/pypi/suds>`_", use the following commands (as root):
-
-        ::
-
-            ssh tkl-odoo11-dev-vm -l root
-
-        ::
-
-            pip3 install suds
-
-        :red:`ImportError: No module named 'client'`
-
-        ::
-
-            root@tkl-odoo11-dev-vm ~# pip3 install suds
-            Downloading/unpacking suds
-              Downloading suds-0.4.tar.gz (104kB): 104kB downloaded
-              Running setup.py (path:/tmp/pip-build-r8jkp16h/suds/setup.py) egg_info for package suds
-                Traceback (most recent call last):
-                  File "<string>", line 17, in <module>
-                  File "/tmp/pip-build-r8jkp16h/suds/setup.py", line 20, in <module>
-                    import suds
-                  File "/tmp/pip-build-r8jkp16h/suds/suds/__init__.py", line 154, in <module>
-                    import client
-                ImportError: No module named 'client'
-                Complete output from command python setup.py egg_info:
-                Traceback (most recent call last):
-
-              File "<string>", line 17, in <module>
-
-              File "/tmp/pip-build-r8jkp16h/suds/setup.py", line 20, in <module>
-
-                import suds
-
-              File "/tmp/pip-build-r8jkp16h/suds/suds/__init__.py", line 154, in <module>
-
-                import client
-
-            ImportError: No module named 'client'
-
-            ----------------------------------------
-            Cleaning up...
-            Command python setup.py egg_info failed with error code 1 in /tmp/pip-build-r8jkp16h/suds
-            Storing debug log for failure in /root/.pip/pip.log
-
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-        ::
-
-                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-        ::
-
-                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/oca_l10n-brazil
-
-Install other libraries
-=======================
-
-#. :red:`(Não Executado)` To install dbfpy, execute the following commands (as root):
-
-    ::
-
-        pip3 install dbfpy
-
-    :red:`ERROR: dbfpy is not working in python3.4`
-
-Additional Installation
-=======================
-
-#. :red:`(Não Executado)` To install the complete **vim** package, use the following commands (as root):
-
-    ::
-
-        apt-get install vim
-
-    ::
-
-        vim
-        vimtutor
-
- * `Desvendando o editor Vim <http://blog.caelum.com.br/desvendando-o-editor-vim/>`_ 
