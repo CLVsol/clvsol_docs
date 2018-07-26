@@ -881,6 +881,16 @@ Remote access to the server
         su odoo
         /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
+    ::
+
+        su odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf --test-enable
+
+    ::
+
+        su odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf -d todo_app -i clv_todo --test-enabl
+
 #. To access remotly the server, use the following commands (as **odoo**) for **JCAFB**:
 
     ::
