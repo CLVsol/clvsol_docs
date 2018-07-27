@@ -99,3 +99,4 @@ Diário (JCAFB)
    jcafb_diario_2018_07_04
    jcafb_diario_2018_07_15
    jcafb_diario_2018_07_16
+   jcafb_diario_2018_07_27
