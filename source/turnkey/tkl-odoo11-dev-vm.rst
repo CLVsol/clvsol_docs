@@ -744,10 +744,7 @@ Installation of project modules
             cd /opt/odoo/clvsol_odoo_api
             git branch -a
 
-
-#. :red:`(Não Executado)` `SymLink <https://wiki.debian.org/SymLink>`_
-
-    #. To create a symbolic link "odoo_api", use the following commands (as **root**):
+    #. :red:`(Não Executado)` To create a symbolic link "odoo_api", use the following commands (as **root**):
 
         ::
 
@@ -767,6 +764,47 @@ Installation of project modules
 
             cd /opt/odoo/clvsol_mfmng/data
             ln -s /opt/odoo/clvsol_odoo_api odoo_api 
+
+        * SymLink <https://wiki.debian.org/SymLink>`_
+
+#. `clvsol_odoo_client <https://github.com/CLVsol/clvsol_odoo_client>`_
+
+    #. To install "**clvsol_odoo_client**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_client
+            cd /opt/odoo/clvsol_odoo_client
+            git branch -a
+
+
+    #. To create a symbolic link "odoo_client", use the following commands (as **root**):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l root
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            ln -s /opt/odoo/clvsol_odoo_client odoo_client 
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_biobox/project
+            ln -s /opt/odoo/clvsol_odoo_client odoo_client 
+
+        ::
+
+            cd /opt/odoo/clvsol_mfmng/project
+            ln -s /opt/odoo/clvsol_odoo_client odoo_client 
+
+        * SymLink <https://wiki.debian.org/SymLink>`_
 
 Installation of external modules
 ================================
