@@ -956,7 +956,7 @@ Remote access to the server
     ::
 
         cd /opt/odoo/clvsol_clvhealth_jcafb/project
-        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb"
+        python3 install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb"
 
         dropdb -i clvhealth_jcafb
 
@@ -969,7 +969,7 @@ Remote access to the server
     ::
 
         cd /opt/odoo/clvsol_clvhealth_biobox/project
-        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_biobox"
+        python3 install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_biobox"
 
         dropdb -i clvhealth_biobox
 
@@ -982,7 +982,7 @@ Remote access to the server
     ::
 
         cd /opt/odoo/clvsol_mfmng/project
-        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "mfmng"
+        python3 install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "mfmng"
 
         dropdb -i mfmng
 
