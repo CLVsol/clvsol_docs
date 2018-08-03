@@ -321,6 +321,12 @@ Development
 
     * Reference: `OpenERP Client Library <https://github.com/nicolas-van/openerp-client-lib>`_
 
+#. To install odoolib (for python 3.5), use the following commands (as root):
+
+    ::
+
+        pip3 install odoo-client-lib
+
 #. To install python-setuptools (for python 2.7), use the following commands (as root):
 
     ::
@@ -360,6 +366,18 @@ Development
         pip3 install xlrd
         pip3 install xlwt
         pip3 install xlutils
+
+#. To install Sphinx (for python 3.5), use the following commands (as root):
+
+    ::
+
+        pip3 install -U sphinx
+
+#. To install OdooRPC (for python 3.5), use the following commands (as root):
+
+    ::
+
+        apt-get install python3-odoorpc
 
 Installation of project modules
 ===============================
