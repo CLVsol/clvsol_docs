@@ -767,6 +767,32 @@ Installation of project modules
 
         * SymLink <https://wiki.debian.org/SymLink>`_
 
+#. `clvsol_todo_app <https://github.com/CLVsol/clvsol_todo_app>`_
+
+    #. To install "**clvsol_todo_app**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_todo_app --branch 11.0
+            cd /opt/odoo/clvsol_todo_app
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_todo_app
+
 #. `clvsol_odoo_client <https://github.com/CLVsol/clvsol_odoo_client>`_
 
     #. To install "**clvsol_odoo_client**", use the following commands (as odoo):
@@ -802,6 +828,11 @@ Installation of project modules
         ::
 
             cd /opt/odoo/clvsol_mfmng/project
+            ln -s /opt/odoo/clvsol_odoo_client odoo_client 
+
+        ::
+
+            cd /opt/odoo/clvsol_todo_app/project
             ln -s /opt/odoo/clvsol_odoo_client odoo_client 
 
         * SymLink <https://wiki.debian.org/SymLink>`_
@@ -985,6 +1016,19 @@ Remote access to the server
         python3 install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "mfmng"
 
         dropdb -i mfmng
+
+#. To access remotly the server, use the following commands (as **odoo**) for **To-do App**:
+
+    ::
+
+        ssh tkl-odoo11-dev-vm -l odoo
+
+    ::
+
+        cd /opt/odoo/clvsol_todo_app/project
+        python3 install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "todo_app"
+
+        dropdb -i todo_app
 
 References
 ==========
