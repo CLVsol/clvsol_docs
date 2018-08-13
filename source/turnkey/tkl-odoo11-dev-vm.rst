@@ -921,6 +921,32 @@ Installation of external modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/oca_l10n-brazil
 
+#. `OCA/server-tools <https://github.com/OCA/server-tools.git>`_
+
+    #. To install "**OCA/server-tools**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/OCA/server-tools.git oca_server-tools --branch 10.0
+            cd /opt/odoo/oca_server-tools
+            git branch -a
+
+    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/oca_server-tools
+
 #. `OCA/vertical-medical <https://github.com/OCA/vertical-medical.git>`_
 
     #. To install "**OCA/vertical-medical**", use the following commands (as odoo):
