@@ -1,3 +1,9 @@
+.. raw:: html
+
+    <style> .red {color:red} </style>
+
+.. role:: red
+
 ===================
 tkl-odoo10-jcafb-vm
 ===================
@@ -437,6 +443,60 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 			# addons_path = /opt/openerp/odoo/addons,...
 			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/oca_l10n-brazil
+
+`OCA/server-tools <https://github.com/OCA/server-tools`_
+------------------------------------------------------------
+
+#. To install "**OCA/server-tools**", use the following commands (as openerp):
+
+	::
+
+		ssh tkl-odoo10-jcafb-vm -l openerp
+
+	::
+
+		cd /opt/openerp
+		git clone https://github.com/OCA/server-tools oca_server-tools --branch 10.0 --depth=1
+		cd /opt/openerp/oca_server-tools
+		git branch -a
+
+#. :red:`(Não Executado)` Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+	::
+
+			addons_path = /opt/openerp/odoo/addons,...
+
+	::
+
+			# addons_path = /opt/openerp/odoo/addons,...
+			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/oca_server-tools
+
+`OCA/vertical-medical <https://github.com/OCA/vertical-medical.git>`_
+---------------------------------------------------------------------
+
+#. To install "**OCA/vertical-medical**", use the following commands (as openerp):
+
+	::
+
+		ssh tkl-odoo10-jcafb-vm -l openerp
+
+	::
+
+		cd /opt/openerp
+		git clone https://github.com/OCA/vertical-medical.git oca_vertical-medical --branch 10.0 --depth=1
+		cd /opt/openerp/oca_vertical-medical
+		git branch -a
+
+#. :red:`(Não Executado)` Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
+
+	::
+
+			addons_path = /opt/openerp/odoo/addons,...
+
+	::
+
+			# addons_path = /opt/openerp/odoo/addons,...
+			addons_path = /opt/openerp/odoo/addons,...,/opt/openerp/oca_vertical-medical
 
 Install other libraries
 =======================
