@@ -921,6 +921,32 @@ Installation of external modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/oca_l10n-brazil
 
+#. `OCA/vertical-medical <https://github.com/OCA/vertical-medical.git>`_
+
+    #. To install "**OCA/vertical-medical**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/OCA/vertical-medical.git oca_vertical-medical --branch 10.0
+            cd /opt/odoo/oca_vertical-medical
+            git branch -a
+
+    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/oca_vertical-medical
+
 Install other libraries
 =======================
 
