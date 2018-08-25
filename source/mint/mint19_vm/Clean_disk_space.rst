@@ -6,8 +6,7 @@ References:
 
 * `How to clean Linux Mint 19 safely <https://sites.google.com/site/easylinuxtipsproject/4>`_
 
-Clear the updates cache
-=======================
+#. Clear the updates cache
 
 	#. Launch **Synaptic Package Manager**.
 
