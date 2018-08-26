@@ -14,3 +14,4 @@ mint19-vm
    System_Snapshots
    Enable_SSH
    Sublime_Text_3_installation
+   KeePassXC_installation
