@@ -17,3 +17,4 @@ mint19-vm
    KeePassXC_installation
    Mint_hosts_file
    Git_installation
+   pip_installation
