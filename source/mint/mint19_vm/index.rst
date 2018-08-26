@@ -20,3 +20,4 @@ mint19-vm
    pip_installation
    Sphinx_installation
    Anaconda_Python_IDE
+   SmartGit_installation
