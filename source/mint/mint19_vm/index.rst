@@ -21,3 +21,4 @@ mint19-vm
    Sphinx_installation
    Anaconda_Python_IDE
    SmartGit_installation
+   SublimeREPL
