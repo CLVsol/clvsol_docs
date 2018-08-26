@@ -12,3 +12,4 @@ mint19-vm
    Clean_disk_space
    VMWare_Tools_installation
    System_Snapshots
+   Enable_SSH
