@@ -26,6 +26,13 @@ References:
 
 		dbvis
 
+
+	::
+
+		No suitable Java Virtual Machine could be found on your system.
+		The version of the JVM must be at least 1.8 and at most 9.
+		Please define INSTALL4J_JAVA_HOME to point to a suitable JVM.
+
 #. Install OpenJDK 8 using the following command
 
 	::
@@ -38,7 +45,7 @@ References:
 
 		Name: DbVisualizer
 		Command: dbvis
-		Icon: /home/openerp/Downloads/DbVisualizer.png
+		Icon: /home/mint19/Downloads/DbVisualizer.png
 
 #. DbVisualizer can be found here `here <http://www.dbvis.com/download/>`_. Upgrade dbVisualizer using the following commands
 
