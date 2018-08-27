@@ -22,3 +22,4 @@ mint19-vm
    Anaconda_Python_IDE
    SmartGit_installation
    SublimeREPL
+   Meld_installation
