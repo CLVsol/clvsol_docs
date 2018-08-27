@@ -24,3 +24,4 @@ mint19-vm
    SublimeREPL
    python3_distutils_installation
    Meld_installation
+   DbVisualizer_installation
