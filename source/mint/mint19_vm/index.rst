@@ -25,3 +25,4 @@ mint19-vm
    python3_distutils_installation
    Meld_installation
    DbVisualizer_installation
+   GParted_installation
