@@ -105,6 +105,48 @@ VM preparation
 
         /etc/init.d/odoo start
 
+#. Enable **Connecting through SSH tunnel**:
+
+    * `Solving SSH “channel 3: open failed: administratively prohibited” error when tunnelling <https://blog.mypapit.net/2012/06/solving-ssh-channel-3-open-failed-administratively-prohibited-error-when-tunnelling.html>`_ 
+
+    #. Edit the file "**/etc/ssh/sshd_config**" (as root):
+
+        ::
+
+            AllowTcpForwarding no
+
+        ::
+
+            AllowTcpForwarding yes
+
+    #. To stop and start the Odoo server, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l root
+
+        ::
+
+            service sshd restart
+
+    #. To  establish a secure tunnel from the remote computer, use one the following commands (change the local port (5432) and the remote port (33335) appropriately):
+
+        ::
+
+            ssh -v -L 33335:localhost:5432 root@tkl-odoo11-dev-vm
+
+        ::
+
+            ssh -L 33335:localhost:5432 root@tkl-odoo11-dev-vm
+
+        ::
+
+            ssh -v -L 33335:127.0.0.1:5432 root@tkl-odoo11-dev-vm
+
+        ::
+
+            ssh -L 33335:127.0.0.1:5432 root@tkl-odoo11-dev-vm
+
 Shrinking VM Disk Images
 ========================
 
