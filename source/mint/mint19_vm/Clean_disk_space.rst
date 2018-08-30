@@ -16,7 +16,25 @@ References:
 
 	#. Press the button: **Delete cached package files**
 
+#. Clean up Linux Mint
 
+    #. You can clean partial packages using a command
+
+    	::
+
+			sudo apt-get autoclean
+
+    #. You can auto cleanup apt-cache
+
+    	::
+
+			sudo apt-get clean
+
+    #. You can clean up of any unused dependencies
+
+    	::
+
+			sudo apt-get autoremove
 
 .. toctree::
    :maxdepth: 2
