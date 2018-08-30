@@ -5,6 +5,7 @@ Virtual Machine creation
 References:
 
 	* `10 things to do first in Linux Mint 19 Cinnamon <https://sites.google.com/site/easylinuxtipsproject/mint-cinnamon-first>`_
+	* `15 Best Things To Do After Installing Linux Mint 19 <https://www.ubuntupit.com/best-things-to-do-after-installing-linux-mint/>`_
 
 #. Create a new virtual machine using the following parameters as a reference::
 
