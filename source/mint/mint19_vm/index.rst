@@ -26,3 +26,4 @@ mint19-vm
    Meld_installation
    DbVisualizer_installation
    GParted_installation
+   TeamViewer_installation
