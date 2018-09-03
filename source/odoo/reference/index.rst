@@ -9,3 +9,4 @@ Odoo - Reference
    Odoo_domain_fileters
    Odoo_10_documentation
    Odoo_Filestore
+   ERPpeek
