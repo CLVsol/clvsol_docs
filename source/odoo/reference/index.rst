@@ -10,3 +10,4 @@ Odoo - Reference
    Odoo_10_documentation
    Odoo_Filestore
    ERPpeek
+   Odoo_Miscellany
