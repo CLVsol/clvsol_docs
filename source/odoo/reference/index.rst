@@ -8,6 +8,7 @@ Odoo - Reference
 
    Odoo_domain_filters
    Odoo_10_documentation
+   Odoo_11_documentation
    Odoo_Filestore
    ERPpeek
    Odoo_Miscellany
