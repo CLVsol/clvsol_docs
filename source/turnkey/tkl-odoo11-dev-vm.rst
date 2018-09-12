@@ -1017,6 +1017,32 @@ Installation of external modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/oca_vertical-medical
 
+#. `JayVora-SerpentCS/MassEditing <https://github.com/JayVora-SerpentCS/MassEditing>`_
+
+    #. To install "**JayVora-SerpentCS/MassEditing**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/JayVora-SerpentCS/MassEditing.git jv_mass_editing --branch 11.0
+            cd /opt/odoo/jv_mass_editing
+            git branch -a
+
+    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/jv_mass_editing
+
 Install other libraries
 =======================
 
