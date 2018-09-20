@@ -1043,6 +1043,32 @@ Installation of external modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/jv_mass_editing
 
+#. `onesteinbv/addons-onestein <https://github.com/onesteinbv/addons-onestein>`_
+
+    #. To install "**onesteinbv/addons-onestein**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo11-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/onesteinbv/addons-onestein.git addons-onestein --branch 11.0
+            cd /opt/odoo/addons-onestein
+            git branch -a
+
+    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/addons-onestein
+
 Install other libraries
 =======================
 
