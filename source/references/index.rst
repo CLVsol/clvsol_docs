@@ -8,3 +8,4 @@ References
 
    git
    odoo_10
+   sublimetext
