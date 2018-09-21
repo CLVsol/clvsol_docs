@@ -7,3 +7,4 @@ Manual
    :caption: Contents:
 
    jcafb_manual_employee
+   jcafb_manual_person_mng
