@@ -55,3 +55,4 @@ Diário (BioBox)
    biobox_diario_2018_08_02
    biobox_diario_2018_08_22
    biobox_diario_2018_09_06
+   biobox_diario_2018_09_25
