@@ -8,4 +8,5 @@ Manual
 
    jcafb_manual_employee
    jcafb_manual_document
+   jcafb_manual_lab_test
    jcafb_manual_person_mng
