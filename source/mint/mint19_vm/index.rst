@@ -24,6 +24,7 @@ mint19-vm
    SublimeREPL
    python3_distutils_installation
    Meld_installation
+   Oracle_Java_8_installation
    DbVisualizer_installation
    GParted_installation
    TeamViewer_installation
