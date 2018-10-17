@@ -52,8 +52,8 @@ References:
 	::
 
 		cd ~/Downloads
-		# wget http://www.dbvis.com/product_download/dbvis-10.0.14/media/dbvis_linux_10_0_14.sh
-		sudo tar -xvf dbvis_unix_10_0_14.tar.gz
+		# wget http://www.dbvis.com/product_download/dbvis-10.0.15/media/dbvis_unix_10_0_15.sh
+		sudo tar -xvf dbvis_unix_10_0_15.tar.gz
 		sudo mv /opt/DbVisualizer /opt/DbVisualizer.old
 		sudo mv DbVisualizer /opt
 		sudo rm -rf /opt/DbVisualizer.old
