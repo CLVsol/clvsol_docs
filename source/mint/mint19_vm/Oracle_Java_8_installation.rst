@@ -26,6 +26,12 @@ Mint comes with a OpenJDK version of java libraries, which shouldn't be used for
 
 		sudo apt-get update && apt-get remove openjdk*
 
+	::
+
+		E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+		E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+
+
 #. Download Oracle JDK from `here <https://www.oracle.com/technetwork/java/javase/downloads/index.html>`_. You are looking for a linux version with tar.gz extension. Also choose the right version from 32-bit (x86)  and 64bit (x64) one.
 	* **jdk-8u191-linux-x64.tar.gz**
 
@@ -66,7 +72,9 @@ Mint comes with a OpenJDK version of java libraries, which shouldn't be used for
 	::
 
 		$ java -version
-		java version "1.7.0_25" Java(TM) SE Runtime Environment (build 1.7.0_25-b15) Java HotSpot(TM) 64-Bit Server VM (build 23.25-b01, mixed mode)
+		java version "1.8.0_191"
+		Java(TM) SE Runtime Environment (build 1.8.0_191-b12)
+		Java HotSpot(TM) 64-Bit Server VM (build 25.191-b12, mixed mode)
 
 :red:`(Não Executado)` Optinaly install firefox plugin by linking libnpjp2.so file to ~/.mozzila/plugins folder.
 
