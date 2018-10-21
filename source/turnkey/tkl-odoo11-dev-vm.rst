@@ -8,7 +8,7 @@
 tkl-odoo11-dev-vm
 =================
 
-This project will help you create a server to host the **CLVhealth-BioBox** solution, based on an `Odoo 11 <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
+This project will help you create a server to host the **Odoo 11 (development)** solution, based on an `Odoo 11 <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
 
     * Based on `Odoo - From ERP to CRM, eCommerce to CMS <https://www.turnkeylinux.org/odoo>`_ 
 
