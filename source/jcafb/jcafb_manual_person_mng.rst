@@ -30,3 +30,5 @@ Persons (Mng)
         #. Executar a Ação **Person (Mng) Update Data**
         #. Os campos do Grupo **Person** e do Grupo **Address** serão automaticamente preenchidos.
 
+    * Edição em Massa de Persons (Mng):
+        #. Executar a Ação **Persons (Mng) Mass Edit** (anteriormente **Persons (Mng) Update**)
