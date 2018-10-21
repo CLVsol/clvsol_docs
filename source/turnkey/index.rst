@@ -28,3 +28,4 @@ Turnkey Linux
    tkl-web2py-vm
    tkl-odoo11-vm
    tkl-odoo11-dev-vm
+   tkl-odoo12-dev-vm
