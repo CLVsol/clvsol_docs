@@ -397,7 +397,7 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons
 
-    #. To create the **11.0** empty branch, use the following commands (as odoo):
+    #. :red:`(Não Executado)` To create the **12.0** branch, use the following commands (as odoo):
 
         ::
 
@@ -434,7 +434,7 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_jcafb
 
-    #. To create the **11.0** empty branch, use the following commands (as odoo):
+    #. :red:`(Não Executado)` To create the **12.0** branch, use the following commands (as odoo):
 
         ::
 
@@ -460,7 +460,7 @@ Installation of project modules
             cd /opt/odoo/clvsol_clvhealth_jcafb
             git branch -a
 
-    #. To create the **12.0** branch, use the following commands (as odoo):
+    #. :red:`(Não Executado)` To create the **12.0** branch, use the following commands (as odoo):
 
         ::
 
