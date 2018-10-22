@@ -515,8 +515,8 @@ Installation of project modules
 
         * SymLink <https://wiki.debian.org/SymLink>`_
 
-:red:`(Não Executado)` Replace the Odoo installation (Odoo 12.0)
-================================================================
+Replace the Odoo installation (Odoo 12.0)
+=========================================
 
 #. To replace the Odoo installation (Odoo 12.0), use the following commands (as root):
 
@@ -597,7 +597,7 @@ Remote access to the server
 
         dropdb -i clvhealth_jcafb
 
-#. To access remotly the server, use the following commands (as **odoo**) for **BioBox**:
+#. :red:`(Não Executado)` To access remotly the server, use the following commands (as **odoo**) for **BioBox**:
 
     ::
 
@@ -610,7 +610,7 @@ Remote access to the server
 
         dropdb -i clvhealth_biobox
 
-#. To access remotly the server, use the following commands (as **odoo**) for **Media File Management**:
+#. :red:`(Não Executado)` To access remotly the server, use the following commands (as **odoo**) for **Media File Management**:
 
     ::
 
@@ -623,7 +623,7 @@ Remote access to the server
 
         dropdb -i mfmng
 
-#. To access remotly the server, use the following commands (as **odoo**) for **To-do App**:
+#. :red:`(Não Executado)` To access remotly the server, use the following commands (as **odoo**) for **To-do App**:
 
     ::
 
@@ -665,7 +665,8 @@ References
 
 
 
-
+:red:`Buffer (Não Executado)`
+=============================
 
 
 Development (2)
