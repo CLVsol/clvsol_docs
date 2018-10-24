@@ -460,7 +460,7 @@ Installation of project modules
             cd /opt/odoo/clvsol_clvhealth_jcafb
             git branch -a
 
-    #. :red:`(Não Executado)` To create the **12.0** branch, use the following commands (as odoo):
+    #. To create the **12.0** branch, use the following commands (as odoo):
 
         ::
 
