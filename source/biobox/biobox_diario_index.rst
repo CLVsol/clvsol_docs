@@ -57,3 +57,4 @@ Diário (BioBox)
    biobox_diario_2018_09_06
    biobox_diario_2018_09_25
    biobox_diario_2018_10_02
+   biobox_diario_2018_10_25
