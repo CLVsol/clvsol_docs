@@ -32,3 +32,9 @@ Persons (Mng)
 
     * Edição em Massa de Persons (Mng):
         #. Executar a Ação **Persons (Mng) Mass Edit** (anteriormente **Persons (Mng) Update**)
+
+    * Confirmação das Pessoas na JCAFB-2019:
+        #. Executar a Ação **Person Confirm**
+
+    * Confirmação dos Endereços na JCAFB-2019:
+        #. Executar a Ação **Address Confirm**
