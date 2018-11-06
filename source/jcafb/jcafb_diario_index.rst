@@ -116,3 +116,4 @@ Diário (JCAFB)
    jcafb_diario_2018_10_31
    jcafb_diario_2018_11_02
    jcafb_diario_2018_11_05
+   jcafb_diario_2018_11_06
