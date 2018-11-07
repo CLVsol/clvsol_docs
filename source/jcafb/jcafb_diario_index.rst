@@ -117,3 +117,4 @@ Diário (JCAFB)
    jcafb_diario_2018_11_02
    jcafb_diario_2018_11_05
    jcafb_diario_2018_11_06
+   jcafb_diario_2018_11_07
