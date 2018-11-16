@@ -25,5 +25,15 @@ References:
 		sudo mv smartgit /usr/share
 		sudo rm -rf /usr/share/smartgit.old
 
+#. Upgrade SmartGit/HG downloading it from `here <http://www.syntevo.com/smartgit/download>`_ and using the following commands
+
+	::
+
+		cd ~/Downloads
+		sudo tar -xvf smartgit-linux-18_1_5.tar.gz
+		sudo mv /usr/share/smartgit /usr/share/smartgit.old
+		sudo mv smartgit /usr/share
+		sudo rm -rf /usr/share/smartgit.old
+
 .. toctree::
    :maxdepth: 2
