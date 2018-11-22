@@ -625,6 +625,21 @@ Installation of external modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/oca_l10n-brazil
 
+#. `Trust-Code/odoo-brasil <https://github.com/Trust-Code/odoo-brasil>`_
+
+    #. To install "**Trust-Code/odoo-brasil**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/Trust-Code/odoo-brasil trust_code_odoo-brasil --branch 12.0 --depth=1
+            cd /opt/odoo/trust_code_odoo-brasil
+            git branch -a
+
 Replace the Odoo installation (Odoo 12.0)
 =========================================
 
