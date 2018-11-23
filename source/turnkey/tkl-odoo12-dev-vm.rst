@@ -533,6 +533,18 @@ Installation of external modules
             cd /opt/odoo/clvsol_l10n_brazil
             git branch -a
 
+    #. :red:`(Não Necessário)` To install "`suds-jurko <https://bitbucket.org/jurko/suds>`_", use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo12-dev-vm -l root
+
+        ::
+
+            pip3 install suds-jurko
+
+            Requirement already satisfied: suds-jurko in /usr/lib/python3/dist-packages
+
     #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
         ::
