@@ -397,7 +397,7 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons
 
-    #. :red:`(Não Executado)` To create the **12.0** branch, use the following commands (as odoo):
+    #. To create the **12.0** branch, use the following commands (as odoo):
 
         ::
 
@@ -434,7 +434,7 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_jcafb
 
-    #. :red:`(Não Executado)` To create the **12.0** branch, use the following commands (as odoo):
+    #. To create the **12.0** branch, use the following commands (as odoo):
 
         ::
 
