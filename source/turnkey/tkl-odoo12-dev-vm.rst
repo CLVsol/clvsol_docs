@@ -691,6 +691,22 @@ Replace the Odoo installation (Odoo 12.0)
         su odoo
         /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
+#. Configure Odoo Server timeouts
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+            limit_time_cpu = 60
+            limit_time_real = 120
+
+        ::
+
+            # limit_time_cpu = 60
+            limit_time_cpu = 600
+            # limit_time_real = 120
+            limit_time_real = 1200
+
 Remote access to the server
 ===========================
 
