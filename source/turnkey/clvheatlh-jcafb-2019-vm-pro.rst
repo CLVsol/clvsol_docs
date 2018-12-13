@@ -45,7 +45,24 @@ VM preparation
 	- PostgreSQL, Adminer: username **postgres**
 	- Odoo Master Account: **admin**
 
+#. Change Credentials:
+
+
+	- Webmin, SSH: username **root**
+	- PostgreSQL, Adminer: username **postgres**
+	- Odoo Master Account: **admin**
+
+	Login as root at SecureCRT and type:
+
+		::
+
+			turnkey-init
+
 #. Upgrade the software:
+
+	::
+
+		ssh clvheatlh-jcafb-2019-vm-pro -l root
 
 	::
 
@@ -77,7 +94,7 @@ VM preparation
 
 		date -set="STRING"
 
-	* STRING: **3 DEC 2017 11:06:00**
+	* STRING: **13 DEC 2018 11:06:00**
 
 #. Copy file "**/etc/odoo/openerp-server.conf**" into "**/etc/odoo/openerp-server-man.conf**". Edit the file "**/etc/odoo/openerp-server-man.conf**":
 
@@ -93,6 +110,10 @@ VM preparation
 #. (Optional) Reboot the instance "**clvheatlh-jcafb-2019-vm-pro**".
 
 #. To stop and start the Odoo server, use the following commands (as root):
+
+	::
+
+		ssh clvheatlh-jcafb-2019-vm-pro -l root
 
 	::
 
@@ -141,6 +162,10 @@ Replace the Odoo installation (Odoo 10.0)
 
 	::
 
+		ssh clvheatlh-jcafb-2019-vm-pro -l root
+
+	::
+
 		apt-get -y install nodejs
 		apt-get -y install npm
 		npm install -g less
@@ -149,6 +174,10 @@ Replace the Odoo installation (Odoo 10.0)
 		ln -s /usr/bin/nodejs /usr/bin/node
 
 #. To replace the Odoo installation (Odoo 10.0), use the following commands (as root):
+
+	::
+
+		ssh clvheatlh-jcafb-2019-vm-pro -l root
 
 	::
 
@@ -167,6 +196,8 @@ Replace the Odoo installation (Odoo 10.0)
 		git config --global user.email "carlos.vercelino@clvsol.com"
 		git config --global user.name "Carlos Eduardo Vercelino - CLVsol"
 
+		git config --global alias.lg "log --oneline --all --graph --decorate"
+
 		git config --list
 
 		exit
@@ -183,6 +214,10 @@ Replace the Odoo installation (Odoo 10.0)
 			DAEMON=/opt/openerp/odoo/odoo-bin
 
 #. To stop and start the Odoo server, use the following commands (as root):
+
+	::
+
+		ssh clvheatlh-jcafb-2019-vm-pro -l root
 
 	::
 
@@ -293,7 +328,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 
 		cd /opt/openerp
 		git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 10.0
-		cd /opt/openerp/clvsol_odoo_addons_jcafb
+		cd /opt/openerp/clvsol_odoo_addons_l10n_br
 		git branch -a
 
 #. Edit the files "**/etc/odoo/openerp-server.conf**" and "**/etc/odoo/openerp-server-man.conf**":
@@ -447,7 +482,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 `OCA/server-tools <https://github.com/OCA/server-tools`_
 ------------------------------------------------------------
 
-#. To install "**OCA/server-tools**", use the following commands (as openerp):
+#. :red:`(Não Executado)` To install "**OCA/server-tools**", use the following commands (as openerp):
 
 	::
 
@@ -474,7 +509,7 @@ Tools for Odoo Administrators to improve some technical features on Odoo.
 `OCA/vertical-medical <https://github.com/OCA/vertical-medical.git>`_
 ---------------------------------------------------------------------
 
-#. To install "**OCA/vertical-medical**", use the following commands (as openerp):
+#. :red:`(Não Executado)` To install "**OCA/vertical-medical**", use the following commands (as openerp):
 
 	::
 
