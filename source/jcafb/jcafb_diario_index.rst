@@ -133,3 +133,4 @@ Diário (JCAFB)
    jcafb_diario_2018_12_05
    jcafb_diario_2018_12_07
    jcafb_diario_2018_12_11
+   jcafb_diario_2018_12_14
