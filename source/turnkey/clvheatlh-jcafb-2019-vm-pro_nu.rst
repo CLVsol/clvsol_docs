@@ -4,9 +4,42 @@
 
 .. role:: red
 
-===========================
-clvheatlh-jcafb-2019-vm-pro
-===========================
+==================================================
+clvheatlh-jcafb-2019-vm-pro :red:`(Não Utilizado)` 
+==================================================
+
+:red:`Erro`:
+
+	::
+
+		2018-12-24 16:45:02,996 8455 WARNING clvhealth_jcafb_2019 odoo.addons.base.ir.ir_qweb.assetsbundle: The "--no-js" argument is deprecated, as inline JavaScript is disabled by default. Use "--js" to enable inline JavaScript (not recommended).
+		[TypeError: Object function Object() { [native code] } has no method 'assign']
+		This error occured while compiling the bundle 'web.assets_common' containing:
+		    - /web/static/lib/bootstrap/less/variables.less
+		    - /web/static/lib/bootstrap/less/mixins/vendor-prefixes.less
+		    - /web/static/lib/bootstrap/less/mixins/buttons.less
+		    - /web/static/src/less/variables.less
+		    - /web/static/src/less/utils.less
+		    - /web_editor/static/src/less/web_editor.variables.less
+		    - /web/static/src/less/fonts.less
+		    - /web/static/src/less/navbar.less
+		    - /web/static/src/less/mimetypes.less
+		    - /web/static/src/less/animation.less
+		    - /web/static/lib/bootstrap-datetimepicker/src/less/bootstrap-datetimepicker.less
+		    - /web_planner/static/src/less/web_planner_common.less
+		    - /web_tour/static/src/less/tip.less
+		    - /web_tour/static/src/less/keyframes.less
+		2018-12-24 16:45:03,163 8455 WARNING clvhealth_jcafb_2019 odoo.addons.base.ir.ir_qweb.assetsbundle: The "--no-js" argument is deprecated, as inline JavaScript is disabled by default. Use "--js" to enable inline JavaScript (not recommended).
+		[TypeError: Object function Object() { [native code] } has no method 'assign']
+		This error occured while compiling the bundle 'web.assets_frontend' containing:
+		    - /web/static/lib/bootstrap/less/variables.less
+		    - /web/static/lib/bootstrap/less/mixins/vendor-prefixes.less
+		    - /web/static/lib/bootstrap/less/mixins/buttons.less
+		    - /web/static/src/less/variables.less
+		    - /web/static/src/less/utils.less
+		    - /web_editor/static/src/less/web_editor.variables.less
+		    - /web/static/src/less/import_bootstrap.less
+		    - /web_editor/static/src/less/web_editor.common.less
 
 This project will help you create a server to host the **CLVhealth-JCAFB** solution, based on an `Odoo 10 <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
 
