@@ -19,6 +19,7 @@ CLVsol Documentation
    windows/index
    references/index
    jcafb/index
+   jcafb_12/index
    pbm/index
    pharm/index
    biobox/index
