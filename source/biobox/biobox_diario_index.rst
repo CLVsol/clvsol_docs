@@ -61,3 +61,4 @@ Diário (BioBox)
    biobox_diario_2018_11_02
    biobox_diario_2018_11_22
    biobox_diario_2018_12_05
+   biobox_diario_2018_12_26
