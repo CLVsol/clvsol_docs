@@ -408,6 +408,43 @@ Installation of project modules
             cd /opt/odoo/clvsol_odoo_addons
             git checkout -b 12.0
 
+#. `clvsol_odoo_addons_l10n_br <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br>`_
+
+    #. To install "**clvsol_odoo_addons_l10n_br**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 11.0
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_l10n_br
+
+    #. To create the **12.0** branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git checkout -b 12.0
+
 #. `clvsol_odoo_addons_jcafb <https://github.com/CLVsol/clvsol_odoo_addons_jcafb>`_
 
     #. To install "**clvsol_odoo_addons_jcafb**", use the following commands (as odoo):
@@ -886,45 +923,6 @@ Development (2)
 
 Installation of project modules (2)
 ===================================
-
-#. `clvsol_odoo_addons_l10n_br <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br>`_
-
-    #. To install "**clvsol_odoo_addons_l10n_br**", use the following commands (as odoo):
-
-        ::
-
-            ssh tkl-odoo12-dev-vm -l odoo
-
-        ::
-
-            cd /opt/odoo
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 10.0
-            cd /opt/odoo/clvsol_odoo_addons_l10n_br
-            git branch -a
-
-    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
-
-        ::
-
-                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-
-        ::
-
-                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
-                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_l10n_br
-
-    #. To create the **11.0** empty branch, use the following commands (as odoo):
-
-        ::
-
-            ssh tkl-odoo12-dev-vm -l odoo
-
-        ::
-
-            cd /opt/odoo/clvsol_odoo_addons_l10n_br
-            git checkout --orphan 11.0
-            git rm -rf .
-            git commit --allow-empty -m "root commit"
 
 #. `clvsol_odoo_addons_pbm <https://github.com/CLVsol/clvsol_odoo_addons_pbm>`_
 
