@@ -140,3 +140,4 @@ Diário (JCAFB)
    jcafb_diario_2019_01_08
    jcafb_diario_2019_01_09
    jcafb_diario_2019_01_10
+   jcafb_diario_2019_01_11
