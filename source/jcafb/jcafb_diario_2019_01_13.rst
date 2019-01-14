@@ -202,10 +202,31 @@
         * Action (Person Address): None
         * State: Done
 
+    #. Pessoa cadastrada e Endereço novo:
+
+        * Address Create
+        * Associar a Pessoa ao novo Endereço
+        * Associar a Pessoa ao *History Marker* **JCAFB-2019**
+        * Action (Person Address): None
+        * State: Done
+
+    #. Pessoa cadastrada e novo Endereço já cadastrado:
+
+        * Associar a Pessoa ao novo Endereço
+        * Associar a Pessoa ao *History Marker* **JCAFB-2019**
+        * Action (Person Address): None
+        * State: Done
+
     #. Pessoa e Endereço cadastrados:
 
         * Nada a fazer
         * State: Done
+
+#. [tkl-odoo10-jcafb-vm] Processamento de Persons (Off) Events.
+
+    #. Persons (Off) *Done*:
+
+        * Person (Off) Copy Event
 
 #. [tkl-odoo10-jcafb-vm] Processamento de Documents (Off).
 
