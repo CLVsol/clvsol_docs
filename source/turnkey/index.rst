@@ -31,3 +31,4 @@ Turnkey Linux
    tkl-odoo11-vm
    tkl-odoo11-dev-vm
    tkl-odoo12-dev-vm
+   tkl-odoo12-jcafb-vm
