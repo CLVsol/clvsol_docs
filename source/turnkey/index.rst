@@ -32,3 +32,4 @@ Turnkey Linux
    tkl-odoo11-dev-vm
    tkl-odoo12-dev-vm
    tkl-odoo12-jcafb-vm
+   tkl-odoo12-biobox-vm
