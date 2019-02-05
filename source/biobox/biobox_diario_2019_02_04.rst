@@ -138,13 +138,13 @@
 
         cd /opt/openerp
 
-        pg_dump clvhealth_biobox_pro_01 -Fp -U postgres -h 172.31.38.203 -p 5432 > clvhealth_biobox_pro_01_2019-02-04a.sql
-        gzip clvhealth_biobox_pro_01_2019-02-04a.sql
+        pg_dump clvhealth_biobox_pro_01 -Fp -U postgres -h 172.31.38.203 -p 5432 > clvhealth_biobox_pro_01_2019-02-05a.sql
+        gzip clvhealth_biobox_pro_01_2019-02-05a.sql
 
         exit
 
     Criados o seguinte arquivo:
-        * /opt/openerp/clvhealth_biobox_pro_01_2019-02-04a.sql.gz
+        * /opt/openerp/clvhealth_biobox_pro_01_2019-02-05a.sql.gz
 
 #. [AWS Amazon (BioBox)] **Desligar** o servidor **tkl-odoo08-biobox-aws**:
 
