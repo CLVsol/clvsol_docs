@@ -153,3 +153,4 @@ Diário (JCAFB)
    jcafb_diario_2019_01_23
    jcafb_diario_2019_01_24
    jcafb_diario_2019_01_26
+   jcafb_diario_2019_02_11
