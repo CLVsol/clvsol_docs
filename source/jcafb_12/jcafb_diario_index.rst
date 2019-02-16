@@ -12,3 +12,4 @@ Diário (JCAFB)
    jcafb_diario_2019_01_14
    jcafb_diario_2019_02_14
    jcafb_diario_2019_02_15
+   jcafb_diario_2019_02_16
