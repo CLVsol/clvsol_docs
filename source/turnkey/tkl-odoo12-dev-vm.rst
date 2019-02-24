@@ -732,6 +732,8 @@ Replace the Odoo installation (Odoo 12.0)
 
     #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
+        * `Command-line interface: odoo-bin <https://www.odoo.com/documentation/12.0/reference/cmdline.html>`_
+
         ::
 
             limit_time_cpu = 60
