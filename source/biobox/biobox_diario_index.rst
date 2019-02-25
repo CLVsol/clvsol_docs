@@ -65,3 +65,4 @@ Diário (BioBox)
    biobox_diario_2019_01_06
    biobox_diario_2019_01_21
    biobox_diario_2019_02_04
+   biobox_diario_2019_02_21
