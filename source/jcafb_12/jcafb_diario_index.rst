@@ -17,3 +17,4 @@ Diário (JCAFB)
    jcafb_diario_2019_02_19
    jcafb_diario_2019_02_21
    jcafb_diario_2019_02_24
+   jcafb_diario_2019_02_26
