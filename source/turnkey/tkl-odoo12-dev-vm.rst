@@ -747,15 +747,17 @@ Replace the Odoo installation (Odoo 12.0)
             # limit_time_cpu = 1200
             # limit_time_cpu = 2400
             # limit_time_cpu = 4800
-            ##limit_time_cpu = 9600
-            limit_time_cpu = 18000
+            # limit_time_cpu = 9600
+            # limit_time_cpu = 18000
+            limit_time_cpu = 36000
             # limit_time_real = 120
             # limit_time_real = 1200
             # limit_time_real = 3600
             # limit_time_real = 7200
             # limit_time_real = 14400
             # limit_time_real = 28800
-            limit_time_real = 36000
+            # limit_time_real = 36000
+            limit_time_real = 72000
 
 Remote access to the server
 ===========================
