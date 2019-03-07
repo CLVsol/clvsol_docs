@@ -3219,3 +3219,226 @@
         * /opt/odoo/clvhealth_jcafb_2019-03-06b.sql
         * /opt/odoo/clvhealth_jcafb_2019-03-06b.sql.gz
         * /opt/odoo/filestore_clvhealth_jcafb_2019-03-06b.tar.gz
+
+#. [tkl-odoo12-dev-vm] **Atualizar** os módulos:
+
+    * clv_address_jcafb
+    * clv_address_sync_jcafb
+    * clv_address_history_jcafb
+    * clv_address_history_sync_jcafb
+
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm (session 1)
+        #
+
+        ssh tkl-odoo12-dev-vm -l root
+
+        /etc/init.d/odoo stop
+
+        su odoo
+
+        cd /opt/odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm (session 2)
+        #
+
+        ssh tkl-odoo12-dev-vm -l odoo
+
+        cd /opt/odoo/clvsol_clvhealth_jcafb/project
+        
+        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_address_jcafb
+        
+#. [tkl-odoo12-dev-vm] Executar o *External Sync Schedule*:
+
+    * clv.address (clv.address)
+
+    ::
+
+        method: _object_external_sync
+
+        external_host: https://192.168.25.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 575
+        reg_count: 575
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 575
+        sync_count: 575
+
+        task_count: 575
+
+        date_last_sync: 2019-03-07 18:25:22
+        upmost_last_update: 2019-02-23 17:46:18
+
+        Execution time: 0:03:27.232
+
+#. [tkl-odoo12-dev-vm] Executar o *External Sync Schedule*:
+
+    * clv.address.history (clv.address.history)
+
+    ::
+
+        method: _object_external_sync
+
+        external_host: https://192.168.25.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 775
+        reg_count: 775
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 775
+        sync_count: 775
+
+        task_count: 775
+
+        date_last_sync: 2019-03-07 18:47:06
+        upmost_last_update: 2018-07-15 23:51:53
+
+        Execution time: 0:02:43.302
+
+#. [tkl-odoo12-dev-vm] **Atualizar** os módulos:
+
+    * clv_document_jcafb
+    * clv_document_sync_jcafb
+
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm (session 1)
+        #
+
+        ssh tkl-odoo12-dev-vm -l root
+
+        /etc/init.d/odoo stop
+
+        su odoo
+
+        cd /opt/odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm (session 2)
+        #
+
+        ssh tkl-odoo12-dev-vm -l odoo
+
+        cd /opt/odoo/clvsol_clvhealth_jcafb/project
+        
+        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_document_jcafb
+
+#. [tkl-odoo12-dev-vm] Executar o *External Sync Schedule*:
+
+    * clv.document (clv.document)
+
+    ::
+
+        method: _object_external_sync
+
+        external_host: https://192.168.25.152
+        external_dbname: clvhealth_jcafb_2019
+
+        external_max_task: 200000
+        external_disable_identification: True
+        external_disable_check_missing: True
+        external_disable_inclusion: False
+        external_disable_sync: False
+        external_last_update_args: []
+
+        login_msg: [01] Login Ok.
+
+        Executing: "_object_external_sync"...
+
+        sync_objects: 5452
+        reg_count: 5452
+        include_count: 0
+        update_count: 0
+        sync_include_count: 0
+        sync_update_count: 5452
+        sync_count: 5452
+
+        task_count: 5452
+
+        date_last_sync: 2019-03-07 19:37:30
+        upmost_last_update: 2019-01-26 11:26:47
+
+        Execution time: 0:29:16.205
+
+#. [tkl-odoo12-dev-vm] Criar um backup dos dados de "**clvhealth_jcafb**", executando:
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm
+        #
+
+        ssh tkl-odoo12-dev-vm -l root
+
+        /etc/init.d/odoo stop
+
+        su odoo
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm
+        #
+        # data_dir = /var/lib/odoo/.local/share/Odoo
+        #
+
+        cd /opt/odoo
+        pg_dump clvhealth_jcafb -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2019-03-07a.sql
+
+        gzip clvhealth_jcafb_2019-03-07a.sql
+        pg_dump clvhealth_jcafb -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2019-03-07a.sql
+
+        cd /var/lib/odoo/.local/share/Odoo/filestore
+        tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2019-03-07a.tar.gz clvhealth_jcafb
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm
+        #
+
+        cd /opt/odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        ^C
+
+        exit
+
+        /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2019-03-07a.sql
+        * /opt/odoo/clvhealth_jcafb_2019-03-07a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2019-03-07a.tar.gz
