@@ -5,7 +5,7 @@
 .. role:: red
 
 =======================
-2019-04-(02-08) (JCAFB)
+2019-04-(02-09) (JCAFB)
 =======================
 
 #. :red:`(Não Executado)` [tkl-odoo12-dev-vm] Restaurar o backup dos dados de "**clvhealth_jcafb**", executando:
@@ -621,9 +621,9 @@
 
 #. [tkl-odoo12-dev-vm] **Criados** os diretórios:
 
-    * [tkl-odoo12-dev-vm] **/opt/odoo/clvsol_filestore/clvhealth_jcafb/export/csv**.
-    * [tkl-odoo12-dev-vm] **/opt/odoo/clvsol_filestore/clvhealth_jcafb/export/sqlite**.
-    * [tkl-odoo12-dev-vm] **/opt/odoo/clvsol_filestore/clvhealth_jcafb/export/xls**.
+    * [tkl-odoo12-dev-vm] **/opt/odoo/clvsol_filestore/clvhealth_jcafb/export_files/csv**.
+    * [tkl-odoo12-dev-vm] **/opt/odoo/clvsol_filestore/clvhealth_jcafb/export_files/sqlite**.
+    * [tkl-odoo12-dev-vm] **/opt/odoo/clvsol_filestore/clvhealth_jcafb/export_files/xls**.
 
 #. [tkl-odoo12-dev-vm] Criar um backup dos dados de "**clvhealth_jcafb**", executando:
 
@@ -712,6 +712,168 @@
         cd /opt/odoo/clvsol_filestore
         rm -rf clvhealth_jcafb
         tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-04-08a.tar.gz
+
+        cd /opt/odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm
+        #
+
+        ^C
+
+        exit
+
+        /etc/init.d/odoo start
+
+#. [tkl-odoo12-dev-vm] **desabilitar** a instalação dos módulos:
+
+    * clv_export
+    * clv_export_jcafb
+
+#. [tkl-odoo12-dev-vm] **desabilitar** a instalação dos módulos:
+
+    * clv_off
+    * clv_off_jcafb
+    * clv_address_off
+    * clv_address_off_l10n_br
+    * clv_address_off_jcafb
+    * clv_family_off
+    * clv_pfamily_off_l10n_br
+    * clv_family_off_jcafb
+    * clv_person_off
+    * clv_person_off_l10n_br
+    * clv_person_off_jcafb
+
+#. [tkl-odoo12-dev-vm] **Atualizar** os módulos:
+
+    * clv_base
+    * clv_mfile_jcafb
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm (session 1)
+        #
+
+        ssh tkl-odoo12-dev-vm -l root
+
+        /etc/init.d/odoo stop
+
+        su odoo
+
+        cd /opt/odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm (session 2)
+        #
+
+        ssh tkl-odoo12-dev-vm -l odoo
+
+        cd /opt/odoo/clvsol_clvhealth_jcafb/project
+        
+        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_base_jcafb
+        
+    ::
+
+        # ***** tkl-odoo12-dev-vm (session 1)
+        #
+
+        ^C
+
+        exit
+
+        /etc/init.d/odoo start
+
+#. [tkl-odoo12-dev-vm] Criar um backup dos dados de "**clvhealth_jcafb**", executando:
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm
+        #
+
+        ssh tkl-odoo12-dev-vm -l root
+
+        /etc/init.d/odoo stop
+
+        su odoo
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm
+        #
+        # data_dir = /var/lib/odoo/.local/share/Odoo
+        #
+
+        cd /opt/odoo
+        pg_dump clvhealth_jcafb -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2019-04-09a.sql
+
+        gzip clvhealth_jcafb_2019-04-09a.sql
+        pg_dump clvhealth_jcafb -Fp -U postgres -h localhost -p 5432 > clvhealth_jcafb_2019-04-09a.sql
+
+        cd /var/lib/odoo/.local/share/Odoo/filestore
+        tar -czvf /opt/odoo/filestore_clvhealth_jcafb_2019-04-09a.tar.gz clvhealth_jcafb
+
+        cd /opt/odoo/clvsol_filestore
+        tar -czvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-04-09a.tar.gz clvhealth_jcafb
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm
+        #
+
+        cd /opt/odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+        ^C
+
+        exit
+
+        /etc/init.d/odoo start
+
+    Criados os seguintes arquivos:
+        * /opt/odoo/clvhealth_jcafb_2019-04-09a.sql
+        * /opt/odoo/clvhealth_jcafb_2019-04-09a.sql.gz
+        * /opt/odoo/filestore_clvhealth_jcafb_2019-04-09a.tar.gz
+        * /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-04-09a.tar.gz
+
+#. [tkl-odoo12-dev-vm] Restaurar o backup dos dados de "**clvhealth_jcafb**", executando:
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm
+        #
+
+        ssh tkl-odoo12-dev-vm -l root
+
+        /etc/init.d/odoo stop
+
+        su odoo
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm
+        #
+
+        cd /opt/odoo
+        # gzip -d clvhealth_jcafb_2019-04-09a.sql.gz
+
+        dropdb -i clvhealth_jcafb
+
+        createdb -O odoo -E UTF8 -T template0 clvhealth_jcafb
+        psql -f clvhealth_jcafb_2019-04-09a.sql -d clvhealth_jcafb -U postgres -h localhost -p 5432 -q
+
+        # mkdir /var/lib/odoo/.local/share/Odoo/filestore
+        cd /var/lib/odoo/.local/share/Odoo/filestore
+        rm -rf clvhealth_jcafb
+        tar -xzvf /opt/odoo/filestore_clvhealth_jcafb_2019-04-09a.tar.gz
+
+        # mkdir /opt/odoo/clvsol_filestore
+        cd /opt/odoo/clvsol_filestore
+        rm -rf clvhealth_jcafb
+        tar -xzvf /opt/odoo/clvsol_filestore_clvhealth_jcafb_2019-04-09a.tar.gz
 
         cd /opt/odoo
         /usr/bin/odoo -c /etc/odoo/odoo-man.conf
