@@ -5,7 +5,7 @@
 .. role:: red
 
 =======================
-2019-04-(02-09) (JCAFB)
+2019-04-(02-11) (JCAFB)
 =======================
 
 #. :red:`(Não Executado)` [tkl-odoo12-dev-vm] Restaurar o backup dos dados de "**clvhealth_jcafb**", executando:
@@ -892,7 +892,11 @@
 #. [tkl-odoo12-dev-vm] **desabilitar** a instalação dos módulos:
 
     * clv_export
+    * clv_document_export
+    * clv_lab_test_export
     * clv_export_jcafb
+    * clv_document_export_jcafb
+    * clv_lab_test_export_jcafb
 
 #. [tkl-odoo12-dev-vm] **desabilitar** a instalação dos módulos:
 
@@ -908,10 +912,56 @@
     * clv_person_off_l10n_br
     * clv_person_off_jcafb
 
+#. [tkl-odoo12-dev-vm] **Atualizar** os módulos:
+
+    * clv_person_history
+    * clv_verification
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm (session 1)
+        #
+
+        ssh tkl-odoo12-dev-vm -l root
+
+        /etc/init.d/odoo stop
+
+        su odoo
+
+        cd /opt/odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    ::
+
+        # ***** tkl-odoo12-dev-vm (session 2)
+        #
+
+        ssh tkl-odoo12-dev-vm -l odoo
+
+        cd /opt/odoo/clvsol_clvhealth_jcafb/project
+        
+        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_person_history
+        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_verification
+        
+    ::
+
+        # ***** tkl-odoo12-dev-vm (session 1)
+        #
+
+        ^C
+
+        exit
+
+        /etc/init.d/odoo start
+
 #. [tkl-odoo12-dev-vm] **Habilitar** a instalação e **Instalar** os módulos:
 
     * clv_export
+    * clv_document_export
+    * clv_lab_test_export
     * clv_export_jcafb
+    * clv_document_export_jcafb
+    * clv_lab_test_export_jcafb
 
     ::
 
