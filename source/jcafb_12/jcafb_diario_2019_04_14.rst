@@ -73,6 +73,9 @@
     * clv_document_export_jcafb
     * clv_lab_test_export_jcafb
 
+    * clv_report
+    * clv_report_jcafb
+
     * clv_off
     * clv_off_jcafb
     * clv_address_off
@@ -88,6 +91,7 @@
 #. [tkl-odoo12-dev-vm] **Atualizar** os módulos:
 
     * clv_external_sync
+    * clv_base_jcafb
 
     ::
 
@@ -113,6 +117,7 @@
         cd /opt/odoo/clvsol_clvhealth_jcafb/project
         
         python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_external_sync
+        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_base_jcafb
         
     ::
 
@@ -137,6 +142,9 @@
     * clv_export_jcafb
     * clv_document_export_jcafb
     * clv_lab_test_export_jcafb
+
+    * clv_report
+    * clv_report_jcafb
 
     * clv_off
     * clv_off_jcafb
