@@ -5,7 +5,7 @@
 .. role:: red
 
 =======================
-2019-04-(14-15) (JCAFB)
+2019-04-(14-16) (JCAFB)
 =======================
 
 #. [tkl-odoo12-dev-vm] Restaurar o backup dos dados de "**clvhealth_jcafb**", executando:
@@ -69,9 +69,11 @@
     * clv_export
     * clv_document_export
     * clv_lab_test_export
+    * clv_person_export
     * clv_export_jcafb
     * clv_document_export_jcafb
     * clv_lab_test_export_jcafb
+    * clv_person_export_jcafb
 
     * clv_report
     * clv_report_jcafb
@@ -90,6 +92,8 @@
 
 #. [tkl-odoo12-dev-vm] **Atualizar** os módulos:
 
+    * clv_document
+    * clv_document_history
     * clv_external_sync
     * clv_base_jcafb
 
@@ -116,6 +120,7 @@
 
         cd /opt/odoo/clvsol_clvhealth_jcafb/project
         
+        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_document
         python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_external_sync
         python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_base_jcafb
         
@@ -138,10 +143,14 @@
     * clv_verification
     * clv_verification_jcafb
 
+    * clv_export
+    * clv_document_export
     * clv_lab_test_export
+    * clv_person_export
     * clv_export_jcafb
     * clv_document_export_jcafb
     * clv_lab_test_export_jcafb
+    * clv_person_export_jcafb
 
     * clv_report
     * clv_report_jcafb
