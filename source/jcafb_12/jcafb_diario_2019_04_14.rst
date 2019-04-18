@@ -5,7 +5,7 @@
 .. role:: red
 
 =======================
-2019-04-(14-16) (JCAFB)
+2019-04-(14-18) (JCAFB)
 =======================
 
 #. [tkl-odoo12-dev-vm] Restaurar o backup dos dados de "**clvhealth_jcafb**", executando:
@@ -60,6 +60,9 @@
 
 #. [tkl-odoo12-dev-vm] **desabilitar** a instalação dos módulos:
 
+    * clv_set
+    * clv_set_jcafb
+
     * clv_data_processing
     * clv_data_processing_jcafb
 
@@ -94,6 +97,8 @@
 
     * clv_document
     * clv_document_history
+    * clv_lab_test
+    * clv_lab_test_history
     * clv_external_sync
     * clv_base_jcafb
 
@@ -121,6 +126,7 @@
         cd /opt/odoo/clvsol_clvhealth_jcafb/project
         
         python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_document
+        python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_lab_test
         python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_external_sync
         python install.py --admin_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --dbname "clvhealth_jcafb" -m clv_base_jcafb
         
@@ -136,6 +142,9 @@
         /etc/init.d/odoo start
 
 #. [tkl-odoo12-dev-vm] **Habilitar** a instalação e **Instalar** os módulos:
+
+    * clv_set
+    * clv_set_jcafb
 
     * clv_processing
     * clv_processing_jcafb
