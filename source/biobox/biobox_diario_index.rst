@@ -69,3 +69,4 @@ Diário (BioBox)
    biobox_diario_2019_03_07
    biobox_diario_2019_03_21
    biobox_diario_2019_04_02
+   biobox_diario_2019_04_22
