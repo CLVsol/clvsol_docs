@@ -28,3 +28,4 @@ mint19-vm
    DbVisualizer_installation
    GParted_installation
    TeamViewer_installation
+   Sublime_Merge_1_installation
