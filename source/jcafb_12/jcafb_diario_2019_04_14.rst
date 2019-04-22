@@ -5,7 +5,7 @@
 .. role:: red
 
 =======================
-2019-04-(14-18) (JCAFB)
+2019-04-(14-22) (JCAFB)
 =======================
 
 #. [tkl-odoo12-dev-vm] Restaurar o backup dos dados de "**clvhealth_jcafb**", executando:
@@ -93,6 +93,8 @@
     * clv_person_off_l10n_br
     * clv_person_off_jcafb
 
+    * clv_person_sel_jcafb
+
 #. [tkl-odoo12-dev-vm] **Atualizar** os módulos:
 
     * clv_document
@@ -175,6 +177,8 @@
     * clv_person_off
     * clv_person_off_l10n_br
     * clv_person_off_jcafb
+
+    * clv_person_sel_jcafb
 
     ::
 
