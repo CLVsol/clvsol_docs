@@ -24,6 +24,7 @@ CLVsol Documentation
    pharm/index
    biobox/index
    mfmng/index
+   applications/index
 
 
 
