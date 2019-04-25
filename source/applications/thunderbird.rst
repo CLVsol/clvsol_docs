@@ -61,7 +61,7 @@ Instalação Portável no Windows
 
 	#. Transferir, manualmente, os Eventos de Calendário do **Outlook** para o **Thunderbird** usando o formato ICS, conforme o descrito no link a seguir:
 
-		* `How to Export Outlook Calendar to Thunderbird Manually <https://www.systoolsgroup.com/updates/export-outlook-calendar-to-thunderbird/>`_ 
+		`How to Export Outlook Calendar to Thunderbird Manually <https://www.systoolsgroup.com/updates/export-outlook-calendar-to-thunderbird/>`_ 
 
 		* Os Eventos foram importados para: **Calendário de Carlos Vercelino**
 
@@ -75,6 +75,34 @@ Instalação Portável no Windows
 
 	#. Instalar a Extenção `Contact Tabs <https://addons.thunderbird.net/en-US/thunderbird/addon/contact-tabs/>`_.
 
+	#. Incluir as contas de email (mantendo as configurações automáticas do Thunderbird, usando POP):
+
+		* carlos.vercelino@gmail.com
+		* carlos@vercelino.com
+		* vercelino@uol.com.br
+		* carlos.eduardo@vercelino.com
+		* carlos.vercelino@uol.com.br
+		* cevercelino@uol.com.br
+		* carlos.vercelino@clvsol.com
+
+	#. Alterar as configurações das contas de email:
+
+		* Servidor: 
+			* **desmarcar**: Manter mensagens no servidor
+			* Armazenamento de mensagens -> Avançado... -> Pasta Entrada de outra conta: **Caixa de entraga global (Pastas Locais)**
+
+	#. Transferir, manualmente, o Catálogo de Endereços e as Mensagens do **Outlook** para o **Thunderbird**, conforme o descrito no link a seguir:
+
+		`How to Import a PST File in Thunderbird <https://www.techwalla.com/articles/how-to-import-a-pst-file-in-thunderbird>`_ 
+
+		* Os Catálogos de Endereços form importados para: **Contatos**.
+
+		* As Mensagens form importados para: **Pastas Locais** -> **Importado do Outlook** (D:\Port\PortableApps\PortableApps\ThunderbirdPortable\Data\profile.x\Mail\Local Folders\Importado do Outlook.sbd).
+
+	#. Incluir as contas de email (mantendo as configurações automáticas do Thunderbird, usando IMAP):
+
+		* lamara.vercelino@gmail.com
+		* lamara.vercelino@uol.com.br
 
 .. toctree::
    :maxdepth: 2
