@@ -104,6 +104,18 @@ Instalação Portável no Windows
 		* lamara.vercelino@gmail.com
 		* lamara.vercelino@uol.com.br
 
+	#. Transferir, manualmente, o **Calendário de Carlos Vercelino**:
+
+		#. Copiar o arquivo do calendário ("**Calendário de Carlos Vercelino.ics**")  do diretório "**D:\Downloads**" para o diretório "**D:\Port\PortableApps\PortableApps\ThunderbirdPortable\Data\profile\calendar-data**".
+
+		#. Executar novamente o procedimento indicado no link a seguir, utilizando o arquivo copiado:
+
+			`How to Export Outlook Calendar to Thunderbird Manually <https://www.systoolsgroup.com/updates/export-outlook-calendar-to-thunderbird/>`_ 
+
+			* Os Eventos e Tarefas foram importados para a nova instância do **Calendário de Carlos Vercelino**.
+
+		#. Cancelar a subscrição anterior (diretório "**D:\Downloads**") do calendário "Calendário de Carlos Vercelino"
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
