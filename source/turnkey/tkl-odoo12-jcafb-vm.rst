@@ -8,11 +8,11 @@
 tkl-odoo12-jcafb-vm
 ===================
 
-This project will help you create a server to host the **Odoo 12 (development)** solution, based on an `Odoo <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
+This project will help you create a server to host the **Odoo 12 (JCAFB)** solution, based on an `Odoo <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
 
     * Based on `Odoo - From ERP to CRM, eCommerce to CMS <https://www.turnkeylinux.org/odoo>`_ 
 
-    * ISO file: "**tkl-odoo_2018-10-21.iso**".
+    * ISO file: "**turnkey-odoo-15.1-stretch-amd64.iso**".
 
 VM preparation
 ==============
@@ -43,17 +43,7 @@ VM preparation
 
     - Webmin, SSH: username **root**
     - PostgreSQL, Adminer: username **postgres**
-    - Odoo Master Account: **admin** :red:`(Aparentemente o password para a "Master Account" não foi configurado. Ao invés disso foi configurado o password para o usuário "admin" do banco de dados "odoo" criado automaticamente durante a instalação do Odoo 11. >>> Veja o procedimento a seguir.)`
-
-#. For the security reason, we need to setup a master password for the odoo database manager:
-
-    #. Open a web browser and type in the odoo URL, in my case: http://tkl-odoo12-jcafb-vm.
-
-    #. Click on 'Manage Databases'.
-
-    #. Clik on 'Set Master Password'.
-
-    #. Type your password and click 'Continue'.
+    - Odoo Master Account: **admin** :red:`(O password para a "Master Account" foi configurado corretamente. Além disso foi configurado o password para o usuário "admin" do banco de dados "odoo" criado automaticamente durante a instalação do Odoo 11.)`
 
 #. Upgrade the software:
 
@@ -93,7 +83,7 @@ VM preparation
 
     * STRING: **19 JUL 2018 15:06:00**
 
-#. Enable **Connecting through SSH tunnel**:
+#. :red:`(Não executado)` Enable **Connecting through SSH tunnel**:
 
     * `Solving SSH “channel 3: open failed: administratively prohibited” error when tunnelling <https://blog.mypapit.net/2012/06/solving-ssh-channel-3-open-failed-administratively-prohibited-error-when-tunnelling.html>`_ 
     * `Secure TCP/IP Connections with SSH Tunnels <https://www.postgresql.org/docs/9.1/static/ssh-tunnels.html>`_ 
@@ -156,10 +146,12 @@ Shrinking VM Disk Images
     Even after you delete the files, the hard drive image still has the contents of the old file on it.  This is why programs like photorec can work.  We need to wipe the data clean off the drive by writing NULL (hex 0x00) bytes to all of the free areas on the drive.  This still doesn't make the image any smaller.  More on this later ...
     
     Wiping Linux From CD
-    The easiest way to wipe extfs filesystems (ext2, ext3, ext4) is with zerofree.  It's the faster choice.  You can download the iso image of Parted Magic and configure your VM to mount that as a virtual CD-ROM.  Boot from it, then open a terminal by clicking on the black monitor icon at the bottom.  From there, it is a few simple commands::
+    The easiest way to wipe extfs filesystems (ext2, ext3, ext4) is with zerofree.  It's the faster choice.  You can download the iso image of Parted Magic and configure your VM to mount that as a virtual CD-ROM.  Boot from it, then open a terminal by clicking on the black monitor icon at the bottom.  From there, it is a few simple commands
 
-        # Wipe a hard drive partition.  Let's say that /dev/sda1 is for /boot and /dev/sda2 is /root
-        zerofree -v /dev/sda1
+        ::
+
+            # Wipe a hard drive partition.  Let's say that /dev/sda1 is for /boot and /dev/sda2 is /root
+            zerofree -v /dev/sda1
 
 #. **VMWare Workstation - Windows Host**
 
