@@ -8,11 +8,11 @@
 tkl-odoo12-biobox-vm
 ====================
 
-This project will help you create a server to host the **Odoo 12 (development)** solution, based on an `Odoo <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
+This project will help you create a server to host the **Odoo 12 (BioBox)** solution, based on an `Odoo <https://www.odoo.com/>`_  appliance, using the VMWare Workstagion infrastructure.
 
     * Based on `Odoo - From ERP to CRM, eCommerce to CMS <https://www.turnkeylinux.org/odoo>`_ 
 
-    * ISO file: "**tkl-odoo_2018-10-21.iso**".
+    * ISO file: "**turnkey-odoo-15.1-stretch-amd64.iso**".
 
 VM preparation
 ==============
@@ -43,17 +43,7 @@ VM preparation
 
     - Webmin, SSH: username **root**
     - PostgreSQL, Adminer: username **postgres**
-    - Odoo Master Account: **admin** :red:`(Aparentemente o password para a "Master Account" não foi configurado. Ao invés disso foi configurado o password para o usuário "admin" do banco de dados "odoo" criado automaticamente durante a instalação do Odoo 11. >>> Veja o procedimento a seguir.)`
-
-#. For the security reason, we need to setup a master password for the odoo database manager:
-
-    #. Open a web browser and type in the odoo URL, in my case: http://tkl-odoo12-biobox-vm.
-
-    #. Click on 'Manage Databases'.
-
-    #. Clik on 'Set Master Password'.
-
-    #. Type your password and click 'Continue'.
+    - Odoo Master Account: **admin** :red:`(O password para a "Master Account" foi configurado corretamente. Além disso foi configurado o password para o usuário "admin" do banco de dados "odoo" criado automaticamente durante a instalação do Odoo 11.)`
 
 #. Upgrade the software:
 
@@ -93,7 +83,7 @@ VM preparation
 
     * STRING: **19 JUL 2018 15:06:00**
 
-#. Enable **Connecting through SSH tunnel**:
+#. :red:`(Não executado)` Enable **Connecting through SSH tunnel**:
 
     * `Solving SSH “channel 3: open failed: administratively prohibited” error when tunnelling <https://blog.mypapit.net/2012/06/solving-ssh-channel-3-open-failed-administratively-prohibited-error-when-tunnelling.html>`_ 
     * `Secure TCP/IP Connections with SSH Tunnels <https://www.postgresql.org/docs/9.1/static/ssh-tunnels.html>`_ 
@@ -113,7 +103,7 @@ VM preparation
 
         ::
 
-            ssh tkl-odoo12-biobox-vm -l root
+            ssh tkl-odoo12-jcafb-vm -l root
 
         ::
 
@@ -123,19 +113,19 @@ VM preparation
 
         ::
 
-            ssh -v -L 33335:localhost:5432 root@tkl-odoo12-biobox-vm
+            ssh -v -L 33335:localhost:5432 root@tkl-odoo12-jcafb-vm
 
         ::
 
-            ssh -L 33335:localhost:5432 root@tkl-odoo12-biobox-vm
+            ssh -L 33335:localhost:5432 root@tkl-odoo12-jcafb-vm
 
         ::
 
-            ssh -v -L 33335:127.0.0.1:5432 root@tkl-odoo12-biobox-vm
+            ssh -v -L 33335:127.0.0.1:5432 root@tkl-odoo12-jcafb-vm
 
         ::
 
-            ssh -L 33335:127.0.0.1:5432 root@tkl-odoo12-biobox-vm
+            ssh -L 33335:127.0.0.1:5432 root@tkl-odoo12-jcafb-vm
 
 Shrinking VM Disk Images
 ========================
