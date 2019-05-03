@@ -103,7 +103,7 @@ VM preparation
 
         ::
 
-            ssh tkl-odoo12-jcafb-vm -l root
+            ssh tkl-odoo12-biobox-vm -l root
 
         ::
 
@@ -113,19 +113,19 @@ VM preparation
 
         ::
 
-            ssh -v -L 33335:localhost:5432 root@tkl-odoo12-jcafb-vm
+            ssh -v -L 33335:localhost:5432 root@tkl-odoo12-biobox-vm
 
         ::
 
-            ssh -L 33335:localhost:5432 root@tkl-odoo12-jcafb-vm
+            ssh -L 33335:localhost:5432 root@tkl-odoo12-biobox-vm
 
         ::
 
-            ssh -v -L 33335:127.0.0.1:5432 root@tkl-odoo12-jcafb-vm
+            ssh -v -L 33335:127.0.0.1:5432 root@tkl-odoo12-biobox-vm
 
         ::
 
-            ssh -L 33335:127.0.0.1:5432 root@tkl-odoo12-jcafb-vm
+            ssh -L 33335:127.0.0.1:5432 root@tkl-odoo12-biobox-vm
 
 Shrinking VM Disk Images
 ========================
@@ -154,3 +154,461 @@ Shrinking VM Disk Images
 #. **VMWare Workstation - Windows Host**
 
     Open up VMWare Workstation and edit the virtual machine.  Select the hard disk, then there's a button on the right that says Utilities.  Under that drop-down menu is an option, "Compact".  Presto-chango, you are done.
+
+Development (1)
+===============
+
+#. Notes on the installation:
+
+    #. Installation: **/usr/lib/python3/dist-packages/odoo**
+
+    #. Configuration File: **/etc/odoo/odoo.conf**
+
+    #. Init file: **/etc/init.d/odoo**
+
+    #. DAEMON: **/usr/bin/odoo**
+
+    #. LOGFILE: **/var/log/odoo/odoo-server.log**
+
+#. To stop and start the Odoo server, use the following commands (as root):
+
+    ::
+
+        ssh tkl-odoo12-biobox-vm -l root
+
+    ::
+
+        /etc/init.d/odoo stop
+
+        /etc/init.d/odoo start
+
+#. Delete the 'odoo' database, using the following procedure:
+
+    #. Open a web browser and type in the odoo URL, in my case: http://tkl-odoo12-biobox-vm.
+
+    #. Click on 'Manage Databases'.
+
+    #. Clik on 'Delete' (Delete the 'odoo' database).
+
+#. To set **odoo** user password (Linux), use the following commands (as root):
+
+    ::
+
+        passwd odoo
+
+
+#. Edit the file "**/etc/password**":
+
+    ::
+
+        odoo:x:112:118::/var/lib/odoo:/bin/false
+
+    ::
+
+        odoo:x:112:118::/var/lib/odoo:/bin/bash
+
+#. Copy file "**/etc/odoo/odoo.conf**" into "**/etc/odoo/odoo-man.conf**". Edit the file "**/etc/odoo/odoo-man.conf**":
+
+    ::
+
+            logfile = /var/log/odoo/odoo-server.log
+
+    ::
+
+            # logfile = /var/log/odoo/odoo-server.log
+            logfile = False
+
+#. Setup the file "**/etc/odoo/odoo-man.conf**" (Group: odoo[118] Owner: odoo[112]) permissions, using the following commands (as root):
+
+    ::
+
+        ssh tkl-odoo12-biobox-vm -l root
+
+    ::
+
+        chown -R odoo:odoo /etc/odoo/odoo-man.conf
+
+
+#. To stop and start the Odoo server, use the following commands (as root):
+
+    ::
+
+        ssh tkl-odoo12-biobox-vm -l root
+
+    ::
+
+        /etc/init.d/odoo stop
+
+        /etc/init.d/odoo start
+
+    ::
+
+        su odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+#. To create the **/opt/odoo** directory, use the following commands (as root):
+
+    ::
+
+        ssh tkl-odoo12-biobox-vm -l root
+
+    ::
+
+        mkdir /opt/odoo
+
+        chown -R odoo:odoo /opt/odoo
+
+#. To configure **Git**, use the following commands (as root):
+
+    ::
+
+        ssh tkl-odoo12-biobox-vm -l root
+
+    ::
+
+        cd /opt/odoo
+        su odoo
+
+        git config --global user.email "carlos.vercelino@clvsol.com"
+        git config --global user.name "Carlos Eduardo Vercelino - CLVsol"
+
+        git config --global alias.lg "log --oneline --all --graph --decorate"
+
+        git config --list
+
+        exit
+
+#. :red:`(Não Executado)` To install erppeek (for python 3.5), use the following commands (as root):
+
+    ::
+
+        pip3 install erppeek
+
+#. :red:`(Não Executado)` To install xlrd 1.0.0, execute the following commands (as root):
+
+    ::
+
+        pip3 install xlrd
+        pip3 install xlwt
+        pip3 install xlutils
+
+#. :red:`(Não Executado)` To install odoolib (for python 3.5), use the following commands (as root):
+
+    ::
+
+        pip3 install odoo-client-lib
+
+Replace the Odoo installation (Odoo 12.0)
+=========================================
+
+#. To replace the Odoo installation (Odoo 12.0), use the following commands (as root):
+
+    ::
+
+        ssh tkl-odoo12-biobox-vm -l root
+
+    ::
+
+        /etc/init.d/odoo stop
+
+    ::
+
+        wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
+        echo "deb http://nightly.odoo.com/12.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
+
+        apt-get update
+
+        apt-get install odoo
+
+#. To stop and start the Odoo server, use the following commands (as root):
+
+    ::
+
+        ssh tkl-odoo12-biobox-vm -l root
+
+    ::
+
+        /etc/init.d/odoo stop
+
+        /etc/init.d/odoo start
+
+    ::
+
+        su odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+#. Install **basic dependencies** needed by Odoo, using the following commands (as root):
+
+    * Extracted from LOGFILE: **/var/log/odoo/odoo-server.log**:
+
+        ::
+
+            2019-05-03 13:24:09,170 3050 WARNING ? odoo.addons.base.models.res_currency: The num2words python library is not installed, amount-to-text features won't be fully available. 
+
+    ::
+
+        ssh tkl-odoo12-biobox-vm -l root
+
+    ::
+
+        apt-get update
+        apt-get -y upgrade
+        apt autoremove
+
+    ::
+
+        pip3 install num2words
+
+    ::
+
+        /etc/init.d/odoo stop
+
+        /etc/init.d/odoo start
+
+#. :red:`(Não Executado)` Configure Odoo Server timeouts
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        * `Command-line interface: odoo-bin <https://www.odoo.com/documentation/12.0/reference/cmdline.html>`_
+        * `Difference between CPU time and wall time <https://service.futurequest.net/index.php?/Knowledgebase/Article/View/407/0/difference-between-cpu-time-and-wall-time>`_
+
+        ::
+
+            limit_time_cpu = 60ssh tkl-odoo12-biobox-vm -l root
+
+            limit_time_real = 120
+
+        ::
+
+            # limit_time_cpu = 60
+            limit_time_cpu = 36000
+            # limit_time_real = 120
+            limit_time_real = 72000
+
+Installation of project modules
+===============================
+
+#. `clvsol_odoo_addons <https://github.com/CLVsol/clvsol_odoo_addons>`_
+
+    #. To install "**clvsol_odoo_addons**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-biobox-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 12.0
+            cd /opt/odoo/clvsol_odoo_addons
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons
+
+#. `clvsol_odoo_addons_l10n_br <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br>`_
+
+    #. To install "**clvsol_odoo_addons_l10n_br**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-biobox-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 12.0
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_l10n_br
+
+#. `clvsol_odoo_addons_pbm <https://github.com/CLVsol/clvsol_odoo_addons_pbm>`_
+
+    #. :red:`(Não Executado)` To install "**clvsol_odoo_addons_pbm**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-biobox-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_pbm --branch 10.0
+            cd /opt/odoo/clvsol_odoo_addons_pbm
+            git branch -a
+
+    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_pbm
+
+    #. :red:`(Não Executado)` To create the **12.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+
+            ssh tkl-odoo12-biobox-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_addons_pbm
+            git checkout -b 12.0
+
+#. `clvsol_odoo_addons_biobox <https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox>`_
+
+    #. :red:`(Não Executado)` To install "**clvsol_odoo_addons_biobox**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-biobox-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox --branch 10.0
+            cd /opt/odoo/clvsol_odoo_addons_biobox
+            git branch -a
+
+    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_biobox
+
+    #. :red:`(Não Executado)` To create the **12.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-biobox-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_odoo_addons_biobox
+            git checkout -b 12.0
+
+#. `clvsol_clvhealth_biobox <https://bitbucket.org/clvsol/clvsol_clvhealth_biobox>`_
+
+    #. :red:`(Não Executado)` To install "**clvsol_clvhealth_biobox**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-biobox-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://bitbucket.org/clvsol/clvsol_clvhealth_biobox --branch 10.0
+            cd /opt/odoo/clvsol_clvhealth_biobox
+            git branch -a
+
+    #. :red:`(Não Executado)` To create the **12.0** empty branch, use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-biobox-vm -l odoo
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_biobox
+            git checkout -b 12.0
+
+#. `clvsol_odoo_client <https://github.com/CLVsol/clvsol_odoo_client>`_
+
+    #. To install "**clvsol_odoo_client**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-biobox-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_client
+            cd /opt/odoo/clvsol_odoo_client
+            git branch -a
+
+
+    #. :red:`(Não Executado)` To create a symbolic link "odoo_client", use the following commands (as **root**):
+
+        ::
+
+            ssh tkl-odoo12-biobox-vm -l root
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_biobox/project
+            ln -s /opt/odoo/clvsol_odoo_client odoo_client 
+
+        * SymLink <https://wiki.debian.org/SymLink>`_
+
+Remote access to the server
+===========================
+
+#. To access remotly the server, use the following commands (as **root**):
+
+    ::
+
+        ssh tkl-odoo12-biobox-vm -l root
+
+    ::
+
+        /etc/init.d/odoo stop
+
+        /etc/init.d/odoo start
+
+    ::
+
+        su odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+#. :red:`(Não Executado)` To access remotly the server, use the following commands (as **odoo**) for **BioBox**:
+
+    ::
+
+        ssh tkl-odoo12-biobox-vm -l odoo
+
+    ::
+
+        cd /opt/odoo/clvsol_clvhealth_biobox/project
+        python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_biobox"
+
+        dropdb -i clvhealth_biobox
+
+References
+==========
+
+#. Installing Odoo (12)
+
+ * `Odoo Nightly builds <https://nightly.odoo.com/>`_ 
+ * `Installing Odoo (12) <https://www.odoo.com/documentation/12.0/setup/install.html>`_ 
+ * `How to install Odoo 12 on Debian 9 <https://www.rosehosting.com/blog/how-to-install-odoo-12-on-debian-9/>`_ 
+ * `How to deploy Odoo 12 on Ubuntu 18.04 <https://linuxize.com/post/how-to-deploy-odoo-12-on-ubuntu-18-04/>`_ 
