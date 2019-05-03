@@ -286,33 +286,6 @@ Development (1)
 
         pip3 install erppeek
 
-#. :red:`(Não Executado)` Install **basic dependencies** needed by Odoo, using the following commands (as root):
-
-    * Extracted from LOGFILE: **/var/log/odoo/odoo-server.log**:
-
-        ::
-
-            2018-10-21 17:29:29,487 2880 WARNING ? odoo.addons.base.models.res_currency: The num2words python library is not installed, amount-to-text features won't be fully available. 
-
-    ::
-
-        ssh tkl-odoo12-jcafb-vm -l root
-
-    ::
-
-        apt-get update
-        apt-get -y upgrade
-
-    ::
-
-        pip3 install num2words
-
-    ::
-
-        /etc/init.d/odoo stop
-
-        /etc/init.d/odoo start
-
 #. :red:`(Não Executado)` To install xlrd 1.0.0, execute the following commands (as root):
 
     ::
@@ -326,3 +299,258 @@ Development (1)
     ::
 
         pip3 install odoo-client-lib
+
+Replace the Odoo installation (Odoo 12.0)
+=========================================
+
+#. To replace the Odoo installation (Odoo 12.0), use the following commands (as root):
+
+    ::
+
+        ssh tkl-odoo12-jcafb-vm -l root
+
+    ::
+
+        /etc/init.d/odoo stop
+
+    ::
+
+        wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
+        echo "deb http://nightly.odoo.com/12.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
+
+        apt-get update
+
+        apt-get install odoo
+
+#. To stop and start the Odoo server, use the following commands (as root):
+
+    ::
+
+        ssh tkl-odoo12-jcafb-vm -l root
+
+    ::
+
+        /etc/init.d/odoo stop
+
+        /etc/init.d/odoo start
+
+    ::
+
+        su odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+#. Install **basic dependencies** needed by Odoo, using the following commands (as root):
+
+    * Extracted from LOGFILE: **/var/log/odoo/odoo-server.log**:
+
+        ::
+
+            2019-05-03 13:24:09,170 3050 WARNING ? odoo.addons.base.models.res_currency: The num2words python library is not installed, amount-to-text features won't be fully available. 
+
+    ::
+
+        ssh tkl-odoo12-jcafb-vm -l root
+
+    ::
+
+        apt-get update
+        apt-get -y upgrade
+        apt autoremove
+
+    ::
+
+        pip3 install num2words
+
+    ::
+
+        /etc/init.d/odoo stop
+
+        /etc/init.d/odoo start
+
+#. :red:`(Não Executado)` Configure Odoo Server timeouts
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        * `Command-line interface: odoo-bin <https://www.odoo.com/documentation/12.0/reference/cmdline.html>`_
+        * `Difference between CPU time and wall time <https://service.futurequest.net/index.php?/Knowledgebase/Article/View/407/0/difference-between-cpu-time-and-wall-time>`_
+
+        ::
+
+            limit_time_cpu = 60ssh tkl-odoo12-jcafb-vm -l root
+
+            limit_time_real = 120
+
+        ::
+
+            # limit_time_cpu = 60
+            limit_time_cpu = 36000
+            # limit_time_real = 120
+            limit_time_real = 72000
+
+Installation of project modules
+===============================
+
+#. `clvsol_odoo_addons <https://github.com/CLVsol/clvsol_odoo_addons>`_
+
+    #. To install "**clvsol_odoo_addons**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 12.0
+            cd /opt/odoo/clvsol_odoo_addons
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons
+
+#. `clvsol_odoo_addons_l10n_br <https://github.com/CLVsol/clvsol_odoo_addons_l10n_br>`_
+
+    #. To install "**clvsol_odoo_addons_l10n_br**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 12.0
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_l10n_br
+
+#. `clvsol_odoo_addons_jcafb <https://github.com/CLVsol/clvsol_odoo_addons_jcafb>`_
+
+    #. To install "**clvsol_odoo_addons_jcafb**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 12.0
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_jcafb
+
+#. `clvsol_clvhealth_jcafb <https://github.com/CLVsol/clvsol_clvhealth_jcafb>`_
+
+    #. To install "**clvsol_clvhealth_jcafb**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 12.0
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git branch -a
+
+#. `clvsol_odoo_client <https://github.com/CLVsol/clvsol_odoo_client>`_
+
+    #. To install "**clvsol_odoo_client**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_client
+            cd /opt/odoo/clvsol_odoo_client
+            git branch -a
+
+
+    #. To create a symbolic link "odoo_client", use the following commands (as **root**):
+
+        ::
+
+            ssh tkl-odoo12-jcafb-vm -l root
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            ln -s /opt/odoo/clvsol_odoo_client odoo_client 
+
+        * SymLink <https://wiki.debian.org/SymLink>`_
+
+Remote access to the server
+===========================
+
+#. To access remotly the server, use the following commands (as **root**):
+
+    ::
+
+        ssh tkl-odoo12-jcafb-vm -l root
+
+    ::
+
+        /etc/init.d/odoo stop
+
+        /etc/init.d/odoo start
+
+    ::
+
+        su odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+#. To access remotly the server, use the following commands (as **odoo**) for **JCAFB**:
+
+    ::
+
+        ssh tkl-odoo12-jcafb-vm -l odoo
+
+    ::
+
+        cd /opt/odoo/clvsol_clvhealth_jcafb/project
+        python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb"
+
+        dropdb -i clvhealth_jcafb
+
+References
+==========
+
+#. Installing Odoo (12)
+
+ * `Odoo Nightly builds <https://nightly.odoo.com/>`_ 
+ * `Installing Odoo (12) <https://www.odoo.com/documentation/12.0/setup/install.html>`_ 
+ * `How to install Odoo 12 on Debian 9 <https://www.rosehosting.com/blog/how-to-install-odoo-12-on-debian-9/>`_ 
+ * `How to deploy Odoo 12 on Ubuntu 18.04 <https://linuxize.com/post/how-to-deploy-odoo-12-on-ubuntu-18-04/>`_ 
