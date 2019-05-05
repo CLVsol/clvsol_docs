@@ -280,13 +280,13 @@ Development (1)
 
         exit
 
-#. :red:`(Não Executado)` To install erppeek (for python 3.5), use the following commands (as root):
+#. To install erppeek (for python 3.5), use the following commands (as root):
 
     ::
 
         pip3 install erppeek
 
-#. :red:`(Não Executado)` To install xlrd 1.0.0, execute the following commands (as root):
+#. To install xlrd 1.0.0, execute the following commands (as root):
 
     ::
 
@@ -511,6 +511,35 @@ Installation of project modules
             ln -s /opt/odoo/clvsol_odoo_client odoo_client 
 
         * SymLink <https://wiki.debian.org/SymLink>`_
+
+Installation of external modules
+================================
+
+#. `clvsol_l10n_brazil <https://github.com/CLVsol/clvsol_l10n_brazil>`_
+
+    #. To install "**clvsol_l10n_brazil**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-dev-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 12.0
+            cd /opt/odoo/clvsol_l10n_brazil
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_l10n_brazil
 
 Remote access to the server
 ===========================
