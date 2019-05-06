@@ -418,7 +418,7 @@ Installation of project modules
 
 #. `clvsol_odoo_addons_mfmng <https://github.com/CLVsol/clvsol_odoo_addons_mfmng>`_
 
-    #. :red:`(Não Executado)` To install "**clvsol_odoo_addons_mfmng**", use the following commands (as odoo):
+    #. To install "**clvsol_odoo_addons_mfmng**", use the following commands (as odoo):
 
         ::
 
@@ -431,7 +431,7 @@ Installation of project modules
             cd /opt/odoo/clvsol_odoo_addons_mfmng
             git branch -a
 
-    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
         ::
 
@@ -442,7 +442,7 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_mfmng
 
-    #. :red:`(Não Executado)` To create the **12.0** empty branch, use the following commands (as odoo):
+    #. To create the **12.0** branch, use the following commands (as odoo):
 
         ::
 
@@ -455,7 +455,7 @@ Installation of project modules
 
 #. `clvsol_mfmng <https://github.com/CLVsol/clvsol_mfmng>`_
 
-    #. :red:`(Não Executado)` To install "**clvsol_mfmng**", use the following commands (as odoo):
+    #. To install "**clvsol_mfmng**", use the following commands (as odoo):
 
         ::
 
@@ -468,7 +468,7 @@ Installation of project modules
             cd /opt/odoo/clvsol_mfmng
             git branch -a
 
-    #. :red:`(Não Executado)` To create the **12.0** empty branch, use the following commands (as odoo):
+    #. To create the **12.0** branch, use the following commands (as odoo):
 
         ::
 
@@ -495,7 +495,7 @@ Installation of project modules
             git branch -a
 
 
-    #. :red:`(Não Executado)` To create a symbolic link "odoo_client", use the following commands (as **root**):
+    #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
         ::
 
@@ -503,7 +503,7 @@ Installation of project modules
 
         ::
 
-            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            cd /opt/odoo/clvsol_mfmng/project
             ln -s /opt/odoo/clvsol_odoo_client odoo_client 
 
         * SymLink <https://wiki.debian.org/SymLink>`_
@@ -528,7 +528,7 @@ Remote access to the server
         su odoo
         /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-#. :red:`(Não Executado)` To access remotly the server, use the following commands (as **odoo**) for **MFMng**:
+#. To access remotly the server, use the following commands (as **odoo**) for **MFMng**:
 
     ::
 
