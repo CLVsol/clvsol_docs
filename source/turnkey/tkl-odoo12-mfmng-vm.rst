@@ -280,13 +280,13 @@ Development (1)
 
         exit
 
-#. :red:`(Não Executado)` To install erppeek (for python 3.5), use the following commands (as root):
+#. To install erppeek (for python 3.5), use the following commands (as root):
 
     ::
 
         pip3 install erppeek
 
-#. :red:`(Não Executado)` To install xlrd 1.0.0, execute the following commands (as root):
+#. To install xlrd 1.0.0, execute the following commands (as root):
 
     ::
 
