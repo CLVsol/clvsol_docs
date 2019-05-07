@@ -442,7 +442,7 @@ Installation of project modules
 
 #. `clvsol_odoo_addons_pbm <https://github.com/CLVsol/clvsol_odoo_addons_pbm>`_
 
-    #. :red:`(Não Executado)` To install "**clvsol_odoo_addons_pbm**", use the following commands (as odoo):
+    #. To install "**clvsol_odoo_addons_pbm**", use the following commands (as odoo):
 
         ::
 
@@ -455,7 +455,7 @@ Installation of project modules
             cd /opt/odoo/clvsol_odoo_addons_pbm
             git branch -a
 
-    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
         ::
 
@@ -466,7 +466,7 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_pbm
 
-    #. :red:`(Não Executado)` To create the **12.0** empty branch, use the following commands (as odoo):
+    #. To create the **12.0** empty branch, use the following commands (as odoo):
 
         ::
 
@@ -480,7 +480,7 @@ Installation of project modules
 
 #. `clvsol_odoo_addons_biobox <https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox>`_
 
-    #. :red:`(Não Executado)` To install "**clvsol_odoo_addons_biobox**", use the following commands (as odoo):
+    #. To install "**clvsol_odoo_addons_biobox**", use the following commands (as odoo):
 
         ::
 
@@ -490,10 +490,13 @@ Installation of project modules
 
             cd /opt/odoo
             git clone https://bitbucket.org/clvsol/clvsol_odoo_addons_biobox --branch 10.0
+
+        ::
+
             cd /opt/odoo/clvsol_odoo_addons_biobox
             git branch -a
 
-    #. :red:`(Não Executado)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
         ::
 
@@ -504,7 +507,7 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_biobox
 
-    #. :red:`(Não Executado)` To create the **12.0** empty branch, use the following commands (as odoo):
+    #. To create the **12.0** empty branch, use the following commands (as odoo):
 
         ::
 
@@ -517,7 +520,7 @@ Installation of project modules
 
 #. `clvsol_clvhealth_biobox <https://bitbucket.org/clvsol/clvsol_clvhealth_biobox>`_
 
-    #. :red:`(Não Executado)` To install "**clvsol_clvhealth_biobox**", use the following commands (as odoo):
+    #. To install "**clvsol_clvhealth_biobox**", use the following commands (as odoo):
 
         ::
 
@@ -527,10 +530,13 @@ Installation of project modules
 
             cd /opt/odoo
             git clone https://bitbucket.org/clvsol/clvsol_clvhealth_biobox --branch 10.0
+
+        ::
+
             cd /opt/odoo/clvsol_clvhealth_biobox
             git branch -a
 
-    #. :red:`(Não Executado)` To create the **12.0** empty branch, use the following commands (as odoo):
+    #. To create the **12.0** empty branch, use the following commands (as odoo):
 
         ::
 
@@ -557,7 +563,7 @@ Installation of project modules
             git branch -a
 
 
-    #. :red:`(Não Executado)` To create a symbolic link "odoo_client", use the following commands (as **root**):
+    #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
         ::
 
@@ -619,7 +625,7 @@ Remote access to the server
         su odoo
         /usr/bin/odoo -c /etc/odoo/odoo-man.conf
 
-#. :red:`(Não Executado)` To access remotly the server, use the following commands (as **odoo**) for **BioBox**:
+#. To access remotly the server, use the following commands (as **odoo**) for **BioBox**:
 
     ::
 
