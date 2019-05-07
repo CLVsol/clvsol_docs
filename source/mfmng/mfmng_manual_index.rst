@@ -1,5 +1,5 @@
 ==============
-Manual (MFMNG)
+Manual (MFMng)
 ==============
 
 .. toctree::
