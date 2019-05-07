@@ -23,6 +23,7 @@ CLVsol Documentation
    pbm/index
    pharm/index
    biobox/index
+   biobox_12/index
    mfmng/index
    applications/index
 
