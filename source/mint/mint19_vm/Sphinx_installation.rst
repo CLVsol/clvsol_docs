@@ -14,5 +14,11 @@ Sphinx installation
 
 		sudo pip install -U sphinx
 
+#. Para atualização do Sphinx/Alabaster (usando pip3)
+
+	::
+
+		sudo pip3 install -U sphinx
+
 .. toctree::
    :maxdepth: 2
