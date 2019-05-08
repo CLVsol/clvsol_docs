@@ -7,3 +7,4 @@ Sphinx
    :caption: Contents:
 
    Sphinx_CLVsol_Documentation
+   Sphinx_CLVhealth_JCAFB_Documentation
