@@ -20,5 +20,11 @@ Sphinx installation
 
 		sudo pip3 install -U sphinx
 
+#. Para instalação do "sphinx_rtd_theme" (usando pip3)
+
+	::
+
+		sudo pip3 install sphinx_rtd_theme
+
 .. toctree::
    :maxdepth: 2
