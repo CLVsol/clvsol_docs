@@ -83,7 +83,7 @@ VM preparation
 
     * STRING: **19 JUL 2018 15:06:00**
 
-#. :red:`(Não executado)` Enable **Connecting through SSH tunnel**:
+#. Enable **Connecting through SSH tunnel**:
 
     * `Solving SSH “channel 3: open failed: administratively prohibited” error when tunnelling <https://blog.mypapit.net/2012/06/solving-ssh-channel-3-open-failed-administratively-prohibited-error-when-tunnelling.html>`_ 
     * `Secure TCP/IP Connections with SSH Tunnels <https://www.postgresql.org/docs/9.1/static/ssh-tunnels.html>`_ 
