@@ -25,5 +25,14 @@ References:
 
         keepassxc
 
+#. To upgrade KeePassXC run the following commands:
+
+    ::
+
+        sudo add-apt-repository ppa:phoerious/keepassxc
+        sudo apt-get update
+        sudo apt-get -y upgrade
+        sudo apt install keepassxc
+
 .. toctree::
    :maxdepth: 2
