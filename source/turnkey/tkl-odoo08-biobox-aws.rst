@@ -320,3 +320,49 @@ Remote access to the server (dbserver = bb-aws-postgres-01)
 		cd /opt/openerp/clvsol_clvhealth_jcafb/data
 		python setup.py -h
 
+Edit the file "**/etc/odoo/openerp-server.conf**"
+-------------------------------------------------
+
+#. Edit the file "**/etc/odoo/openerp-server.conf**":
+
+    ::
+
+		db_host = 127.0.0.1
+
+    ::
+
+		# db_host = 127.0.0.1
+		db_host = 172.31.38.203
+
+#. Edit the file "**/etc/odoo/openerp-server.conf**":
+
+    ::
+
+		db_user = openerp
+
+    ::
+
+		# db_user = openerp
+		db_user = openuser
+
+#. Edit the file "**/etc/odoo/openerp-server.conf**":
+
+    ::
+
+		db_password = ***
+
+    ::
+
+		# db_password = ***
+		db_password = ***
+
+#. Edit the file "**/etc/odoo/openerp-server.conf**":
+
+    ::
+
+		db_name = False
+
+    ::
+
+		# db_name = False
+		db_name = clvhealth_biobox_pro_01
