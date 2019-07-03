@@ -111,7 +111,7 @@ html_theme_options = {
     # 'page_width': 'auto',
     'page_width': '1220px',
     'sidebar_width': '220px',
-    'fixed_sidebar': True,
+    'fixed_sidebar': False,
     'show_related': True,
 }
 
