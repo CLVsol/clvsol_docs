@@ -1,3 +1,13 @@
+.. raw:: html
+
+    <style> .red {color:red} </style>
+    <style> .green {color:green} </style>
+    <style> .bi {font-weight: bold; font-style: italic} </style>
+
+.. role:: red
+.. role:: green
+.. role:: bi
+
 ===========
 Thunderbird
 ===========
@@ -32,6 +42,9 @@ Add-ons
 
 	* `ImportExportTools <https://addons.thunderbird.net/thunderbird/addon/importexporttools/>`_ 
 		Adds some tools to import and export folders and messages.
+
+	* `Manually sort folders <https://addons.thunderbird.net/pt-BR/thunderbird/addon/manually-sort-folders/>`_ 
+		This extension allows you to manually sort (order) your folders in the folder pane of Thunderbird or automatically sort them, but in a better way. This extension also allows you to re-order accounts in the folder pane.
 
 Installation
 ------------
@@ -75,7 +88,7 @@ Instalação Portável no Windows
 
 	#. Instalar a Extenção `Contact Tabs <https://addons.thunderbird.net/en-US/thunderbird/addon/contact-tabs/>`_.
 
-	#. Incluir as contas de email (mantendo as configurações automáticas do Thunderbird, usando POP):
+	#. :red:`(Todas as contas foram migradas para IMAP)` Incluir as contas de email (mantendo as configurações automáticas do Thunderbird, usando POP):
 
 		* carlos.vercelino@gmail.com
 		* carlos@vercelino.com
@@ -103,6 +116,17 @@ Instalação Portável no Windows
 
 		* lamara.vercelino@gmail.com
 		* lamara.vercelino@uol.com.br
+		* rosa@vercelino.com
+		* vercelino@uol.com.br
+		* cevercelino@uol.com.br
+		* carlos.vercelino@uol.com.br
+		* vercelino@hotmail.com
+		* carlos.vercelino@yahoo.com.br
+		* cvercelino@yahoo.com
+		* carlos.vercelino@gmail.com
+		* carlos.eduardo@vercelino.com
+		* carlos.vercelino@clvsol.com
+		* carlos@vercelino.com
 
 	#. Transferir, manualmente, o **Calendário de Carlos Vercelino**:
 
