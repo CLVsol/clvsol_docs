@@ -30,3 +30,4 @@ mint19-vm
    TeamViewer_installation
    Sublime_Merge_1_installation
    Mint_atualization_19_1
+   LibreCad_installation
