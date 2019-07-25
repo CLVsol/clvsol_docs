@@ -77,3 +77,4 @@ Diário (BioBox)
    biobox_diario_2019_06_21
    biobox_diario_2019_07_02
    biobox_diario_2019_07_24
+   biobox_diario_2019_07_25
