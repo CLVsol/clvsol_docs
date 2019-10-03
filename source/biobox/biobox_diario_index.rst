@@ -83,3 +83,4 @@ Diário (BioBox)
    biobox_diario_2019_08-22
    biobox_diario_2019_09_02
    biobox_diario_2019_09-25
+   biobox_diario_2019_10_03
