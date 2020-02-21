@@ -473,7 +473,7 @@ Installation of project modules
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                 addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons
 
-#. `clvsol_odoo_addons_mfmng <https://github.com/CLVsol/clvsol_odoo_addons_mfmng>`_
+#. :red:`(Não Executado)` `clvsol_odoo_addons_mfmng <https://github.com/CLVsol/clvsol_odoo_addons_mfmng>`_
 
     #. To install "**clvsol_odoo_addons_mfmng**", use the following commands (as odoo):
 
@@ -510,7 +510,33 @@ Installation of project modules
             cd /opt/odoo/clvsol_odoo_addons_mfmng
             git checkout -b 12.0
 
-#. `clvsol_mfmng <https://github.com/CLVsol/clvsol_mfmng>`_
+#. `clvsol_odoo_addons_mfmng <https://github.com/CLVsol/clvsol_odoo_addons_mfmng>`_
+
+    #. To install "**clvsol_odoo_addons_mfmng**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-mfmng-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_mfmng --branch 12.0
+            cd /opt/odoo/clvsol_odoo_addons_mfmng
+            git branch -a
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        ::
+
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+        ::
+
+                # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_mfmng
+
+#. :red:`(Não Executado)` `clvsol_mfmng <https://github.com/CLVsol/clvsol_mfmng>`_
 
     #. To install "**clvsol_mfmng**", use the following commands (as odoo):
 
@@ -535,6 +561,21 @@ Installation of project modules
 
             cd /opt/odoo/clvsol_mfmng
             git checkout -b 12.0
+
+#. `clvsol_mfmng <https://github.com/CLVsol/clvsol_mfmng>`_
+
+    #. To install "**clvsol_mfmng**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo12-mfmng-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/CLVsol/clvsol_mfmng --branch 12.0
+            cd /opt/odoo/clvsol_mfmng
+            git branch -a
 
 #. `clvsol_odoo_client <https://github.com/CLVsol/clvsol_odoo_client>`_
 
