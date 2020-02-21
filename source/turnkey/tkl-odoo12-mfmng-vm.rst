@@ -1,8 +1,12 @@
 .. raw:: html
 
     <style> .red {color:red} </style>
+    <style> .green {color:green} </style>
+    <style> .bi {font-weight: bold; font-style: italic} </style>
 
 .. role:: red
+.. role:: green
+.. role:: bi
 
 ===================
 tkl-odoo12-mfmng-vm
@@ -83,7 +87,7 @@ VM preparation
 
     * STRING: **19 JUL 2018 15:06:00**
 
-#. :red:`(Não executado)` Enable **Connecting through SSH tunnel**:
+#. Enable **Connecting through SSH tunnel**:
 
     * `Solving SSH “channel 3: open failed: administratively prohibited” error when tunnelling <https://blog.mypapit.net/2012/06/solving-ssh-channel-3-open-failed-administratively-prohibited-error-when-tunnelling.html>`_ 
     * `Secure TCP/IP Connections with SSH Tunnels <https://www.postgresql.org/docs/9.1/static/ssh-tunnels.html>`_ 
@@ -367,7 +371,12 @@ Replace the Odoo installation (Odoo 12.0)
 
         /etc/init.d/odoo start
 
-#. :red:`(Não Executado)` Configure Odoo Server timeouts
+    ::
+
+        su odoo
+        /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+#. Configure Odoo Server timeouts
 
     #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
@@ -386,6 +395,54 @@ Replace the Odoo installation (Odoo 12.0)
             limit_time_cpu = 36000
             # limit_time_real = 120
             limit_time_real = 72000
+
+#. Configure Odoo Server workers
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        * `Sample odoo.conf file  <https://gist.github.com/Guidoom/d5db0a76ce669b139271a528a8a2a27f>`_
+        * `How to Speed up Odoo <https://www.rosehosting.com/blog/how-to-speed-up-odoo/>`_
+        * `What is a “worker” in Odoo? <https://stackoverflow.com/questions/35918633/what-is-a-worker-in-odoo>`_
+
+        ::
+
+            workers = 1
+
+        ::
+
+            # workers = 1
+            workers = 5
+
+#. :red:`(Não Executado)` Configure Odoo Server data_dir
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        * `Filestore and Session Physical Location – Odoo/OpenERP  <https://www.technaureus.com/filestore-and-session-physical-location/>`_
+        * `Odoo 12 Development Cookbook <https://books.google.com.br/books?id=KfeVDwAAQBAJ&pg=PA75&lpg=PA75&dq=odoo+data_dir&source=bl&ots=I1OW2GaxYr&sig=ACfU3U0gBkE_N64J6HcHFP337yJTHA8PYA&hl=pt-BR&sa=X&ved=2ahUKEwi_uv7ihrXjAhV4D7kGHfaIAKMQ6AEwBXoECAgQAQ#v=onepage&q=odoo%20data_dir&f=false>`_
+
+        ::
+
+            data_dir = /var/lib/odoo/.local/share/Odoo
+
+        ::
+
+            # data_dir = /var/lib/odoo/.local/share/Odoo
+            data_dir = /var/lib/odoo/.local/share/Odoo
+
+#. Configure "server_wide_modules"
+
+    #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+        * `[odoo12.0] How the api_integration works using python3 for odoov12?  <https://www.odoo.com/fr_FR/forum/aide-1/question/odoo12-0-how-the-api-integration-works-using-python3-for-odoov12-141915>`_
+
+        ::
+
+            server_wide_modules = web
+
+        ::
+
+            # server_wide_modules = web
+            server_wide_modules = None
 
 Installation of project modules
 ===============================
