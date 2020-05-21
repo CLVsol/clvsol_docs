@@ -7,6 +7,7 @@ Turnkey Linux
    :caption: Contents:
 
    tkl-tkldev-vm
+   tkl-tkldev16-vm
    tkl-odoo-vm
    tkl-odoo10-vm
    tkl-odoo10-mfmng-vm
