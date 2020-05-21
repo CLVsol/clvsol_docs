@@ -137,8 +137,8 @@ TurnKey Integrations
 
 By convention, the source code for TurnKey integrations is placed within tkldev in /turnkey/fab/products (e.g., /turnkey/fab/products/core, /turnkey/fab/products/wordpress, etc.).
 
-:red:`(Not Implemented)` TurnKey Core
--------------------------------------
+TurnKey Core
+------------
 
 	`TurnKey Core <https://github.com/turnkeylinux-apps/core>`_ is the base operating system which all TurnKey GNU/Linux solutions share in common. It is commonly deployed standalone as a convenient starting point for custom system integrations. Benefits include automatic daily security updates, 1-click backup and restore, a web control panel, and preconfigured system monitoring with optional email alerts.
 
@@ -178,7 +178,7 @@ By convention, the source code for TurnKey integrations is placed within tkldev 
 
 		::
 
-			/turnkey/fab/products/tkl-core_2017-02-27.iso
+			/turnkey/fab/products/tkl-core_2020-05-21.iso
 
 	#. Get the ISO out of your TKLDev VM
 
@@ -188,55 +188,60 @@ By convention, the source code for TurnKey integrations is placed within tkldev 
 
 			make clean
 
-:red:`(Not Implemented)` Odoo
------------------------------
+Odoo
+----
 
 	`Odoo <https://github.com/turnkeylinux-apps/odoo>`_ is an all-in-one business management suite of mobile-friendly web apps that integrates everything you need to grow your business: CRM, website content management, project management, human resources, accounting, invoicing and more. Odoo apps integrate seamlessly to provide a full-featured open source ERP, but can also be used stand-alone.
 
 	#. Build the ISO
 
+		- [tkl-tkldev16-vm] Log in:
+
+		    ::
+
+		        ssh tkl-tkldev16-vm -l root
+
 		- Change directory to **/turnkey/fab/products**:
 
-		::
+			::
 
-			cd products
+				cd products
 
 		- Clone the 'TKLDev' appliance build code:
 
-		::
+			::
 
-			git-clone https://github.com/turnkeylinux-apps/odoo.git
+				git-clone https://github.com/turnkeylinux-apps/odoo.git
 
 		- Enter the odoo directory:
 
-		::
+			::
 
-			cd odoo
+				cd odoo
 
 		- Make the ISO:
 
-		::
+			::
 
-			make
+				make
 
 		- When that is finished it should have produced an ISO called 'product.iso'. Check to see with 'ls':
 
-		::
+			::
 
-			ls build
+				ls build
 
 		- I suggest that you rename it now. This is what I would use so that it produces a timestamped filename in the /turnkey/fab/products directory:
 
-		::
+			::
 
-			mv build/product.iso ../tkl-$(basename $(pwd))_$(date --utc +%Y-%m-%d).iso
+				mv build/product.iso ../tkl-$(basename $(pwd))_$(date --utc +%Y-%m-%d).iso
 
 		- Assuming everything has gone how it should, this should produce a file similar to this (different date):
 
-		::
+			::
 
-			/turnkey/fab/products/tkl-odoo_2018-07-19.iso
-			/turnkey/fab/products/tkl-odoo_2018-10-21.iso
+				/turnkey/fab/products/tkl-odoo_2020-05-21.iso
 
 	#. Get the ISO out of your TKLDev VM
 
