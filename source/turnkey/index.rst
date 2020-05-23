@@ -36,3 +36,4 @@ Turnkey Linux
    tkl-odoo12-jcafb-vm
    tkl-odoo12-biobox-vm
    tkl-odoo12-mfmng-vm
+   tkl-odoo-160-buster-vm
