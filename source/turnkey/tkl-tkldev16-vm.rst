@@ -235,13 +235,13 @@ Odoo
 
 			::
 
-				mv build/product.iso ../tkl-$(basename $(pwd))_$(date --utc +%Y-%m-%d).iso
+				mv build/product.iso ../tkl-$(basename $(pwd))-16.0-buster-amd64_$(date --utc +%Y-%m-%d).iso
 
 		- Assuming everything has gone how it should, this should produce a file similar to this (different date):
 
 			::
 
-				/turnkey/fab/products/tkl-odoo_2020-05-21.iso
+				/turnkey/fab/products/tkl-odoo_2020-05-23.iso
 
 	#. Get the ISO out of your TKLDev VM
 
