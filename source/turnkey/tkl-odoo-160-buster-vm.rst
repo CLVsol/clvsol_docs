@@ -1031,6 +1031,173 @@ Remote access to the server
 
             dropdb -i clvhealth_jcafb
 
+Atualizar os fontes do projeto
+------------------------------
+
+    #. **Atualizar** os fontes do projeto
+
+        ::
+
+            ssh tkl-odoo-160-buster-vm -l odoo
+
+        ::
+
+            /etc/init.d/odoo stop
+
+        ::
+
+            # ***** clvheatlh-jcafb-2020-aws-pro
+            #
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_l10n_br
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_history
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_history_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_verification_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_summary_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_export_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_report
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_report_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_process_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync
+            git pull
+
+            cd /opt/odoo/clvsol_odoo_addons_sync_jcafb
+            git pull
+
+        ::
+
+            cd /opt/odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+Replace the Odoo installation (Odoo 13.0)
+-----------------------------------------
+
+    #. To replace the Odoo installation (Odoo 13.0), use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo-160-buster-vm -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+        ::
+
+            wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
+            echo "deb http://nightly.odoo.com/13.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
+
+            apt-get update
+
+            apt-get install odoo
+
+    #. To stop and start the Odoo server, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo-160-buster-vm -l root
+
+        ::
+
+            /etc/init.d/odoo stop
+
+            /etc/init.d/odoo start
+
+        ::
+
+            su odoo
+            /usr/bin/odoo -c /etc/odoo/odoo-man.conf
+
+    #. Configure Odoo Server timeouts
+
+        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+            * `Command-line interface: odoo-bin <https://www.odoo.com/documentation/12.0/reference/cmdline.html>`_
+            * `Difference between CPU time and wall time <https://service.futurequest.net/index.php?/Knowledgebase/Article/View/407/0/difference-between-cpu-time-and-wall-time>`_
+
+            ::
+
+                limit_time_cpu = 60
+                limit_time_real = 120
+
+            ::
+
+                # limit_time_cpu = 60
+                limit_time_cpu = 36000
+                # limit_time_real = 120
+                limit_time_real = 72000
+
+    #. Configure Odoo Server workers
+
+        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+            * `Sample odoo.conf file  <https://gist.github.com/Guidoom/d5db0a76ce669b139271a528a8a2a27f>`_
+            * `How to Speed up Odoo <https://www.rosehosting.com/blog/how-to-speed-up-odoo/>`_
+            * `What is a “worker” in Odoo? <https://stackoverflow.com/questions/35918633/what-is-a-worker-in-odoo>`_
+
+            ::
+
+                workers = 2
+
+            ::
+
+                # workers = 2
+                workers = 5
+
+    #. Configure "server_wide_modules"
+
+        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+            * `[odoo12.0] How the api_integration works using python3 for odoov12?  <https://www.odoo.com/fr_FR/forum/aide-1/question/odoo12-0-how-the-api-integration-works-using-python3-for-odoov12-141915>`_
+
+            ::
+
+                server_wide_modules = web
+
+            ::
+
+                # server_wide_modules = web
+                server_wide_modules = None
+
 References
 ----------
 
