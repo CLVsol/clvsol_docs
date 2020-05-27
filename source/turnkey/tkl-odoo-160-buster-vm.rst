@@ -16,7 +16,7 @@ This project will help you create a server to host the **Odoo - From ERP to CRM,
 
     * Based on `Odoo - From ERP to CRM, eCommerce to CMS <https://www.turnkeylinux.org/odoo>`_ 
 
-    * ISO file: "**tkl-odoo-16.0-buster-amd64_2020-05-23**".
+    * ISO file: "**tkl-odoo-16.0-buster-amd64_2020-05-27**".
 
 Glossary
 --------
@@ -319,9 +319,9 @@ Development (1)
             Collecting xlwt
               Downloading https://files.pythonhosted.org/packages/44/48/def306413b25c3d01753603b1a222a011b8621aed27cd7f89cbc27e6b0f4/xlwt-1.3.0-py2.py3-none-any.whl (99kB)
                 100% |████████████████████████████████| 102kB 1.3MB/s 
-            odoo 12.0.post20200523 requires pyldap, which is not installed.
-            odoo 12.0.post20200523 requires qrcode, which is not installed.
-            odoo 12.0.post20200523 requires vobject, which is not installed.
+            odoo 11.0.post20200527 requires pyldap, which is not installed.
+            odoo 11.0.post20200527 requires qrcode, which is not installed.
+            odoo 11.0.post20200527 requires vobject, which is not installed.
             Installing collected packages: xlwt
             Successfully installed xlwt-1.3.0
             root@tkl-odoo-160-buster-amd64-vm .../clvsol_clvhealth_jcafb/project# pip3 install xlutils
@@ -332,13 +332,12 @@ Development (1)
             Requirement already satisfied: xlwt>=0.7.4 in /usr/local/lib/python3.7/dist-packages (from xlutils) (1.3.0)
             Installing collected packages: xlutils
             Successfully installed xlutils-2.0.0
-            root@tkl-odoo-160-buster-amd64-vm
 
         **To Verify**:
 
-            * :red:`odoo 12.0.post20200523 requires pyldap, which is not installed.`
-            * :red:`odoo 12.0.post20200523 requires qrcode, which is not installed.`
-            * :red:`odoo 12.0.post20200523 requires vobject, which is not installed.`
+            * :red:`odoo 11.0.post20200527 requires pyldap, which is not installed.`
+            * :red:`odoo 11.0.post20200527 requires qrcode, which is not installed.`
+            * :red:`odoo 11.0.post20200527 requires vobject, which is not installed.`
 
 Replace the Odoo installation (Odoo 12.0)
 -----------------------------------------
@@ -430,8 +429,8 @@ Replace the Odoo installation (Odoo 12.0)
                 # server_wide_modules = web
                 server_wide_modules = None
 
-Installation of external modules
---------------------------------
+:red:`(Not Executed)` Installation of external modules
+------------------------------------------------------
 
     #. `OCA/l10n-brazil <https://github.com/OCA/l10n-brazil>`_
 
@@ -444,7 +443,7 @@ Installation of external modules
             ::
 
                 cd /opt/odoo
-                git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0 --depth=1
+                git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
                 cd /opt/odoo/oca_l10n-brazil
                 git branch -a
 
@@ -499,8 +498,8 @@ Installation of external modules
                     # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                     addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/oca_l10n-brazil
 
-Installation of project modules
--------------------------------
+:red:`(Not Executed)` Installation of project modules
+-----------------------------------------------------
 
     #. `clvsol_odoo_client <https://github.com/CLVsol/clvsol_odoo_client>`_
 
@@ -986,6 +985,92 @@ Installation of project modules
 
                     # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
                     addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_odoo_addons_sync_jcafb
+
+Installation of all modules
+---------------------------
+
+    #. To install "**all modules**", use the following commands (as odoo):
+
+        ::
+
+            ssh tkl-odoo-160-buster-vm -l odoo
+
+        ::
+
+            cd /opt/odoo
+            git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
+            git clone https://github.com/CLVsol/clvsol_odoo_client
+            git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_history --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_history_jcafb --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_verification --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_verification_jcafb --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_summary --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_summary_jcafb --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_export --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_export_jcafb --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_report --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_report_jcafb --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_process --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_process_jcafb --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_jcafb --branch 12.0.ng
+
+    #. To install "`node-less <https://github.com/odoo/odoo/issues/16463>`_", use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo-160-buster-vm -l root
+
+        ::
+
+            apt-get install node-less
+
+    #. To install "`suds-py3 <https://stackoverflow.com/questions/46043345/how-use-suds-client-library-in-python-3-6-2>`_", use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo-160-buster-vm -l root
+
+        ::
+
+            pip3 install suds-py3
+
+    #. To install "`erpbrasil.base <https://pypi.org/project/erpbrasil.base/>`_", use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo-160-buster-vm -l root
+
+        ::
+
+            pip3 install erpbrasil.base
+
+    #. To install "`pycep-correios <https://pypi.org/project/pycep-correios/>`_", use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo-160-buster-vm -l root
+
+        ::
+
+            pip3 install pycep-correios
+
+    #. To create a symbolic link "odoo_client", use the following commands (as **root**):
+
+        ::
+
+            ssh tkl-odoo-160-buster-vm -l root
+
+        ::
+
+            cd /opt/odoo/clvsol_clvhealth_jcafb/project
+            ln -s /opt/odoo/clvsol_odoo_client odoo_client 
+
+        * SymLink <https://wiki.debian.org/SymLink>`_
 
     #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
