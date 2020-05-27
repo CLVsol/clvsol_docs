@@ -241,7 +241,7 @@ Odoo
 
 			::
 
-				/turnkey/fab/products/tkl-odoo_2020-05-23.iso
+				/turnkey/fab/products/tkl-odoo_2020-05-27.iso
 
 	#. Get the ISO out of your TKLDev VM
 
