@@ -487,7 +487,7 @@ Replace the Odoo installation (Odoo 12.0)
 
                 pip3 install pycep-correios
 
-        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+        #. :red:`(Not Executed)` Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
 
             ::
 
@@ -543,6 +543,32 @@ Replace the Odoo installation (Odoo 12.0)
                 ln -s /opt/odoo/clvsol_odoo_client odoo_client 
 
             * SymLink <https://wiki.debian.org/SymLink>`_
+
+    #. `clvsol_l10n_brazil (12.0) <https://github.com/CLVsol/clvsol_l10n_brazil/tree/12.0.ng>`_
+
+        #. To install "**clvsol_l10n_brazil**", use the following commands (as odoo):
+
+            ::
+
+                ssh tkl-odoo-160-buster-vm -l odoo
+
+            ::
+
+                cd /opt/odoo
+                git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 12.0
+                cd /opt/odoo/clvsol_l10n_brazil
+                git branch -a
+
+        #. Edit the files "**/etc/odoo/odoo.conf**" and "**/etc/odoo/odoo-man.conf**" (as odoo):
+
+            ::
+
+                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+
+            ::
+
+                    # addons_path = /usr/lib/python3/dist-packages/odoo/addons,...
+                    addons_path = /usr/lib/python3/dist-packages/odoo/addons,...,/opt/odoo/clvsol_l10n_brazil
 
     #. `clvsol_odoo_addons (12.0.ng) <https://github.com/CLVsol/clvsol_odoo_addons/tree/12.0.ng>`_
 
@@ -1001,6 +1027,7 @@ Installation of all modules
             git clone https://github.com/OCA/l10n-brazil oca_l10n-brazil --branch 12.0
             git clone https://github.com/CLVsol/clvsol_odoo_client
             git clone https://github.com/CLVsol/clvsol_clvhealth_jcafb --branch 12.0.ng
+            git clone https://github.com/CLVsol/clvsol_l10n_brazil --branch 12.0
             git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 12.0.ng
             git clone https://github.com/CLVsol/clvsol_odoo_addons_l10n_br --branch 12.0.ng
             git clone https://github.com/CLVsol/clvsol_odoo_addons_jcafb --branch 12.0.ng
@@ -1081,7 +1108,7 @@ Installation of all modules
         ::
 
                 # addons_path = /usr/lib/python3/dist-packages/odoo/addons
-                addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/oca_l10n-brazil,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb
+                addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/clvsol_l10n_brazil,/opt/odoo/clvsol_odoo_addons,/opt/odoo/clvsol_odoo_addons_l10n_br,/opt/odoo/clvsol_odoo_addons_jcafb,/opt/odoo/clvsol_odoo_addons_history,/opt/odoo/clvsol_odoo_addons_history_jcafb,/opt/odoo/clvsol_odoo_addons_verification,/opt/odoo/clvsol_odoo_addons_verification_jcafb,/opt/odoo/clvsol_odoo_addons_summary,/opt/odoo/clvsol_odoo_addons_summary_jcafb,/opt/odoo/clvsol_odoo_addons_export,/opt/odoo/clvsol_odoo_addons_export_jcafb,/opt/odoo/clvsol_odoo_addons_report,/opt/odoo/clvsol_odoo_addons_report_jcafb,/opt/odoo/clvsol_odoo_addons_process,/opt/odoo/clvsol_odoo_addons_process_jcafb,/opt/odoo/clvsol_odoo_addons_sync,/opt/odoo/clvsol_odoo_addons_sync_jcafb
 
 Remote access to the server
 ---------------------------
@@ -1135,6 +1162,9 @@ Atualizar os fontes do projeto
             #
 
             cd /opt/odoo/clvsol_clvhealth_jcafb
+            git pull
+
+            cd /opt/odoo/clvsol_l10n_brazil
             git pull
 
             cd /opt/odoo/clvsol_odoo_addons
