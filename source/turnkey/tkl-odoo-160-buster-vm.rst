@@ -154,6 +154,50 @@ VM preparation
 
         * STRING: **19 JUL 2018 15:06:00**
 
+#. Enable **Connecting through SSH tunnel**:
+
+    * `Solving SSH “channel 3: open failed: administratively prohibited” error when tunnelling <https://blog.mypapit.net/2012/06/solving-ssh-channel-3-open-failed-administratively-prohibited-error-when-tunnelling.html>`_ 
+    * `Secure TCP/IP Connections with SSH Tunnels <https://www.postgresql.org/docs/9.1/static/ssh-tunnels.html>`_ 
+    * `Using an SSH Tunnel <http://confluence.dbvis.com/display/UG91/Using+an+SSH+Tunnel>`_ 
+
+    #. Edit the file "**/etc/ssh/sshd_config**" (as root):
+
+        ::
+
+            AllowTcpForwarding no
+
+        ::
+
+            AllowTcpForwarding yes
+
+    #. To stop and start the Odoo server, use the following commands (as root):
+
+        ::
+
+            ssh tkl-odoo-160-buster-vm -l root
+
+        ::
+
+            service sshd restart
+
+    #. To  establish a secure tunnel from the remote computer, use one the following commands (change the local port (5432) and the remote port (33335) appropriately):
+
+        ::
+
+            ssh -v -L 33335:localhost:5432 root@tkl-odoo-160-buster-vm
+
+        ::
+
+            ssh -L 33335:localhost:5432 root@tkl-odoo-160-buster-vm
+
+        ::
+
+            ssh -v -L 33335:127.0.0.1:5432 root@tkl-odoo-160-buster-vm
+
+        ::
+
+            ssh -L 33335:127.0.0.1:5432 root@tkl-odoo-160-buster-vm
+
 Development (1)
 ---------------
 
