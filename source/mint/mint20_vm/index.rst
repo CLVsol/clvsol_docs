@@ -7,3 +7,4 @@ mint20-vm
    :caption: Contents:
 
    VM_creation
+   Shrinking_VM_Disk_Images
