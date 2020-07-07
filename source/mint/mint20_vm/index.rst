@@ -9,3 +9,4 @@ mint20-vm
    VM_creation
    Shrinking_VM_Disk_Images
    Check_for_Any_Last_Minute_Updates
+   VMWare_Tools_installation
