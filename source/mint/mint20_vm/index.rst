@@ -17,3 +17,4 @@ mint20-vm
    Mint_hosts_file
    Git_installation
    pip_installation
+   Sphinx_installation
