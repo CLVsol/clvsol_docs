@@ -15,3 +15,4 @@ mint20-vm
    Sublime_Text_3_installation
    KeePassXC_installation
    Mint_hosts_file
+   Git_installation
