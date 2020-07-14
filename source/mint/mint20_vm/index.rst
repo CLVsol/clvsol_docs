@@ -14,3 +14,4 @@ mint20-vm
    Enable_SSH
    Sublime_Text_3_installation
    KeePassXC_installation
+   Mint_hosts_file
