@@ -12,3 +12,4 @@ mint20-vm
    VMWare_Tools_installation
    System_Snapshots
    Enable_SSH
+   Sublime_Text_3_installation
