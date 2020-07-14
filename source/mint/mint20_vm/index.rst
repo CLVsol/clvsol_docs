@@ -11,3 +11,4 @@ mint20-vm
    Check_for_Any_Last_Minute_Updates
    VMWare_Tools_installation
    System_Snapshots
+   Enable_SSH
