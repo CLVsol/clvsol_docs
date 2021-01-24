@@ -12,6 +12,7 @@ mint20-vm
    VMWare_Tools_installation
    System_Snapshots
    Enable_SSH
+   VM_Tune_Up
    Sublime_Text_3_installation
    KeePassXC_installation
    Mint_hosts_file
