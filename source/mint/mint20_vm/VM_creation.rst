@@ -23,7 +23,7 @@ References:
 
 	::
 
-		VMware® Workstation Version: 15.5.6
+		VMware® Workstation Version: 15.5.7
 		Hardware compatibility: Workstation 12.x
 		I will install the operating system later.
 		Guest operating system: Linux (Ubuntu 64-bit)
@@ -58,7 +58,7 @@ References:
 				Disk file: "sdc\sdc.vmdk"
 
 
-#. Mount a CD/DVD disk using the image "**linuxmint-20-cinnamon-64bit.iso**" and power on the virtual machine. Use the following parameters as a reference:
+#. Mount a CD/DVD disk using the image "**linuxmint-20.1-cinnamon-64bit.iso**" and power on the virtual machine. Use the following parameters as a reference:
 
 	::
 
