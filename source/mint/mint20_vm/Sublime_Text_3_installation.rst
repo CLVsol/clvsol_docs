@@ -59,7 +59,7 @@ References:
 
         #. Navigate to Sublime Text -> Preferences -> Browse Packages
         #. Open the User directory
-        #. Create a file named Default.sublime-theme (if you're using the default theme, otherwise use the theme name, e.g. Material-Theme-Darker.sublime-theme) with the following content (modify font.size as required):
+        #. Create a file named **Default.sublime-theme** (if you're using the default theme, otherwise use the theme name, e.g. Material-Theme-Darker.sublime-theme) with the following content (modify font.size as required):
 
             ::
 
@@ -85,6 +85,21 @@ References:
                         "shadow_offset": [0, 1]
                     }
                 ]
+
+#. Conteúdo do arquivo "**/home/mint20/.config/sublime-text-3/Packages/UserPreferences.sublime-settings**"
+
+    ::
+
+        {
+            "color_scheme": "Monokai.sublime-color-scheme",
+            "font_size": 14,
+            "highlight_modified_tabs": true,
+            "ignored_packages":
+            [
+                "Vintage"
+            ],
+            "theme": "Default.sublime-theme"
+        }
 
 .. toctree::
    :maxdepth: 2
