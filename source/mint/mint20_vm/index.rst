@@ -19,3 +19,4 @@ mint20-vm
    Git_installation
    pip_installation
    Sphinx_installation
+   SmartGit_installation
