@@ -21,3 +21,4 @@ mint20-vm
    Sphinx_installation
    SmartGit_installation
    Anaconda_Python_IDE
+   DbVisualizer_installation
