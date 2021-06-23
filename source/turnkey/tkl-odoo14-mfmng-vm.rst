@@ -428,7 +428,7 @@ Development (3)
 
             ::
 
-                2021-01-14 13:29:55,275 8698 WARNING clvhealth_jcafb_2021v_14 py.warnings: /usr/lib/python3/dist-packages/jinja2/sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
+                2021-01-14 13:29:55,275 8698 WARNING mfmng_2021v_14 py.warnings: /usr/lib/python3/dist-packages/jinja2/sandbox.py:82: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated, and in 3.8 it will stop working
                 from collections import MutableSet, MutableMapping, MutableSequence
  
         ::
@@ -517,10 +517,10 @@ Remote access to the server
 
         ::
 
-            cd /opt/odoo/clvsol_clvhealth_jcafb/project
-            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "clvhealth_jcafb"
+            cd /opt/odoo/clvsol_mfmng/project
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "mfmng"
 
-            dropdb -i clvhealth_jcafb
+            dropdb -i mfmng
 
 References
 ----------
