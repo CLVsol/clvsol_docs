@@ -520,9 +520,9 @@ Remote access to the server
         ::
 
             cd /opt/odoo/clvsol_mfmng/project
-            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "mfmng"
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "mfmng_14"
 
-            dropdb -i mfmng
+            dropdb -i mfmng_14
 
 References
 ----------
