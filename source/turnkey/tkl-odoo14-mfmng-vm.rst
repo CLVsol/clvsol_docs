@@ -524,6 +524,24 @@ Remote access to the server
 
             dropdb -i mfmng_14
 
+Upgrade the odoo software
+-------------------------
+
+    #. Upgrade the odoo software:
+
+        ::
+
+            ssh tkl-odoo14-mfmng-vm -l root
+
+            /etc/init.d/odoo stop
+
+        ::
+
+            apt-get update
+            apt-get -y upgrade
+
+            apt-get install odoo
+
 References
 ----------
 
