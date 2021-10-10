@@ -115,6 +115,14 @@ References:
             Command: /opt/anaconda/bin/anaconda-navigator
             Icon: /home/mint20/Downloads/anaconda-icon-1024x1024.png
 
+    #. Criar um item de menu "Programing" para o "Jupyter Notebook":
+
+        ::
+
+            Name: Anaconda Navigator
+            Command: /opt/anaconda/bin/jupyter notebook
+            Icon: /home/mint20/Downloads/jupyter.png
+
 Se necessário, consultar o artigo: `Instalando o Anaconda em uma distribuição Linux <https://cienciaprogramada.com.br/2020/08/instalando-o-anaconda-em-linux/>`_.
 
 .. toctree::
