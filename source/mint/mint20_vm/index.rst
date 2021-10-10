@@ -22,3 +22,4 @@ mint20-vm
    SmartGit_installation
    Anaconda_Python_IDE
    DbVisualizer_installation
+   Anaconda_installation
