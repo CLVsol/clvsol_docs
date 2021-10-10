@@ -125,5 +125,18 @@ References:
 
 Se necessário, consultar o artigo: `Instalando o Anaconda em uma distribuição Linux <https://cienciaprogramada.com.br/2020/08/instalando-o-anaconda-em-linux/>`_.
 
+
+**Instalações adicionais**:
+
+    #. `Install Pandoc on Linux Mint 20 <https://linuxways.net/mint/install-pandoc-on-linux-mint-20/>`_:
+
+        ::
+
+            sudo apt-get update
+
+            sudo apt-get install pandoc
+
+            pandoc --version
+
 .. toctree::
    :maxdepth: 2
