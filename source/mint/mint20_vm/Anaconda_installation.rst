@@ -119,9 +119,19 @@ References:
 
         ::
 
-            Name: Anaconda Navigator
+            Name: Jupyter Notebook
             Command: /opt/anaconda/bin/jupyter notebook
             Icon: /home/mint20/Downloads/jupyter.png
+            Launch in Terminal: marcado
+
+    #. Criar um item de menu "Programing" para o "Jupyter Notebook (jupyter_notebooks)":
+
+        ::
+
+            Name: Jupyter Notebook (jupyter_notebooks)
+            Command: /opt/anaconda/bin/jupyter notebook --notebook-dir="/opt/clvsol/jupyter_notebooks"
+            Icon: /home/mint20/Downloads/jupyter.png
+            Launch in Terminal: marcado
 
 Se necessário, consultar o artigo: `Instalando o Anaconda em uma distribuição Linux <https://cienciaprogramada.com.br/2020/08/instalando-o-anaconda-em-linux/>`_.
 
