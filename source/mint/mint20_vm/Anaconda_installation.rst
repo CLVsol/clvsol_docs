@@ -148,5 +148,13 @@ Se necessário, consultar o artigo: `Instalando o Anaconda em uma distribuição
 
             pandoc --version
 
+    #. `Install TeX <https://nbconvert.readthedocs.io/en/latest/install.html>`_:
+
+        ::
+
+            sudo apt-get update
+
+            sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic
+
 .. toctree::
    :maxdepth: 2
