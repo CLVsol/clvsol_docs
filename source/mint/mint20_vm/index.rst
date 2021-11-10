@@ -23,3 +23,4 @@ mint20-vm
    Anaconda_Python_IDE
    DbVisualizer_installation
    Anaconda_installation
+   Clean Up Disk Space on Linux Mint Distro
