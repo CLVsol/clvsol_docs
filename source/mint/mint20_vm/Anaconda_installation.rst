@@ -124,20 +124,20 @@ References:
             Icon: /home/mint20/Downloads/jupyter.png
             Launch in Terminal: marcado
 
-    #. Criar um item de menu "Programing" para o "Jupyter Notebook (jupyter_notebooks)":
+    #. Criar um item de menu "Programing" para o "Jupyter Notebook (CLVsol Jupyter)":
 
         ::
 
-            Name: Jupyter Notebook (jupyter_notebooks)
+            Name: Jupyter Notebook (CLVsol Jupyter)
             Command: /opt/anaconda/bin/jupyter notebook --notebook-dir="/opt/clvsol/jupyter"
             Icon: /home/mint20/Downloads/jupyter.png
             Launch in Terminal: marcado
 
-    #. Criar um item de menu "Programing" para o "JupyterLab (jupyter_notebooks)":
+    #. Criar um item de menu "Programing" para o "JupyterLab (CLVsol Jupyter)":
 
         ::
 
-            Name: JupyterLab (jupyter_notebooks)
+            Name: JupyterLab (CLVsol Jupyter)
             Command: /opt/anaconda/bin/jupyter-lab --notebook-dir="/opt/clvsol/jupyter"
             Icon: /home/mint20/Downloads/jupyterlab.png
             Launch in Terminal: marcado
@@ -164,6 +164,44 @@ Se necessário, consultar o artigo: `Instalando o Anaconda em uma distribuição
             sudo apt-get update
 
             sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic
+
+**Change Jupyter notebook start up folder in Anaconda**:
+
+    * `How to change Jupyter notebook start up folder in Anaconda <https://www.planetofbits.com/python/change-jupyter-notebook-startup-folder-anaconda/>`_
+
+    * `Change anaconda ipython main directory <https://stackoverflow.com/questions/24117132/change-anaconda-ipython-main-directory>`_
+
+    * `How to change the default working directory of Jupyter and Jupyter Lab in Anaconda Navigator on Windows environment <https://techras.wordpress.com/2019/02/13/how-to-change-the-default-working-directory-of-jupyter-and-jupyter-lab-in-anaconda-navigator-on-windows-environment/>`_
+
+    * `How to change the working directory of Jupyter and Jupyter Lab on Windows environment <https://stackoverflow.com/questions/15680463/change-ipython-jupyter-notebook-working-directory>`_
+
+    * `Change IPython/Jupyter notebook working directory <https://stackoverflow.com/questions/15680463/change-ipython-jupyter-notebook-working-directory>`_
+
+    * `Open Jupyter Notebook from a Drive Other than C Drive <https://stackoverflow.com/questions/55078484/open-jupyter-notebook-from-a-drive-other-than-c-drive>`_
+
+    #. Open the Anaconda Navigator and click on Environments -> base(root) -> Open Terminal. This will open a command prompt window.
+
+    #. Type the command:
+
+        ::
+
+            jupyter notebook --generate-config
+            Writing default config to: /home/mint20/.jupyter/jupyter_notebook_config.py
+
+    #. Edit the "**/home/mint20/.jupyter/jupyter_notebook_config.py**" file:
+
+        ::
+
+            # c.NotebookApp.notebook_dir = ''
+
+
+        ::
+
+            # c.NotebookApp.notebook_dir = ''
+            c.NotebookApp.notebook_dir = '/opt/clvsol/jupyter'
+
+
+    #. To bring the changes into effect, restart Anaconda Navigator and launch Jupyter notebook. You should now see the startup folder changed to your supplied location.
 
 .. toctree::
    :maxdepth: 2
