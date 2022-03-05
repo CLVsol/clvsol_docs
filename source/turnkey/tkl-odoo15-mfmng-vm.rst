@@ -502,11 +502,11 @@ Repositories Installation
 
             cd /opt/odoo
             git clone https://github.com/CLVsol/clvsol_odoo_client --branch 13.0
-            git clone https://github.com/CLVsol/clvsol_mfmng --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_mfmng --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 14.0
-            git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_mfmng --branch 12.0to14.0
+            git clone https://github.com/CLVsol/clvsol_mfmng --branch 15.0_dev
+            git clone https://github.com/MostlyOpen/clvsol_odoo_addons --branch 15.0_dev
+            git clone https://github.com/CLVsol/clvsol_odoo_addons_mfmng --branch 15.0_dev
+            # git clone https://github.com/CLVsol/clvsol_odoo_addons_sync --branch 14.0
+            # git clone https://github.com/CLVsol/clvsol_odoo_addons_sync_mfmng --branch 12.0to14.0
 
     #. To create a symbolic link "odoo_client", use the following commands (as **root**):
 
@@ -561,9 +561,9 @@ Remote access to the server
         ::
 
             cd /opt/odoo/clvsol_mfmng/project
-            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "mfmng_14"
+            python3 install.py --super_user_pw "***" --admin_user_pw "***" --data_admin_user_pw "***" --db "mfmng_15"
 
-            dropdb -i mfmng_14
+            dropdb -i mfmng_15
 
 Upgrade the odoo software
 -------------------------
@@ -586,9 +586,7 @@ Upgrade the odoo software
 References
 ----------
 
-    #. Installing Odoo (12)
+    #. Installing Odoo (15)
 
      * `Odoo Nightly builds <https://nightly.odoo.com/>`_ 
-     * `Installing Odoo (12) <https://www.odoo.com/documentation/13.0/setup/install.html>`_ 
-     * `How to install Odoo 15 on Debian 9 <https://www.rosehosting.com/blog/how-to-install-odoo-12-on-debian-9/>`_ 
-     * `How to deploy Odoo 15 on Ubuntu 18.04 <https://linuxize.com/post/how-to-deploy-odoo-12-on-ubuntu-18-04/>`_ 
+     * `Installing Odoo (15) <https://www.odoo.com/documentation/15.0/setup/install.html>`_ 
