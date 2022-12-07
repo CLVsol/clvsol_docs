@@ -24,3 +24,4 @@ mint20-vm
    DbVisualizer_installation
    Anaconda_installation
    Clean Up Disk Space on Linux Mint Distro
+   TeamViewer_installation
