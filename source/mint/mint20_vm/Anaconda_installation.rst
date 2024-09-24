@@ -15,40 +15,55 @@ References:
 
 `Jupyter <https://jupyter.org/>`_ will be installed via `Anaconda <https://www.anaconda.com/>`_ installation.
 
+    #. Unistall Anaconda Navigator using the Mint 20 Graphical Interface.
+
+    #. `Uninstalling Anaconda Distribution <https://docs.anaconda.com/anaconda/install/uninstall/>`_
+
+        * Remove any conda initialization scripts from all your terminal shell profiles by running the following command:
+
+            ::
+
+                conda activate
+                
+                conda init --reverse --all
+
+        * Remove your entire anaconda directory with rm -rf:
+
+            ::
+
+                sudo rm -rf /opt/anaconda
+                
     #. Before the `Anaconda <https://www.anaconda.com/>`_ installation, it’s important to make sure your system is up to date by running the following apt commands in the terminal:
 
         ::
 
             sudo apt update
+            
             sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+
+            sudo apt autoremove
 
     #. Now we download the latest Anaconda from the official page:
 
         ::
 
             cd ~/Downloads
-            wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
-
-    #. Once done, check the data integrity of the script by running the sha256sum command:
-
-        ::
-
-            sha256sum Anaconda3-2021.05-Linux-x86_64.sh
-
-    #. Compare it with the official `Hashes for Anaconda <https://docs.continuum.io/anaconda/install/hashes/Anaconda3-2021.05-Linux-x86_64.sh-hash/>`_. If the hash value of the locally downloaded installer file matches with the official hash, you’re good to go.
+            
+            wget https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_64.sh
 
     #. Next, create the "**/opt/anaconda**" directory using the following commands:
 
         ::
 
             sudo mkdir /opt/anaconda
+            
             sudo chmod ugo+w /opt/anaconda
 
     #. Next, install Anaconda for Python 3.8 in the directory "**/opt/anaconda**", using the following command:
 
         ::
 
-            bash Anaconda3-2021.05-Linux-x86_64.sh -u
+            bash Anaconda3-2024.06-1-Linux-x86_64.sh -u
 
     #. Now keep pressing enter till it asks:
 
@@ -65,11 +80,45 @@ References:
               - Or specify a different location below
 
             [/home/mint20/anaconda3] >>> /opt/anaconda
+            PREFIX=/opt/anaconda
+            Unpacking payload ...
+                                                                                                                                                                                                          
+            Installing base environment...
 
-            Do you wish the installer to initialize Anaconda3
-            by running conda init? [yes|no]
+
+            Downloading and Extracting Packages:
+
+
+            Downloading and Extracting Packages:
+
+            Preparing transaction: done
+            Executing transaction: done
+            installation finished.
+            Do you wish to update your shell profile to automatically initialize conda?
+            This will activate conda on startup and change the command prompt when activated.
+            If you'd prefer that conda's base environment not be activated on startup,
+               run the following command when conda is activated:
+
+            conda config --set auto_activate_base false
+
+            You can undo this by running `conda init --reverse $SHELL`? [yes|no]
             [no] >>> yes
+            no change     /opt/anaconda/condabin/conda
+            no change     /opt/anaconda/bin/conda
+            no change     /opt/anaconda/bin/conda-env
+            no change     /opt/anaconda/bin/activate
+            no change     /opt/anaconda/bin/deactivate
+            no change     /opt/anaconda/etc/profile.d/conda.sh
+            no change     /opt/anaconda/etc/fish/conf.d/conda.fish
+            no change     /opt/anaconda/shell/condabin/Conda.psm1
+            no change     /opt/anaconda/shell/condabin/conda-hook.ps1
+            no change     /opt/anaconda/lib/python3.12/site-packages/xontrib/conda.xsh
+            no change     /opt/anaconda/etc/profile.d/conda.csh
+            modified      /home/mint20/.bashrc
 
+            ==> For changes to take effect, close and re-open your current shell. <==
+
+            Thank you for installing Anaconda3!
 
     #. To activate the Anaconda installation, you can either close and re-open your shell or load the new PATH environment variable into the current shell session by typing:
 
