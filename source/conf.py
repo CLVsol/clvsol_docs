@@ -63,8 +63,7 @@ release = u'1.0.0'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-# language = None
-language = 'en'
+language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -183,6 +182,9 @@ texinfo_documents = [
      author, 'CLVsolDocumentation', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+
+
+
 # Example configuration for intersphinx: refer to the Python standard library.
-# intersphinx_mapping = {'https://docs.python.org/': None}
-inx_mapping = {'<name>': ('https://docs.python.org/', None)}
+intersphinx_mapping = {'https://docs.python.org/': None}
