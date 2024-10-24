@@ -25,3 +25,4 @@ mint20-vm
    Anaconda_installation
    Clean Up Disk Space on Linux Mint Distro
    TeamViewer_installation
+   ERPpeek_installation
