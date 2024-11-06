@@ -26,3 +26,4 @@ mint20-vm
    Clean Up Disk Space on Linux Mint Distro
    TeamViewer_installation
    ERPpeek_installation
+   DB_Browser_for_SQLite_installation
